@@ -1,0 +1,994 @@
+# Textos de fedekilich.com
+#
+# Este archivo es la fuente de todo el texto del sitio. Se edita acá y se vuelca
+# al sitio con:
+#
+#     python3 tools/aplicar-textos.py              # muestra qué cambiaría
+#     python3 tools/aplicar-textos.py --aplicar    # lo escribe
+#
+# Cada entrada tiene:
+#     nota   para qué sirve ese texto y dónde se ve
+#     es     castellano — es el idioma fuente
+#     en     inglés
+#     valor  en lugar de es/en, cuando el dato no se traduce (URLs, email)
+#
+# Dejar `en` vacío hace que el sitio muestre el castellano en su lugar: sirve
+# para ir traduciendo de a poco sin romper nada.
+#
+# Los textos largos van entre tres comillas y respetan los saltos de línea:
+# una línea en blanco adentro es un párrafo nuevo.
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  INTERFAZ
+#  Labels, títulos de sección y mensajes. Los mismos textos se repiten
+#  en varias páginas: cambiarlos acá los cambia en todas.
+# ══════════════════════════════════════════════════════════════════════════
+
+
+# ─── Navegación ──────────────────────────────────────────────────────────
+
+[ui.nav.about]
+nota = "Label del link a About. En el header y el pie de las 7 páginas."
+es = "About"
+en = "About"
+
+[ui.nav.work]
+nota = "Label del link al catálogo completo (all-work.html), no a un caso suelto."
+es = "Work"
+en = "Work"
+
+[ui.nav.contact]
+nota = "Label del link a Contact."
+es = "Contact"
+en = "Contact"
+
+[ui.nav.lab]
+nota = "Label del link a Lab. Va en minúscula y en azul para anticipar la mutación de la sección."
+es = "lab"
+en = "lab"
+
+[ui.nav.langLabel]
+nota = "Texto del botón ES/EN para lectores de pantalla. No se ve; describe la acción, no el estado."
+es = "Cambiar idioma a inglés"
+en = "Switch language to Spanish"
+
+[ui.nav.skip]
+nota = "Link para saltar al contenido. Solo aparece al navegar con teclado."
+es = "Saltar al contenido"
+en = "Skip to content"
+
+[ui.nav.primary]
+nota = "Nombre de la navegación del header para lectores de pantalla."
+es = "Navegación principal"
+en = "Primary navigation"
+
+[ui.nav.footer]
+nota = "Nombre de la navegación del pie para lectores de pantalla."
+es = "Navegación del pie"
+en = "Footer navigation"
+
+
+# ─── Hero de Home ────────────────────────────────────────────────────────
+
+[ui.hero.role]
+nota = "Volanta del hero de Home, arriba del nombre. Define el rubro en tres palabras."
+es = "Brand, Motion & IA"
+en = "Brand, Motion & AI"
+
+[ui.hero.intro]
+nota = "Bajada del hero de Home. Es la primera definición de qué hacés: lo lee un reclutador antes que nada."
+es = """
+Design Lead con foco en identidad visual, motion design y procesos creativos potenciados por IA. Trabajo en soluciones visuales que ordenan y fortalecen la comunicación de marca."""
+en = """
+Design Lead focused on visual identity, motion design, and creative processes powered by AI. I work on visual solutions that bring order and strength to brand communication."""
+
+[ui.hero.scroll]
+nota = "Label del indicador de scroll al pie del hero."
+es = "Scroll"
+en = "Scroll"
+
+
+# ─── Home — casos destacados ─────────────────────────────────────────────
+
+[ui.home.workEyebrow]
+nota = "Volanta de la sección de casos destacados en Home."
+es = "Trabajos"
+en = "Work"
+
+[ui.home.workTitle]
+nota = "Título de la sección de casos destacados en Home."
+es = "Casos destacados"
+en = "Featured Cases"
+
+[ui.home.viewAll]
+nota = "Link al catálogo completo. Aparece dos veces en Home: arriba de la grilla y en el botón del final."
+es = "Ver todo el trabajo"
+en = "See all work"
+
+
+# ─── Caso — ficha y navegación ───────────────────────────────────────────
+
+[ui.work.client]
+nota = "Etiqueta de la ficha del caso: la columna del cliente."
+es = "Cliente"
+en = "Client"
+
+[ui.work.role]
+nota = "Etiqueta de la ficha: tu rol en el proyecto. También se usa en el detalle de Lab."
+es = "Rol"
+en = "Role"
+
+[ui.work.period]
+nota = "Etiqueta de la ficha: cuándo se hizo. También se usa en el detalle de Lab."
+es = "Período"
+en = "Period"
+
+[ui.work.site]
+nota = "Etiqueta de la ficha: link al sitio publicado. Solo aparece si el caso tiene URL."
+es = "Ver sitio"
+en = "View site"
+
+[ui.work.next]
+nota = "Volanta del link al caso siguiente, al pie del detalle."
+es = "Siguiente caso"
+en = "Next case"
+
+[ui.work.back]
+nota = "Link de vuelta al catálogo, al pie del detalle."
+es = "Volver al trabajo"
+en = "Back to work"
+
+[ui.work.notFound]
+nota = "Mensaje cuando la URL trae un caso que no existe (?case=loquesea)."
+es = "No encontramos ese caso."
+en = "We couldn't find that case."
+
+[ui.work.notFoundCta]
+nota = "Botón de salida de esa pantalla de error."
+es = "Ver todo el trabajo"
+en = "See all work"
+
+
+# ─── All Works ───────────────────────────────────────────────────────────
+
+[ui.all.eyebrow]
+nota = "Volanta de All Works."
+es = "Catálogo completo"
+en = "Full catalog"
+
+[ui.all.title]
+nota = "Título de All Works."
+es = "All Works"
+en = "All Works"
+
+[ui.all.intro]
+nota = "Bajada de All Works: qué va a encontrar quien entra y con qué criterio está ordenado."
+es = "Todos los casos, destacados y secundarios, sin jerarquía visual fuerte."
+en = "Every case, featured and secondary, with no strong visual hierarchy."
+
+[ui.all.filterAll]
+nota = "Primer filtro del catálogo: muestra todos los casos. Los demás filtros son los tags, que no se traducen."
+es = "Todos"
+en = "All"
+
+[ui.all.filterLabel]
+nota = "Nombre del grupo de filtros para lectores de pantalla."
+es = "Filtrar por tag"
+en = "Filter by tag"
+
+[ui.all.empty]
+nota = "Mensaje si un filtro no deja ningún caso a la vista."
+es = "No hay casos con ese tag."
+en = "No cases with that tag."
+
+
+# ─── Lab ─────────────────────────────────────────────────────────────────
+
+[ui.lab.eyebrow]
+nota = "Volanta de Lab."
+es = "Experimentando"
+en = "Experimenting"
+
+[ui.lab.title]
+nota = "Título de Lab. Se le agrega un cursor verde parpadeante por CSS, no va en el texto."
+es = "Lab"
+en = "Lab"
+
+[ui.lab.intro]
+nota = "Bajada de Lab: por qué existe la sección y en qué se diferencia del trabajo con clientes."
+es = """
+Ganas de crear, probar, experimentar. De ahí salen estos proyectos, sin clientes ni deadlines."""
+en = """
+The urge to create, try, experiment. That's where these projects come from, no clients, no deadlines."""
+
+[ui.lab.back]
+nota = "Link de vuelta al listado de Lab, al pie del detalle."
+es = "Volver al lab"
+en = "Back to lab"
+
+[ui.lab.next]
+nota = "Volanta del link al experimento siguiente."
+es = "Siguiente experimento"
+en = "Next experiment"
+
+[ui.lab.notFound]
+nota = "Mensaje cuando la URL trae un experimento que no existe."
+es = "No encontramos ese experimento."
+en = "We couldn't find that experiment."
+
+[ui.lab.notFoundCta]
+nota = "Botón de salida de esa pantalla de error."
+es = "Volver al lab"
+en = "Back to lab"
+
+
+# ─── About ───────────────────────────────────────────────────────────────
+
+[ui.about.eyebrow]
+nota = "Volanta de About."
+es = "About"
+en = "About"
+
+[ui.about.title]
+nota = "Titular de About (h1). Se corta a ~16 caracteres por línea: conviene que sea corto."
+es = "15 años conectando diseño, motion y marca."
+en = "15 years connecting design, motion, and brand."
+
+[ui.about.name]
+nota = "Tu nombre, abajo del titular de About, alineado a la izquierda."
+es = "Fede Kilich"
+en = "Fede Kilich"
+
+[ui.about.role]
+nota = "Tu rol, abajo del titular de About, alineado a la derecha. Enfrenta al nombre."
+es = "Design Lead · Brand & Motion"
+en = "Design Lead · Brand & Motion"
+
+[ui.about.photoPending]
+nota = "Texto del recuadro que reemplaza a tu foto hasta que exista. Se borra la entrada cuando se cargue la imagen."
+es = "Foto pendiente"
+en = "Photo coming soon"
+
+[ui.about.quote]
+nota = "Frase destacada de About, en grande y en color de acento. Es la idea que resume todo el bio."
+es = "Una visión 360° del diseño, el motion y la marca."
+en = "A 360° view of design, motion, and brand."
+
+[ui.about.p1]
+nota = "Primer párrafo de About: cómo empezaste y de dónde viene la curiosidad."
+es = """
+Llevo más de 15 años trabajando en comunicación visual, y empecé como empiezan muchos: haciendo cosas que nadie me pidió. Wallpapers, sitios en Flash para amigos, experimentando con herramientas que aprendí solo. Esa curiosidad nunca me abandonó."""
+en = """
+I've spent more than 15 years working in visual communication, and I started the way many people do: making things nobody asked for. Wallpapers, Flash sites for friends, experimenting with tools I taught myself. That curiosity never left me."""
+
+[ui.about.p2]
+nota = "Segundo párrafo de About: el recorrido por productoras, agencias, gobierno y fintech, y qué te dejó cada uno."
+es = """
+Con los años pasé por productoras, agencias de publicidad, comunicaciones de gobierno y fintech. Cada entorno me enseñó algo distinto: la productora me dio tiempo y libertad para desarrollar profundidad técnica en 3D, motion, edición y posproducción. Las agencias me enseñaron ritmo, presión y lo que significa trabajar para un cliente real con un deadline real. El gobierno me dio escala: coordinar un equipo de más de 10 diseñadores para comunicar a millones de personas en uno de los momentos más complejos que se recuerdan. Y la fintech me enseñó disciplina: trabajar dentro de sistemas de marca estrictos y comunicar conceptos financieros complejos con claridad visual."""
+en = """
+Over the years I moved through production companies, advertising agencies, government communications, and fintech. Each environment taught me something different: the production company gave me time and freedom to build technical depth in 3D, motion, editing, and post-production. The agencies taught me pace, pressure, and what it means to work for a real client with a real deadline. Government gave me scale: coordinating a team of more than 10 designers to communicate with millions of people during one of the most complex moments in recent memory. And fintech taught me discipline: working inside strict brand systems and communicating complex financial concepts with visual clarity."""
+
+[ui.about.p3]
+nota = "Tercer párrafo de About: qué conecta todo eso. Es el argumento central del posicionamiento."
+es = """
+Lo que conecta todo eso es una visión 360° de la comunicación visual. No soy especialista en una sola disciplina, soy alguien que entiende cómo el diseño, el motion y la marca funcionan juntos, y cómo liderar un equipo que cubre todo ese espectro."""
+en = """
+What connects all of it is a 360° view of visual communication. I'm not a specialist in a single discipline — I'm someone who understands how design, motion, and brand work together, and how to lead a team that covers that whole spectrum."""
+
+[ui.about.p4]
+nota = "Cuarto párrafo de About: qué aportás en un rol de liderazgo. Cierra apuntando a lo que busca quien contrata."
+es = """
+Eso es lo que aporto en un rol de liderazgo. No solo la capacidad de hacer el trabajo, sino de entender qué se necesita, distribuirlo bien, y asegurar que el resultado sea coherente, ya sea en una vía pública, una red social, un video o una pantalla."""
+en = """
+That's what I bring to a leadership role. Not just the ability to do the work, but to understand what's needed, distribute it well, and make sure the result holds together — whether it lands on a billboard, a social feed, a video, or a screen."""
+
+[ui.about.timelineTitle]
+nota = "Título de la sección de recorrido profesional en About."
+es = "Recorrido"
+en = "Career path"
+
+
+# ─── Contact ─────────────────────────────────────────────────────────────
+
+[ui.contact.eyebrow]
+nota = "Volanta de Contact."
+es = "Contacto"
+en = "Contact"
+
+[ui.contact.title]
+nota = "Titular de Contact."
+es = "Hablemos."
+en = "Let's talk."
+
+[ui.contact.emailLabel]
+nota = "Etiqueta de la fila del email."
+es = "Email"
+en = "Email"
+
+[ui.contact.linkedinLabel]
+nota = "Etiqueta de la fila de LinkedIn."
+es = "LinkedIn"
+en = "LinkedIn"
+
+[ui.contact.copied]
+nota = "Confirmación al copiar el email. Aparece al lado de la etiqueta y se desvanece sola."
+es = "· Copiado"
+en = "· Copied"
+
+[ui.contact.copyFail]
+nota = "Aviso si el navegador bloqueó el copiado, para que lo seleccione a mano."
+es = "· Copiá manualmente"
+en = "· Copy manually"
+
+[ui.contact.copyHint]
+nota = "Texto del botón de email para lectores de pantalla: aclara que copia, no que abre el correo."
+es = "Click para copiar el email"
+en = "Click to copy the email"
+
+[ui.contact.based]
+nota = "Línea de cierre de Contact: desde dónde trabajás y con qué alcance."
+es = "Buenos Aires, Argentina. Remotamente para el mundo."
+en = "Buenos Aires, Argentina. Remote, for the world."
+
+
+# ─── Placeholders de imagen y video ──────────────────────────────────────
+
+[ui.media.imagePending]
+nota = "Texto de los recuadros que reemplazan a las imágenes que faltan. Se borra cuando haya material real."
+es = "Imagen pendiente"
+en = "Image pending"
+
+[ui.media.videoPending]
+nota = "Texto de los recuadros que reemplazan a los videos que faltan."
+es = "Video pendiente"
+en = "Video pending"
+
+
+# ─── Pie de página ───────────────────────────────────────────────────────
+
+[ui.footer.rights]
+nota = "Línea de copyright del pie, en las 7 páginas."
+es = "© 2026 Fede Kilich"
+en = "© 2026 Fede Kilich"
+
+[ui.footer.location]
+nota = "Ubicación en el pie, al lado del copyright."
+es = "Buenos Aires, Argentina"
+en = "Buenos Aires, Argentina"
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  CASOS
+#  El contenido de cada caso del portfolio. El orden, el destacado y las
+#  imágenes no se tocan acá: eso vive en data/cases.json.
+# ══════════════════════════════════════════════════════════════════════════
+
+
+# ─── 1. GCBA / COVID-19   ·   id: gcba ───────────────────────────────────
+
+[caso.gcba.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Secretaría de Comunicaciones GCBA"
+en = ""
+
+[caso.gcba.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "GCBA / COVID-19"
+en = "GCBA / COVID-19"
+
+[caso.gcba.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Coordinar comunicación de crisis para una ciudad, en tiempo real."
+en = "Coordinating crisis communication for a city, in real time."
+
+[caso.gcba.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = """
+Coordinador del equipo de diseño, Secretaría de Comunicaciones GCBA. Lideré equipo de 10+ diseñadores."""
+en = "Design team coordinator, GCBA Communications Department. Led a team of 10+ designers."
+
+[caso.gcba.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "Marzo 2020 – Agosto 2021"
+en = ""
+
+[caso.gcba.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+El 3 de marzo de 2020 se confirmó el primer caso de COVID-19 en Buenos Aires. En cuestión de días, la Secretaría de Comunicaciones debía responder con información clara, masiva y urgente a millones de personas. Sin manual de crisis, sin procesos remotos establecidos. Coordiné un equipo de más de 10 diseñadores que pasó a operar 100% remoto de un día para el otro. Definimos un sistema visual simple y reconocible: amarillo dominante, magenta como acento, tipografía clara, iconografía de línea consistente. Durante más de un año, el equipo sostuvo la producción de comunicación pública en uno de los momentos más complejos de la historia reciente de la ciudad."""
+en = """
+On March 3, 2020, the first COVID-19 case was confirmed in Buenos Aires. Within days, the Communications Department had to respond with clear, large-scale, urgent information for millions of people. No crisis playbook, no established remote processes. I coordinated a team of more than 10 designers that went 100% remote overnight. We defined a simple, recognizable visual system: dominant yellow, magenta as an accent, clear typography, consistent line iconography. For over a year, the team sustained public communication output through one of the most complex moments in the city's recent history."""
+
+[caso.gcba.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ─── 2. Mammina Fit   ·   id: mammina-fit ────────────────────────────────
+
+[caso.mammina-fit.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Mammina Fit — Merano, Italia (2025)"
+en = ""
+
+[caso.mammina-fit.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "Mammina Fit"
+en = "Mammina Fit"
+
+[caso.mammina-fit.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "De una idea con energía a una marca completa."
+en = ""
+
+[caso.mammina-fit.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = "Brand strategy y design completo. En colaboración con Bretzel Brand Lab."
+en = ""
+
+[caso.mammina-fit.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2025"
+en = ""
+
+[caso.mammina-fit.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+Mammina Fit llegó con una idea clara y mucho desorden. La clienta quería solo una actualización sutil del logo existente. Se realizó esa versión, pero también se desarrolló un rebranding completo por convicción propia. Se pidió permiso para presentarlo sin compromiso. La clienta eligió el camino nuevo. El trabajo no se limitó al diseño: Bretzel acompañó la organización del modelo de negocio y su digitalización completa."""
+en = ""
+
+[caso.mammina-fit.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = "https://mamminafit.com"
+
+
+# ─── 3. Driving Team Schobloch   ·   id: driving-team-schobloch ──────────
+
+[caso.driving-team-schobloch.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Driving Team Schobloch — Weingarten, Alemania (2025/2026)"
+en = ""
+
+[caso.driving-team-schobloch.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "Driving Team Schobloch"
+en = "Driving Team Schobloch"
+
+[caso.driving-team-schobloch.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Dos marcas heredadas, una sola dirección."
+en = ""
+
+[caso.driving-team-schobloch.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.driving-team-schobloch.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2025 – 2026"
+en = ""
+
+[caso.driving-team-schobloch.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+La escuela venía operando bajo dos marcas distintas, sociedad heredada nunca resuelta visualmente. Dos logos completamente diferentes, dos estéticas sin relación. El desafío era unificar dos historias sin borrar ninguna. El resultado fue un sistema visual unificado que integra ambos nombres bajo una sola identidad, desplegado en todos los puntos de contacto del negocio."""
+en = ""
+
+[caso.driving-team-schobloch.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = "https://drivingteam-schobloch.de"
+
+
+# ─── 4. ARM (Londres)   ·   id: arm ──────────────────────────────────────
+
+[caso.arm.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "ARM — Londres, Reino Unido"
+en = ""
+
+[caso.arm.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "ARM (Londres)"
+en = "ARM (London)"
+
+[caso.arm.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Precisión técnica para tecnología compleja."
+en = ""
+
+[caso.arm.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = """
+Motion graphics y animación. Dentro de equipo de freelancers coordinado por Vladimir Rueda. El diseño base fue de otro miembro del equipo."""
+en = ""
+
+[caso.arm.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.arm.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+Videos técnicos para presentación de nueva arquitectura de servidores ARM vs estándar de industria. Infografías animadas para facilitar comprensión. Trabajo de precisión técnica y ejecución impecable dentro de parámetros definidos por el cliente y el director."""
+en = ""
+
+[caso.arm.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ─── 5. ØX Beard Care   ·   id: ox-beard-care ────────────────────────────
+
+[caso.ox-beard-care.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "ØX Beard Care — Argentina"
+en = ""
+
+[caso.ox-beard-care.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "ØX Beard Care"
+en = "ØX Beard Care"
+
+[caso.ox-beard-care.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "De la nada a una marca premium."
+en = ""
+
+[caso.ox-beard-care.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.ox-beard-care.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.ox-beard-care.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+Empezó sin nombre ni marca. El brief era simple y abierto: construir una marca de cuidado masculino premium que se alejara del cliché lumberjack saturando el mercado. Miramos hacia el norte: cultura vikinga, relación histórica de la barba con identidad. ØX, "hacha" en noruego, nació así. Identidad oscura, precisa, minimal."""
+en = ""
+
+[caso.ox-beard-care.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ─── 6. Inviu   ·   id: inviu ────────────────────────────────────────────
+
+[caso.inviu.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Inviu — Grupo Financiero Galicia — Argentina, Perú, Uruguay (2021–presente)"
+en = ""
+
+[caso.inviu.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "Inviu"
+en = "Inviu"
+
+[caso.inviu.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Cinco años construyendo una marca fintech regional."
+en = "Five years building a regional fintech brand."
+
+[caso.inviu.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = "Brand Designer — Inviu"
+en = "Brand Designer — Inviu"
+
+[caso.inviu.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2021 – presente"
+en = ""
+
+[caso.inviu.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = """
+Durante casi cinco años, único diseñador de marca de la compañía, operando transversalmente a todos los equipos. Trabajo sostenido: emails segmentados, redes sociales, materiales comerciales, folletería institucional, eventos anuales kickoff por país con identidad propia. Con la expansión regional a Perú y Uruguay, el trabajo sumó la dimensión de adaptar la comunicación a nuevos mercados manteniendo coherencia de marca."""
+en = """
+For nearly five years, the company's only brand designer, working across every team. Sustained output: segmented emails, social media, sales materials, institutional print collateral, annual kickoff events with a dedicated identity for each country. With the regional expansion into Peru and Uruguay, the work took on the added dimension of adapting communication to new markets while keeping the brand coherent."""
+
+[caso.inviu.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ─── 7. AMA Studio (Zürich)   ·   id: ama-studio ─────────────────────────
+
+[caso.ama-studio.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "AMA Studio — Zürich, Suiza"
+en = ""
+
+[caso.ama-studio.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "AMA Studio (Zürich)"
+en = "AMA Studio (Zürich)"
+
+[caso.ama-studio.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Branding system desde logo existente."
+en = ""
+
+[caso.ama-studio.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.ama-studio.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.ama-studio.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = ""
+en = ""
+
+[caso.ama-studio.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ─── 8. Dr. Caroline Wilson (Alemania)   ·   id: caroline-wilson ─────────
+
+[caso.caroline-wilson.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Dr. Caroline Wilson — Alemania"
+en = ""
+
+[caso.caroline-wilson.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "Dr. Caroline Wilson (Alemania)"
+en = "Dr. Caroline Wilson (Germany)"
+
+[caso.caroline-wilson.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Rebranding respetando legado."
+en = ""
+
+[caso.caroline-wilson.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.caroline-wilson.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[caso.caroline-wilson.narrative]
+nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
+es = ""
+en = ""
+
+[caso.caroline-wilson.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = ""
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  LAB
+#  Los experimentos de la sección Lab.
+# ══════════════════════════════════════════════════════════════════════════
+
+
+# ─── 1. Video de producto para Bidcom/Gadnic   ·   id: bidcom-gadnic ─────
+
+[lab.bidcom-gadnic.client]
+nota = "Cliente o marco del experimento. Se muestra dentro del recuadro del video y como volanta del detalle."
+es = "Bidcom / Gadnic"
+en = ""
+
+[lab.bidcom-gadnic.title]
+nota = "Título del experimento, en la card y en el detalle."
+es = "Video de producto para Bidcom/Gadnic"
+en = "Product video for Bidcom/Gadnic"
+
+[lab.bidcom-gadnic.role]
+nota = "Qué hiciste. Va en la ficha del detalle."
+es = "Motion, edición y posproducción — proyecto personal"
+en = "Motion, editing, and post-production — personal project"
+
+[lab.bidcom-gadnic.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2025"
+en = ""
+
+[lab.bidcom-gadnic.text]
+nota = "Una línea sobre qué es la pieza. Se lee en la card y bajo el título del detalle."
+es = ""
+en = ""
+
+[lab.bidcom-gadnic.narrative]
+nota = "El experimento contado completo. Es el cuerpo del detalle."
+es = ""
+en = ""
+
+
+# ─── 2. experimento-02   ·   id: experimento-02 ──────────────────────────
+
+[lab.experimento-02.client]
+nota = "Cliente o marco del experimento. Se muestra dentro del recuadro del video y como volanta del detalle."
+es = "Proyecto personal"
+en = ""
+
+[lab.experimento-02.title]
+nota = "Título del experimento, en la card y en el detalle."
+es = ""
+en = ""
+
+[lab.experimento-02.role]
+nota = "Qué hiciste. Va en la ficha del detalle."
+es = ""
+en = ""
+
+[lab.experimento-02.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2025"
+en = ""
+
+[lab.experimento-02.text]
+nota = "Una línea sobre qué es la pieza. Se lee en la card y bajo el título del detalle."
+es = ""
+en = ""
+
+[lab.experimento-02.narrative]
+nota = "El experimento contado completo. Es el cuerpo del detalle."
+es = ""
+en = ""
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  RECORRIDO
+#  Los hitos del timeline de About. Los dos últimos tienen caseId: su
+#  teaser y su detalle se toman del caso, así que acá quedan vacíos.
+# ══════════════════════════════════════════════════════════════════════════
+
+
+# ─── 1. Antarctica Films   ·   id: antarctica ────────────────────────────
+
+[hito.antarctica.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2006–2014"
+en = "2006–2014"
+
+[hito.antarctica.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "Antarctica Films"
+en = "Antarctica Films"
+
+[hito.antarctica.teaser]
+nota = "Una línea sobre esa etapa, siempre visible bajo el título."
+es = "Motion, 3D y posproducción para TV. Ahí aprendí el oficio."
+en = "Motion, 3D, and post-production for TV. That's where I learned the craft."
+
+[hito.antarctica.expanded]
+nota = "El detalle que se despliega al abrir el hito: qué hacías y qué se logró ahí."
+es = """
+Entré como Motion Designer y 3D Artist, después pasé a coordinar el equipo. Piezas para cable (bumpers, cortinas, transiciones), motion, 3D y posproducción en cada entrega. Con los años empecé a organizar cronogramas y liderar proyectos clave del equipo."""
+en = """
+I started as a Motion Designer and 3D Artist, later moving into team coordination. Pieces for cable TV (bumpers, lower thirds, transitions), motion, 3D, and post-production on every delivery. Over time I started organizing schedules and leading key projects for the team."""
+
+
+# ─── 2. Ideapolis   ·   id: ideapolis ────────────────────────────────────
+
+[hito.ideapolis.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2014–2016"
+en = "2014–2016"
+
+[hito.ideapolis.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "Ideapolis"
+en = "Ideapolis"
+
+[hito.ideapolis.teaser]
+nota = "Una línea sobre esa etapa, siempre visible bajo el título."
+es = "3D para activaciones de marca: stands, ferias, puntos de venta."
+en = "3D for brand activations: stands, trade shows, points of sale."
+
+[hito.ideapolis.expanded]
+nota = "El detalle que se despliega al abrir el hito: qué hacías y qué se logró ahí."
+es = """
+Diseñé, modelé y rendericé espacios físicos para activaciones en ferias y puntos de venta. Esas visualizaciones eran tanto para mostrarle la idea al cliente como guía técnica para arquitectos y proveedores. El stand del Banco Central en Tecnópolis, ganado por concurso, es lo que más recuerdo de esta etapa."""
+en = """
+I designed, modeled, and rendered physical spaces for activations at trade shows and points of sale. Those visualizations worked both to show the client the idea and as technical guides for architects and vendors. The Central Bank's stand at Tecnópolis, won through a competitive bid, is what I remember most from this stage."""
+
+
+# ─── 3. Al Margen BA   ·   id: almargen ──────────────────────────────────
+
+[hito.almargen.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2016–2017"
+en = "2016–2017"
+
+[hito.almargen.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "Al Margen BA"
+en = "Al Margen BA"
+
+[hito.almargen.teaser]
+nota = "Una línea sobre esa etapa, siempre visible bajo el título."
+es = "Motion graphics para publicidad. Un año de mucho ritmo."
+en = "Motion graphics for advertising. A fast-paced year."
+
+[hito.almargen.expanded]
+nota = "El detalle que se despliega al abrir el hito: qué hacías y qué se logró ahí."
+es = """
+Motion graphics, animación 3D y compositing para campañas digitales y de TV, con clientes como Despegar, ICBC y Garbarino. También sumé posproducción de cine: correcciones visuales de época para la película El Ángel (2018), con rotoscopía y motion tracking."""
+en = """
+Motion graphics, 3D animation, and compositing for digital and TV campaigns, with clients like Despegar, ICBC, and Garbarino. I also picked up film post-production: period-accurate visual corrections for the film El Ángel (2018), using rotoscoping and motion tracking."""
+
+
+# ─── 4. GCBA — Diseñador   ·   id: gcbaDesigner ──────────────────────────
+
+[hito.gcbaDesigner.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2017–2019"
+en = "2017–2019"
+
+[hito.gcbaDesigner.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "GCBA — Diseñador"
+en = "GCBA — Designer"
+
+[hito.gcbaDesigner.teaser]
+nota = "Una línea sobre esa etapa, siempre visible bajo el título."
+es = "Piezas de campaña y comunicación institucional para la Ciudad."
+en = "Campaign pieces and institutional communication for the City."
+
+[hito.gcbaDesigner.expanded]
+nota = "El detalle que se despliega al abrir el hito: qué hacías y qué se logró ahí."
+es = """
+Diseñé piezas para campañas de concientización, eventos culturales y comunicación institucional, en digital e impreso, incluyendo vía pública y gran formato. Trabajé en la presentación del nuevo Código Urbanístico de Buenos Aires (2019) y participé en la comunicación de los Juegos Olímpicos de la Juventud 2018."""
+en = """
+I designed pieces for awareness campaigns, cultural events, and institutional communication, across digital and print, including outdoor and large-format work. I worked on the presentation of the new Buenos Aires Urban Code (2019) and took part in the communication for the 2018 Youth Olympic Games."""
+
+
+# ─── 5. GCBA — Coordinador   ·   id: gcbaCoordinator   ·   toma el texto del caso «gcba» 
+
+[hito.gcbaCoordinator.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2019–2021"
+en = "2019–2021"
+
+[hito.gcbaCoordinator.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "GCBA — Coordinador"
+en = "GCBA — Coordinator"
+
+
+# ─── 6. Inviu   ·   id: inviu   ·   toma el texto del caso «inviu» ───────
+
+[hito.inviu.period]
+nota = "Años del hito. Se muestra arriba del título, en versalitas."
+es = "2021–presente"
+en = "2021–present"
+
+[hito.inviu.title]
+nota = "Nombre del lugar o del rol. Es el botón que despliega el detalle."
+es = "Inviu"
+en = "Inviu"
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  PÁGINAS
+#  Lo que ve un buscador y lo que aparece al compartir el link.
+#  No se ve dentro del sitio.
+# ══════════════════════════════════════════════════════════════════════════
+
+
+# ─── about.html ──────────────────────────────────────────────────────────
+
+[pagina.about.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "About — Fede Kilich"
+en = ""
+
+[pagina.about.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Design Lead · Brand & Motion. 15 años conectando diseño, motion y marca."
+en = ""
+
+
+# ─── all-work.html ───────────────────────────────────────────────────────
+
+[pagina.all-work.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "All Works — Fede Kilich"
+en = ""
+
+[pagina.all-work.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Catálogo completo de casos: branding, motion, comunicación institucional y fintech."
+en = ""
+
+
+# ─── contact.html ────────────────────────────────────────────────────────
+
+[pagina.contact.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "Contact — Fede Kilich"
+en = ""
+
+[pagina.contact.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Escribime. Buenos Aires, Argentina. Remotamente para el mundo."
+en = ""
+
+
+# ─── index.html ──────────────────────────────────────────────────────────
+
+[pagina.index.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "Fede Kilich — Design Lead · Brand & Motion"
+en = ""
+
+[pagina.index.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = """
+Design Lead con foco en identidad visual, motion design y procesos creativos potenciados por IA."""
+en = ""
+
+
+# ─── lab-work.html ───────────────────────────────────────────────────────
+
+[pagina.lab-work.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "Lab — Fede Kilich"
+en = ""
+
+[pagina.lab-work.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Experimento del Lab de Fede Kilich."
+en = ""
+
+
+# ─── lab.html ────────────────────────────────────────────────────────────
+
+[pagina.lab.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "Lab — Fede Kilich"
+en = ""
+
+[pagina.lab.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Proyectos propios: crear, probar, experimentar. Sin clientes ni deadlines."
+en = ""
+
+
+# ─── work.html ───────────────────────────────────────────────────────────
+
+[pagina.work.title]
+nota = "Título de la pestaña del navegador y de los resultados de búsqueda."
+es = "Caso — Fede Kilich"
+en = ""
+
+[pagina.work.description]
+nota = "Resumen de la página para buscadores y para las tarjetas al compartir el link."
+es = "Caso del portfolio de Fede Kilich."
+en = ""
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  CONTACTO
+#  Se repiten en el pie de las 7 páginas: cambiarlos acá los cambia
+#  en todas de una.
+# ══════════════════════════════════════════════════════════════════════════
+
+[contacto.email]
+nota = "Tu email. Se copia al portapapeles en Contact y aparece en el pie de las 7 páginas."
+valor = "hola@fedekilich.com"
+
+[contacto.linkedin]
+nota = "URL completa de tu perfil de LinkedIn."
+valor = "https://www.linkedin.com/in/fedekilich"
+
+[contacto.linkedinCorto]
+nota = "Cómo se muestra el perfil en pantalla, sin el dominio."
+valor = "/in/fedekilich"
