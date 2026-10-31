@@ -1,0 +1,130 @@
+{
+  "milestones": [
+    {
+      "id": "antarctica",
+      "order": 1,
+      "period": {
+        "es": "2006–2014",
+        "en": "2006–2014"
+      },
+      "caseId": "",
+      "title": {
+        "es": "Antarctica Films",
+        "en": "Antarctica Films"
+      },
+      "teaser": {
+        "es": "Motion, 3D y posproducción para TV. Ahí aprendí el oficio.",
+        "en": "Motion, 3D, and post-production for TV. That's where I learned the craft."
+      },
+      "expanded": {
+        "es": "Entré como Motion Designer y 3D Artist, después pasé a coordinar el equipo. Piezas para cable (bumpers, cortinas, transiciones), motion, 3D y posproducción en cada entrega. Con los años empecé a organizar cronogramas y liderar proyectos clave del equipo.",
+        "en": "I started as a Motion Designer and 3D Artist, later moving into team coordination. Pieces for cable TV (bumpers, lower thirds, transitions), motion, 3D, and post-production on every delivery. Over time I started organizing schedules and leading key projects for the team."
+      }
+    },
+    {
+      "id": "ideapolis",
+      "order": 2,
+      "period": {
+        "es": "2014–2016",
+        "en": "2014–2016"
+      },
+      "caseId": "",
+      "title": {
+        "es": "Ideapolis",
+        "en": "Ideapolis"
+      },
+      "teaser": {
+        "es": "3D para activaciones de marca: stands, ferias, puntos de venta.",
+        "en": "3D for brand activations: stands, trade shows, points of sale."
+      },
+      "expanded": {
+        "es": "Diseñé, modelé y rendericé espacios físicos para activaciones en ferias y puntos de venta. Esas visualizaciones eran tanto para mostrarle la idea al cliente como guía técnica para arquitectos y proveedores. El stand del Banco Central en Tecnópolis, ganado por concurso, es lo que más recuerdo de esta etapa.",
+        "en": "I designed, modeled, and rendered physical spaces for activations at trade shows and points of sale. Those visualizations worked both to show the client the idea and as technical guides for architects and vendors. The Central Bank's stand at Tecnópolis, won through a competitive bid, is what I remember most from this stage."
+      }
+    },
+    {
+      "id": "almargen",
+      "order": 3,
+      "period": {
+        "es": "2016–2017",
+        "en": "2016–2017"
+      },
+      "caseId": "",
+      "title": {
+        "es": "Al Margen BA",
+        "en": "Al Margen BA"
+      },
+      "teaser": {
+        "es": "Motion graphics para publicidad. Un año de mucho ritmo.",
+        "en": "Motion graphics for advertising. A fast-paced year."
+      },
+      "expanded": {
+        "es": "Motion graphics, animación 3D y compositing para campañas digitales y de TV, con clientes como Despegar, ICBC y Garbarino. También sumé posproducción de cine: correcciones visuales de época para la película El Ángel (2018), con rotoscopía y motion tracking.",
+        "en": "Motion graphics, 3D animation, and compositing for digital and TV campaigns, with clients like Despegar, ICBC, and Garbarino. I also picked up film post-production: period-accurate visual corrections for the film El Ángel (2018), using rotoscoping and motion tracking."
+      }
+    },
+    {
+      "id": "gcbaDesigner",
+      "order": 4,
+      "period": {
+        "es": "2017–2019",
+        "en": "2017–2019"
+      },
+      "caseId": "",
+      "title": {
+        "es": "GCBA — Diseñador",
+        "en": "GCBA — Designer"
+      },
+      "teaser": {
+        "es": "Piezas de campaña y comunicación institucional para la Ciudad.",
+        "en": "Campaign pieces and institutional communication for the City."
+      },
+      "expanded": {
+        "es": "Diseñé piezas para campañas de concientización, eventos culturales y comunicación institucional, en digital e impreso, incluyendo vía pública y gran formato. Trabajé en la presentación del nuevo Código Urbanístico de Buenos Aires (2019) y participé en la comunicación de los Juegos Olímpicos de la Juventud 2018.",
+        "en": "I designed pieces for awareness campaigns, cultural events, and institutional communication, across digital and print, including outdoor and large-format work. I worked on the presentation of the new Buenos Aires Urban Code (2019) and took part in the communication for the 2018 Youth Olympic Games."
+      }
+    },
+    {
+      "id": "gcbaCoordinator",
+      "order": 5,
+      "period": {
+        "es": "2019–2021",
+        "en": "2019–2021"
+      },
+      "caseId": "gcba",
+      "title": {
+        "es": "GCBA — Coordinador",
+        "en": "GCBA — Coordinator"
+      },
+      "teaser": {
+        "es": "",
+        "en": ""
+      },
+      "expanded": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "inviu",
+      "order": 6,
+      "period": {
+        "es": "2021–presente",
+        "en": "2021–present"
+      },
+      "caseId": "inviu",
+      "title": {
+        "es": "Inviu",
+        "en": "Inviu"
+      },
+      "teaser": {
+        "es": "",
+        "en": ""
+      },
+      "expanded": {
+        "es": "",
+        "en": ""
+      }
+    }
+  ]
+}

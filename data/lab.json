@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "bidcom-gadnic",
+      "order": 1,
+      "client": {
+        "es": "Bidcom / Gadnic",
+        "en": ""
+      },
+      "title": {
+        "es": "Video de producto para Bidcom/Gadnic",
+        "en": "Product video for Bidcom/Gadnic"
+      },
+      "role": {
+        "es": "Motion, edición y posproducción — proyecto personal",
+        "en": "Motion, editing, and post-production — personal project"
+      },
+      "period": {
+        "es": "2025",
+        "en": ""
+      },
+      "text": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": ""
+    },
+    {
+      "id": "experimento-02",
+      "order": 2,
+      "client": {
+        "es": "Proyecto personal",
+        "en": ""
+      },
+      "title": {
+        "es": "",
+        "en": ""
+      },
+      "role": {
+        "es": "",
+        "en": ""
+      },
+      "period": {
+        "es": "2025",
+        "en": ""
+      },
+      "text": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": ""
+    }
+  ]
+}

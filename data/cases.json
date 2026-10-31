@@ -1,0 +1,291 @@
+{
+  "cases": [
+    {
+      "id": "gcba",
+      "featured": true,
+      "order": 1,
+      "client": {
+        "es": "Secretaría de Comunicaciones GCBA",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "GCBA / COVID-19",
+        "en": "GCBA / COVID-19"
+      },
+      "oneLiner": {
+        "es": "Coordinar comunicación de crisis para una ciudad, en tiempo real.",
+        "en": "Coordinating crisis communication for a city, in real time."
+      },
+      "role": {
+        "es": "Coordinador del equipo de diseño, Secretaría de Comunicaciones GCBA. Lideré equipo de 10+ diseñadores.",
+        "en": "Design team coordinator, GCBA Communications Department. Led a team of 10+ designers."
+      },
+      "period": {
+        "es": "Marzo 2020 – Agosto 2021",
+        "en": ""
+      },
+      "narrative": {
+        "es": "El 3 de marzo de 2020 se confirmó el primer caso de COVID-19 en Buenos Aires. En cuestión de días, la Secretaría de Comunicaciones debía responder con información clara, masiva y urgente a millones de personas. Sin manual de crisis, sin procesos remotos establecidos. Coordiné un equipo de más de 10 diseñadores que pasó a operar 100% remoto de un día para el otro. Definimos un sistema visual simple y reconocible: amarillo dominante, magenta como acento, tipografía clara, iconografía de línea consistente. Durante más de un año, el equipo sostuvo la producción de comunicación pública en uno de los momentos más complejos de la historia reciente de la ciudad.",
+        "en": "On March 3, 2020, the first COVID-19 case was confirmed in Buenos Aires. Within days, the Communications Department had to respond with clear, large-scale, urgent information for millions of people. No crisis playbook, no established remote processes. I coordinated a team of more than 10 designers that went 100% remote overnight. We defined a simple, recognizable visual system: dominant yellow, magenta as an accent, clear typography, consistent line iconography. For over a year, the team sustained public communication output through one of the most complex moments in the city's recent history."
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Government",
+        "Crisis Communication",
+        "Team Leadership"
+      ]
+    },
+    {
+      "id": "mammina-fit",
+      "featured": true,
+      "order": 2,
+      "client": {
+        "es": "Mammina Fit — Merano, Italia (2025)",
+        "en": ""
+      },
+      "url": "https://mamminafit.com",
+      "title": {
+        "es": "Mammina Fit",
+        "en": "Mammina Fit"
+      },
+      "oneLiner": {
+        "es": "De una idea con energía a una marca completa.",
+        "en": ""
+      },
+      "role": {
+        "es": "Brand strategy y design completo. En colaboración con Bretzel Brand Lab.",
+        "en": ""
+      },
+      "period": {
+        "es": "2025",
+        "en": ""
+      },
+      "narrative": {
+        "es": "Mammina Fit llegó con una idea clara y mucho desorden. La clienta quería solo una actualización sutil del logo existente. Se realizó esa versión, pero también se desarrolló un rebranding completo por convicción propia. Se pidió permiso para presentarlo sin compromiso. La clienta eligió el camino nuevo. El trabajo no se limitó al diseño: Bretzel acompañó la organización del modelo de negocio y su digitalización completa.",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Branding",
+        "Brand Strategy"
+      ]
+    },
+    {
+      "id": "driving-team-schobloch",
+      "featured": true,
+      "order": 3,
+      "client": {
+        "es": "Driving Team Schobloch — Weingarten, Alemania (2025/2026)",
+        "en": ""
+      },
+      "url": "https://drivingteam-schobloch.de",
+      "title": {
+        "es": "Driving Team Schobloch",
+        "en": "Driving Team Schobloch"
+      },
+      "oneLiner": {
+        "es": "Dos marcas heredadas, una sola dirección.",
+        "en": ""
+      },
+      "role": {
+        "es": "",
+        "en": ""
+      },
+      "period": {
+        "es": "2025 – 2026",
+        "en": ""
+      },
+      "narrative": {
+        "es": "La escuela venía operando bajo dos marcas distintas, sociedad heredada nunca resuelta visualmente. Dos logos completamente diferentes, dos estéticas sin relación. El desafío era unificar dos historias sin borrar ninguna. El resultado fue un sistema visual unificado que integra ambos nombres bajo una sola identidad, desplegado en todos los puntos de contacto del negocio.",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Branding",
+        "Visual System"
+      ]
+    },
+    {
+      "id": "arm",
+      "featured": true,
+      "order": 4,
+      "client": {
+        "es": "ARM — Londres, Reino Unido",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "ARM (Londres)",
+        "en": "ARM (London)"
+      },
+      "oneLiner": {
+        "es": "Precisión técnica para tecnología compleja.",
+        "en": ""
+      },
+      "role": {
+        "es": "Motion graphics y animación. Dentro de equipo de freelancers coordinado por Vladimir Rueda. El diseño base fue de otro miembro del equipo.",
+        "en": ""
+      },
+      "period": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "Videos técnicos para presentación de nueva arquitectura de servidores ARM vs estándar de industria. Infografías animadas para facilitar comprensión. Trabajo de precisión técnica y ejecución impecable dentro de parámetros definidos por el cliente y el director.",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Motion Graphics",
+        "Animation"
+      ]
+    },
+    {
+      "id": "ox-beard-care",
+      "featured": true,
+      "order": 5,
+      "client": {
+        "es": "ØX Beard Care — Argentina",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "ØX Beard Care",
+        "en": "ØX Beard Care"
+      },
+      "oneLiner": {
+        "es": "De la nada a una marca premium.",
+        "en": ""
+      },
+      "role": {
+        "es": "",
+        "en": ""
+      },
+      "period": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "Empezó sin nombre ni marca. El brief era simple y abierto: construir una marca de cuidado masculino premium que se alejara del cliché lumberjack saturando el mercado. Miramos hacia el norte: cultura vikinga, relación histórica de la barba con identidad. ØX, \"hacha\" en noruego, nació así. Identidad oscura, precisa, minimal.",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Branding",
+        "Packaging"
+      ]
+    },
+    {
+      "id": "inviu",
+      "featured": true,
+      "order": 6,
+      "client": {
+        "es": "Inviu — Grupo Financiero Galicia — Argentina, Perú, Uruguay (2021–presente)",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "Inviu",
+        "en": "Inviu"
+      },
+      "oneLiner": {
+        "es": "Cinco años construyendo una marca fintech regional.",
+        "en": "Five years building a regional fintech brand."
+      },
+      "role": {
+        "es": "Brand Designer — Inviu",
+        "en": "Brand Designer — Inviu"
+      },
+      "period": {
+        "es": "2021 – presente",
+        "en": ""
+      },
+      "narrative": {
+        "es": "Durante casi cinco años, único diseñador de marca de la compañía, operando transversalmente a todos los equipos. Trabajo sostenido: emails segmentados, redes sociales, materiales comerciales, folletería institucional, eventos anuales kickoff por país con identidad propia. Con la expansión regional a Perú y Uruguay, el trabajo sumó la dimensión de adaptar la comunicación a nuevos mercados manteniendo coherencia de marca.",
+        "en": "For nearly five years, the company's only brand designer, working across every team. Sustained output: segmented emails, social media, sales materials, institutional print collateral, annual kickoff events with a dedicated identity for each country. With the regional expansion into Peru and Uruguay, the work took on the added dimension of adapting communication to new markets while keeping the brand coherent."
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Fintech",
+        "Brand Design"
+      ]
+    },
+    {
+      "id": "ama-studio",
+      "featured": false,
+      "order": 7,
+      "client": {
+        "es": "AMA Studio — Zürich, Suiza",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "AMA Studio (Zürich)",
+        "en": "AMA Studio (Zürich)"
+      },
+      "oneLiner": {
+        "es": "Branding system desde logo existente.",
+        "en": ""
+      },
+      "role": {
+        "es": "",
+        "en": ""
+      },
+      "period": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Branding"
+      ]
+    },
+    {
+      "id": "caroline-wilson",
+      "featured": false,
+      "order": 8,
+      "client": {
+        "es": "Dr. Caroline Wilson — Alemania",
+        "en": ""
+      },
+      "url": "",
+      "title": {
+        "es": "Dr. Caroline Wilson (Alemania)",
+        "en": "Dr. Caroline Wilson (Germany)"
+      },
+      "oneLiner": {
+        "es": "Rebranding respetando legado.",
+        "en": ""
+      },
+      "role": {
+        "es": "",
+        "en": ""
+      },
+      "period": {
+        "es": "",
+        "en": ""
+      },
+      "narrative": {
+        "es": "",
+        "en": ""
+      },
+      "media": [],
+      "coverImage": "",
+      "tags": [
+        "Branding"
+      ]
+    }
+  ]
+}
