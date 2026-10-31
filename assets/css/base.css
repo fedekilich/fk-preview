@@ -1,0 +1,522 @@
+/* ============================================================
+   Fede Kilich — base
+   Tokens, reset, tipografía, header y footer compartidos.
+   ============================================================ */
+
+:root {
+  /* Paleta sitio principal */
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --line: #2b2b2b;
+  --line-track: #23232a;
+  --text: #f0f0f0;
+  --text-soft: #cfcfcf;
+  --muted: #8c8c8c;
+  --muted-dim: #666;
+  --accent: #fa4659;
+  /* Acento de la sección Lab (mutación intencional) */
+  --lab: #5555ff;
+
+  --header-bg: rgba(14, 14, 14, 0.82);
+
+  /* Fondo de los bloques de media todavía sin material real */
+  --ph-bg:
+    radial-gradient(120% 120% at 15% 0%, rgba(250, 70, 89, 0.22) 0%, transparent 55%),
+    linear-gradient(140deg, #1a1a1a 0%, #0f0f0f 100%);
+
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Grilla del sitio */
+  --shell-max: 1440px;
+  --shell-pad: clamp(1.25rem, 5vw, 5rem);
+
+  /* Escalas tipográficas recurrentes */
+  --fs-display: clamp(1.9rem, 4.4vw, 3.5rem);
+  --fs-section: clamp(1.4rem, 3vw, 1.9rem);
+  --fs-nav: 0.75rem;
+  --fs-eyebrow: 0.7rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* La barra de scroll reserva su lugar siempre. Sin esto, pasar de una página
+     que scrollea a una que no —o el momento en que llegan los datos y la página
+     crece— cambia el ancho útil 15px y corre todo el contenido de costado. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  /* El footer queda abajo aunque la página sea corta */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main { flex: 1 0 auto; }
+
+::selection { background: var(--accent); color: #fff; }
+
+img, video { max-width: 100%; display: block; }
+
+/* Una clase con display propio le gana a [hidden] si no forzamos */
+[hidden] { display: none !important; }
+
+/* Foco visible y consistente en todo lo interactivo */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Salto directo al contenido para navegación por teclado */
+.skip-link {
+  position: absolute;
+  left: var(--shell-pad);
+  top: -100%;
+  z-index: 200;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-nav);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+.skip-link:focus-visible { top: 0.75rem; }
+
+/* --- Contenedor de página ------------------------------------ */
+.shell {
+  width: 100%;
+  max-width: var(--shell-max);
+  margin-inline: auto;
+  padding-inline: var(--shell-pad);
+}
+
+/* --- Tipografía compartida ----------------------------------- */
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.eyebrow {
+  display: block;
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+}
+
+/* --- Header --------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  color: var(--text);
+  text-decoration: none;
+}
+.wordmark span { color: var(--accent); }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2.5vw, 2.25rem);
+  flex-wrap: wrap;
+}
+
+.site-nav__link {
+  position: relative;
+  padding-block: 0.35rem;
+  font-size: var(--fs-nav);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Subrayado de acento: entra desde la izquierda, sale hacia la derecha.
+   El link a Lab queda afuera — sus dos pseudo son las copias del glitch, y su
+   subrayado (azul, no magenta) se dibuja con background más abajo. */
+.site-nav__link:not(.site-nav__link--lab)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease-out);
+}
+
+.site-nav__link:hover { color: var(--text); }
+.site-nav__link[aria-current="page"] { color: var(--text); }
+
+.site-nav__link:not(.site-nav__link--lab):hover::after,
+.site-nav__link:not(.site-nav__link--lab)[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+/* ─── Item "Lab" del nav ──────────────────────────────────────────────────
+   El subrayado se dibuja con background en vez de ::after, para dejar los dos
+   pseudo-elementos libres: son las copias del glitch de hover.
+   ---------------------------------------------------------------------- */
+.site-nav__link--lab {
+  color: var(--lab);
+  background-image: linear-gradient(var(--lab), var(--lab));
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0 1px;
+  transition: background-size 0.35s var(--ease-out), color 0.25s ease;
+}
+.site-nav__link--lab:hover {
+  color: var(--lab);
+  background-position: 0 100%;
+  background-size: 100% 1px;
+}
+
+/* Glitch corto al entrar el hover — una sola pasada, 180ms.
+   Se omite en touch (sin hover) y con prefers-reduced-motion. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .site-nav__link--lab::before,
+  .site-nav__link--lab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-block: inherit;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  /* El texto duplicado sólo existe mientras dura el hover: fuera de ahí no
+     hay nada que un lector de pantalla pueda leer de más. */
+  .site-nav__link--lab:hover::before,
+  .site-nav__link--lab:hover::after { content: attr(data-text); }
+
+  .site-nav__link--lab:hover { animation: lab-nav-shift 180ms steps(1, end) 1; }
+
+  /* Canales fijos: el split tiene que leerse rojo/cian, no seguir al acento */
+  .site-nav__link--lab:hover::before {
+    color: #fa4659;
+    animation: lab-nav-rojo 180ms steps(1, end) 1;
+  }
+  .site-nav__link--lab:hover::after {
+    color: #4dffff;
+    animation: lab-nav-cian 180ms steps(1, end) 1;
+  }
+
+  @keyframes lab-nav-shift {
+    0%   { transform: translateX(0); }
+    22%  { transform: translateX(3px); }
+    44%  { transform: translateX(-2px); }
+    66%  { transform: translateX(1px); }
+    80%, 100% { transform: translateX(0); }
+  }
+
+  /* Las copias hacen RGB split y block displacement a la vez: cada una se
+     recorta en una franja distinta del label y se corre para su lado. */
+  @keyframes lab-nav-rojo {
+    0%   { opacity: 0; transform: translateX(0); clip-path: inset(0 0 55% 0); }
+    22%  { opacity: 0.9; transform: translateX(-2px); clip-path: inset(0 0 55% 0); }
+    44%  { opacity: 0.9; transform: translateX(-4px); clip-path: inset(38% 0 22% 0); }
+    66%  { opacity: 0.75; transform: translateX(-1px); clip-path: inset(0 0 62% 0); }
+    80%, 100% { opacity: 0; transform: translateX(0); }
+  }
+  @keyframes lab-nav-cian {
+    0%   { opacity: 0; transform: translateX(0); clip-path: inset(52% 0 0 0); }
+    22%  { opacity: 0.9; transform: translateX(2px); clip-path: inset(52% 0 0 0); }
+    44%  { opacity: 0.9; transform: translateX(4px); clip-path: inset(20% 0 45% 0); }
+    66%  { opacity: 0.75; transform: translateX(1px); clip-path: inset(60% 0 0 0); }
+    80%, 100% { opacity: 0; transform: translateX(0); }
+  }
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+.lang-toggle:hover { border-color: var(--muted); }
+.lang-toggle__opt { color: var(--muted); transition: color 0.25s ease; }
+.lang-toggle__opt.is-active { color: var(--text); }
+
+/* --- Footer --------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.75rem;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.85rem 2rem;
+}
+
+.site-footer__nav,
+.site-footer__links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-footer a {
+  font-size: var(--fs-nav);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.site-footer__nav a { color: var(--muted); }
+.site-footer__nav a:hover { color: var(--text); }
+.site-footer__nav a.is-lab { color: var(--lab); }
+.site-footer__links a { color: var(--text); }
+.site-footer__links a:hover { color: var(--accent); }
+
+.site-footer__meta {
+  font-size: var(--fs-eyebrow);
+  color: var(--muted-dim);
+}
+
+/* --- Botón / link de acción ----------------------------------- */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.95rem 1.6rem;
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+/* --- Preferencia de movimiento reducido ----------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Componentes compartidos entre páginas
+   ============================================================ */
+
+/* --- Encabezado de página (eyebrow + título + intro) ---------- */
+.page-hero { padding-top: clamp(3rem, 9vw, 7rem); }
+.page-hero__eyebrow { margin-bottom: 1.25rem; }
+.page-hero__title { font-size: clamp(2.25rem, 7vw, 5.5rem); }
+.page-hero__intro {
+  max-width: 52ch;
+  margin: 1.5rem 0 0;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --- Placeholder de media (hasta cargar imágenes/videos reales) */
+.media-ph {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: border-color 0.3s ease;
+}
+.media-ph__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--ph-bg);
+}
+.media-ph__label {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.media-ph__name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.1rem, 2.4vw, 2rem);
+  letter-spacing: -0.02em;
+  color: rgba(240, 240, 240, 0.55);
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+
+/* Variante con imagen real: mismo marco, la foto llena el cuadro */
+.media-ph--foto .media-ph__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Card de caso (Home y All Works) -------------------------- */
+.case-grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.case-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.case-card__media { aspect-ratio: 4 / 3; }
+.case-card:hover .media-ph { border-color: var(--accent); }
+.case-card:hover .case-card__title { color: var(--accent); }
+
+.case-card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.case-card__client {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.case-card__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.4rem, 2.6vw, 2.25rem);
+  margin: 0.35rem 0 0;
+  transition: color 0.25s ease;
+}
+.case-card__line {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+  max-width: 46ch;
+}
+.case-card__index {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  list-style: none;
+  padding: 0;
+}
+.tag {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* --- Estado "no encontrado" (work.html / lab-work.html) ------- */
+.not-found {
+  padding-top: 6rem;
+  text-align: center;
+}
+.not-found__title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  margin: 0;
+}
+.not-found .btn-ghost { margin-top: 2rem; }
+
+/* Variante angosta del contenedor (Contact) */
+.shell--narrow { max-width: 40rem; }

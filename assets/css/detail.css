@@ -1,0 +1,139 @@
+/* ============================================================
+   Fede Kilich — página de detalle
+   Comparten estructura work.html (casos) y lab-work.html (experimentos).
+   ============================================================ */
+
+.detail__head { padding-top: clamp(3rem, 8vw, 6rem); }
+
+.detail__client { margin-bottom: 1rem; }
+
+.detail__title {
+  font-size: clamp(2.25rem, 7vw, 5.5rem);
+  margin: 0 0 1.5rem;
+}
+
+.detail__line {
+  max-width: 40ch;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.detail__cover {
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+.detail__cover .media-ph { aspect-ratio: 21 / 9; }
+
+/* --- Ficha (cliente / rol / período / sitio) ------------------ */
+.detail__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  border-bottom: 1px solid var(--line);
+  margin: 0;
+}
+
+.detail__facts dt {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.detail__facts dd {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.detail__facts a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.25s ease;
+}
+.detail__facts a:hover { border-color: var(--accent); }
+
+/* --- Narrativa ------------------------------------------------ */
+.detail__narrative { padding-block: clamp(3rem, 7vw, 5.5rem); }
+
+.detail__narrative p {
+  max-width: 62ch;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--text-soft);
+  margin: 0 0 1.4em;
+}
+.detail__narrative p:last-child { margin-bottom: 0; }
+
+/* --- Galería -------------------------------------------------- */
+.detail__gallery {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.detail__gallery .media-ph { aspect-ratio: 16 / 9; }
+
+.detail__media {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+}
+.detail__media img,
+.detail__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Navegación entre piezas ---------------------------------- */
+.detail__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: clamp(3rem, 7vw, 5rem);
+  border-top: 1px solid var(--line);
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.detail__back {
+  font-size: var(--fs-nav);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.detail__back:hover { color: var(--text); }
+
+.detail__next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.detail__next-label {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+.detail__next-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
+  letter-spacing: -0.01em;
+  color: var(--text);
+  transition: color 0.25s ease;
+}
+.detail__next:hover .detail__next-title { color: var(--accent); }

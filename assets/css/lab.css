@@ -1,0 +1,264 @@
+/* ============================================================
+   Fede Kilich — Lab
+   Mutación de paleta: mismos componentes, otros tokens.
+   ============================================================ */
+
+.theme-lab {
+  --bg: #0a0a14;
+  --surface: #12121f;
+  --line: #23233a;
+  --line-track: #23233a;
+  --text-soft: #cfcfe8;
+  --muted: #7c7ca0;
+  --muted-dim: #565676;
+  --accent: #5555ff;
+  --header-bg: rgba(10, 10, 20, 0.82);
+  --ph-bg: linear-gradient(140deg, #161629 0%, #0c0c18 100%);
+
+  /* Acentos propios del Lab */
+  --lab-eyebrow: #b565ff;
+  --lab-caret: #4dff88;
+
+  background-image: radial-gradient(90% 55% at 50% 0%, rgba(85, 85, 255, 0.12) 0%, transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* El eyebrow del Lab se separa del acento azul */
+.theme-lab .eyebrow { color: var(--lab-eyebrow); }
+
+.theme-lab .wordmark {
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+/* Ya estamos en la sección: el subrayado queda dibujado, no espera al hover */
+.theme-lab .site-nav__link--lab {
+  background-position: 0 100%;
+  background-size: 100% 1px;
+}
+
+.media-ph__icon {
+  display: block;
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.theme-lab .media-ph__name {
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* --- Entrada al Lab: un corte de color, después el título parpadea --- */
+.lab-cut {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  pointer-events: none;
+  background: var(--accent);
+  animation: labCut 340ms linear forwards;
+}
+
+@keyframes labCut {
+  0%, 50% { opacity: 1; }
+  100%    { opacity: 0; }
+}
+
+@keyframes labFlicker {
+  0%   { opacity: 0; }
+  18%  { opacity: 1; }
+  30%  { opacity: 0.1; }
+  46%  { opacity: 1; }
+  58%  { opacity: 0.35; }
+  74%  { opacity: 1; }
+  84%  { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.lab-flicker {
+  animation: labFlicker 300ms steps(1, end) both;
+  animation-delay: 340ms;
+}
+.lab-flicker--late { animation-delay: 360ms; }
+
+.lab-caret {
+  color: var(--lab-caret);
+  animation: caret 1.1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% { opacity: 0; }
+}
+
+/* ─── Glitch de transición (lo monta assets/js/lab-glitch.js) ─────────────
+   Arranca al terminar el corte de color y dura 320ms. Tres capas simultáneas
+   sobre un clon de la pantalla: bandas desplazadas, RGB split y scanlines.
+   Todo con steps() — nada interpolado, nada suave.
+   ---------------------------------------------------------------------- */
+
+/* .lab-stage envuelve header + main + footer: asume la columna flex del body
+   para que el footer siga quedando abajo. */
+.lab-stage {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+.lab-stage.is-glitching { visibility: hidden; }
+
+.glitch {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  overflow: hidden;
+  pointer-events: none;
+  animation: glitch-cortes 320ms steps(1, end) forwards;
+}
+
+.glitch__layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* El clon se despega de la columna flex y se ancla arriba; el JS lo corre
+   según el scroll para que coincida con lo que está en pantalla. */
+.glitch__layer > .lab-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: visible;
+}
+
+/* El texto del clon parpadea junto con el glitch, sin esperar su delay */
+.glitch .lab-flicker { animation-delay: 0ms !important; }
+
+/* 1. Block displacement — cada banda salta y vuelve */
+.glitch__band {
+  animation: glitch-banda 320ms steps(1, end) forwards;
+}
+@keyframes glitch-banda {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(calc(var(--dx) * var(--dir))); }
+  20%  { transform: translateX(0); }
+  34%  { transform: translateX(calc(var(--dx) * var(--dir) * -0.55)); }
+  44%  { transform: translateX(0); }
+  62%  { transform: translateX(calc(var(--dx) * var(--dir) * 0.35)); }
+  72%, 100% { transform: translateX(0); }
+}
+
+/* 2. RGB split — rojo a la izquierda, cian a la derecha.
+   Opacidad y brillo contenidos: el split tiene que leerse como franja de color
+   en los bordes y el texto, no lavar los bloques grandes de imagen. */
+.glitch__rgb { mix-blend-mode: screen; opacity: 0.5; }
+.glitch__rgb--red {
+  filter: grayscale(1) sepia(1) saturate(7) hue-rotate(-30deg) brightness(0.85);
+  animation: glitch-rgb-rojo 320ms steps(1, end) forwards;
+}
+.glitch__rgb--cyan {
+  filter: grayscale(1) sepia(1) saturate(7) hue-rotate(140deg) brightness(0.85);
+  animation: glitch-rgb-cian 320ms steps(1, end) forwards;
+}
+@keyframes glitch-rgb-rojo {
+  0%   { transform: translateX(-4px); }
+  20%  { transform: translateX(-3px); }
+  44%  { transform: translateX(-4px); }
+  62%  { transform: translateX(-2px); }
+  80%, 100% { transform: translateX(0); opacity: 0; }
+}
+@keyframes glitch-rgb-cian {
+  0%   { transform: translateX(4px); }
+  20%  { transform: translateX(3px); }
+  44%  { transform: translateX(4px); }
+  62%  { transform: translateX(2px); }
+  80%, 100% { transform: translateX(0); opacity: 0; }
+}
+
+/* 3. Scanlines de alto contraste barriendo la pantalla */
+.glitch__scan { position: absolute; inset: 0; }
+.glitch__scan span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 90%, transparent);
+  animation: glitch-scan 320ms steps(7, end) infinite;
+}
+.glitch__scan span:nth-child(1) { animation-delay: 0ms; }
+.glitch__scan span:nth-child(2) { animation-delay: 90ms; opacity: 0.55; }
+.glitch__scan span:nth-child(3) { animation-delay: 170ms; opacity: 0.75; }
+@keyframes glitch-scan {
+  from { transform: translateY(-4vh); }
+  to   { transform: translateY(104vh); }
+}
+
+/* Cortes secos de opacidad de toda la vista */
+@keyframes glitch-cortes {
+  0%   { opacity: 1; }
+  16%  { opacity: 0.2; }
+  22%  { opacity: 1; }
+  52%  { opacity: 0.35; }
+  58%  { opacity: 1; }
+  84%  { opacity: 0.55; }
+  90%, 100% { opacity: 1; }
+}
+
+/* --- Grilla de experimentos ----------------------------------- */
+.lab-list { padding-block: clamp(4rem, 10vw, 9rem); }
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.lab-card {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-content: start;
+  text-decoration: none;
+  color: inherit;
+}
+.lab-card .media-ph { aspect-ratio: 16 / 9; }
+.lab-card:hover .media-ph { border-color: var(--accent); }
+.lab-card:hover .lab-card__title { color: var(--accent); }
+
+.lab-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 60ch;
+}
+
+.lab-card__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+.lab-card__text p {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* El detalle del Lab lleva video, no una portada panorámica */
+.theme-lab .detail__cover .media-ph { aspect-ratio: 16 / 9; }
+
+/* El corte y el parpadeo son decorativos */
+@media (prefers-reduced-motion: reduce) {
+  .lab-cut { display: none; }
+  .glitch { display: none; }
+  .lab-stage.is-glitching { visibility: visible; }
+  .lab-flicker { animation: none; opacity: 1; }
+  .lab-caret { animation: none; }
+}

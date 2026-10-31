@@ -1,0 +1,39 @@
+/* ============================================================
+   Fede Kilich — All Works
+   ============================================================ */
+
+.all-work { padding-block: clamp(4rem, 10vw, 9rem); }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.filter {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.filter:hover { color: var(--text); border-color: var(--muted); }
+
+.filter[aria-pressed="true"] {
+  color: var(--bg);
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.all-work__empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.all-work__empty[hidden] { display: none; }
