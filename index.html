@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title data-i18n="pagina.index.title">Fede Kilich — Design Lead · Brand &amp; Motion</title>
+<meta name="description" data-i18n-content="pagina.index.description" content="Design Lead con foco en identidad visual, motion design y procesos creativos potenciados por IA.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+
+<link rel="modulepreload" href="assets/js/site.js">
+<link rel="modulepreload" href="data/i18n.js">
+<link rel="modulepreload" href="data/strings.js">
+<link rel="modulepreload" href="assets/js/ui.js">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="wordmark" href="index.html">Fede Kilich<span>.</span></a>
+    <nav class="site-nav" data-i18n-aria-label="nav.primary" aria-label="Navegación principal">
+      <a class="site-nav__link" href="about.html" data-i18n="nav.about">About</a>
+      <a class="site-nav__link" href="all-work.html" data-i18n="nav.work">Work</a>
+      <a class="site-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="site-nav__link site-nav__link--lab" href="lab.html" data-text="lab" data-i18n="nav.lab">lab</a>
+      <button type="button" class="lang-toggle" data-i18n-aria-label="nav.langLabel" aria-label="Cambiar idioma a inglés">
+        <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+        <span aria-hidden="true">/</span>
+        <span class="lang-toggle__opt" data-lang="en">EN</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="shell hero">
+    <div>
+      <span class="hero__role" data-i18n="hero.role">Brand, Motion &amp; IA</span>
+      <h1 class="display hero__title">
+        <span class="hero__line">
+          <span class="hero__word">Fede</span>
+          <span class="hero__bar" aria-hidden="true"></span>
+        </span>
+        <span class="hero__line">
+          <span class="hero__word hero__word--accent">Kilich</span>
+          <span class="hero__bar" aria-hidden="true"></span>
+        </span>
+      </h1>
+      <p class="hero__intro" data-i18n="hero.intro">Design Lead con foco en identidad visual, motion design y procesos creativos potenciados por IA. Trabajo en soluciones visuales que ordenan y fortalecen la comunicación de marca.</p>
+      <a class="hero__scroll" href="#work">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <span class="hero__cue" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!-- TODO: reemplazar por la foto real de Fede (PRD §8) -->
+    <div class="media-ph hero__photo">
+      <div class="media-ph__inner">
+        <span class="media-ph__label" data-i18n="about.photoPending">Foto pendiente</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell work-section" id="work">
+    <div class="work-section__head">
+      <div>
+        <span class="eyebrow work-section__eyebrow" data-i18n="home.workEyebrow">Trabajos</span>
+        <h2 class="display work-section__title" data-i18n="home.workTitle">Casos destacados</h2>
+      </div>
+      <a class="work-section__all" href="all-work.html" data-i18n="home.viewAll">Ver todo el trabajo</a>
+    </div>
+
+    <!-- Las cards las construye assets/js/home.js desde data/cases.json -->
+    <div class="case-grid case-grid--home" id="featured-cases"></div>
+
+    <div class="work-section__cta">
+      <a class="btn-ghost" href="all-work.html">
+        <span data-i18n="home.viewAll">Ver todo el trabajo</span><span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <nav class="site-footer__nav" data-i18n-aria-label="nav.footer" aria-label="Navegación del pie">
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="all-work.html" data-i18n="nav.work">Work</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="is-lab" href="lab.html">Lab</a>
+    </nav>
+    <div class="site-footer__links">
+      <!-- TODO: email definitivo pendiente de confirmar (PRD §5.6) -->
+      <a href="contact.html">hola@fedekilich.com</a>
+      <a href="https://www.linkedin.com/in/fedekilich" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <span class="site-footer__meta">
+      <span data-i18n="footer.rights">© 2026 Fede Kilich</span> —
+      <span data-i18n="footer.location">Buenos Aires, Argentina</span>
+    </span>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/home.js"></script>
+</body>
+</html>

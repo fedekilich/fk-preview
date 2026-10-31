@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · Casos — Fede Kilich</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+  <header class="barra">
+    <h1>Casos</h1>
+    <button class="btn" type="button" id="abrir">Abrir carpeta del proyecto</button>
+    <span class="estado" id="estado">Sin carpeta abierta</span>
+    <span class="sep"></span>
+    <button class="btn" type="button" id="nuevo" disabled>+ Caso nuevo</button>
+    <button class="btn btn--primario" type="button" id="guardar" disabled>Guardar</button>
+    <a class="btn" href="index.html" target="_blank" rel="noopener">Ver sitio ↗</a>
+  </header>
+
+  <p class="aviso" id="aviso">
+    <strong>Herramienta local, solo Chrome o Edge.</strong>
+    Usa la File System Access API, que no existe en Safari ni en Firefox. Hay que darle permiso
+    a la carpeta del proyecto una vez por sesión.
+    Al guardar escribe el texto de los casos en <code>contenido/textos.toml</code>, el resto
+    (orden, destacados, tags, media) en <code>data/cases.json</code>, y copia los archivos
+    subidos a <code>assets/&lt;id-del-caso&gt;/</code>. Esta página no está linkeada desde la
+    navegación del sitio.
+  </p>
+
+  <div class="layout">
+    <aside class="panel">
+      <div class="panel__cabecera">
+        <h2>Casos</h2>
+        <span class="estado" id="contador"></span>
+      </div>
+      <div class="lista" id="lista">
+        <p class="lista__vacia">Abrí la carpeta del proyecto para empezar.</p>
+      </div>
+    </aside>
+
+    <main class="panel editor" id="editor">
+      <p class="editor__vacio">Abrí la carpeta del proyecto y elegí un caso.</p>
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

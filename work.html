@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title data-i18n="pagina.work.title">Caso — Fede Kilich</title>
+<meta name="description" data-i18n-content="pagina.work.description" content="Caso del portfolio de Fede Kilich.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+
+<link rel="modulepreload" href="assets/js/site.js">
+<link rel="modulepreload" href="data/i18n.js">
+<link rel="modulepreload" href="data/strings.js">
+<link rel="modulepreload" href="assets/js/ui.js">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/detail.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="wordmark" href="index.html">Fede Kilich<span>.</span></a>
+    <nav class="site-nav" data-i18n-aria-label="nav.primary" aria-label="Navegación principal">
+      <a class="site-nav__link" href="about.html" data-i18n="nav.about">About</a>
+      <a class="site-nav__link" href="all-work.html" aria-current="page" data-i18n="nav.work">Work</a>
+      <a class="site-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="site-nav__link site-nav__link--lab" href="lab.html" data-text="lab" data-i18n="nav.lab">lab</a>
+      <button type="button" class="lang-toggle" data-i18n-aria-label="nav.langLabel" aria-label="Cambiar idioma a inglés">
+        <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+        <span aria-hidden="true">/</span>
+        <span class="lang-toggle__opt" data-lang="en">EN</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- El caso se resuelve desde ?case=<id> en assets/js/work.js -->
+  <div class="shell not-found" id="not-found" hidden>
+    <h1 class="display not-found__title" data-i18n="work.notFound">No encontramos ese caso.</h1>
+    <a class="btn-ghost" href="all-work.html">
+      <span data-i18n="work.notFoundCta">Ver todo el trabajo</span><span aria-hidden="true">→</span>
+    </a>
+  </div>
+
+  <article id="case" hidden>
+    <header class="shell detail__head">
+      <span class="eyebrow detail__client" id="case-client"></span>
+      <h1 class="display detail__title" id="case-title"></h1>
+      <p class="detail__line" id="case-line"></p>
+      <ul class="tag-list" id="case-tags"></ul>
+    </header>
+
+    <div class="shell detail__cover" id="case-cover"></div>
+
+    <div class="shell">
+      <dl class="detail__facts">
+        <div>
+          <dt data-i18n="work.client">Cliente</dt>
+          <dd id="fact-client">—</dd>
+        </div>
+        <div>
+          <dt data-i18n="work.role">Rol</dt>
+          <dd id="fact-role">—</dd>
+        </div>
+        <div>
+          <dt data-i18n="work.period">Período</dt>
+          <dd id="fact-period">—</dd>
+        </div>
+        <div id="fact-site-wrap" hidden>
+          <dt data-i18n="work.site">Ver sitio</dt>
+          <dd><a id="fact-site" href="#" target="_blank" rel="noopener"></a></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="shell detail__narrative">
+      <p id="case-narrative"></p>
+    </div>
+
+    <div class="shell detail__gallery" id="case-gallery"></div>
+
+    <nav class="shell detail__nav" data-i18n-aria-label="nav.work" aria-label="Work">
+      <a class="detail__back" href="all-work.html">← <span data-i18n="work.back">Volver al trabajo</span></a>
+      <a class="detail__next" id="case-next" href="#">
+        <span class="detail__next-label" data-i18n="work.next">Siguiente caso</span>
+        <strong class="detail__next-title" id="case-next-title"></strong>
+      </a>
+    </nav>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <nav class="site-footer__nav" data-i18n-aria-label="nav.footer" aria-label="Navegación del pie">
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="all-work.html" data-i18n="nav.work">Work</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="is-lab" href="lab.html">Lab</a>
+    </nav>
+    <div class="site-footer__links">
+      <!-- TODO: email definitivo pendiente de confirmar (PRD §5.6) -->
+      <a href="contact.html">hola@fedekilich.com</a>
+      <a href="https://www.linkedin.com/in/fedekilich" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <span class="site-footer__meta">
+      <span data-i18n="footer.rights">© 2026 Fede Kilich</span> —
+      <span data-i18n="footer.location">Buenos Aires, Argentina</span>
+    </span>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/work.js"></script>
+</body>
+</html>

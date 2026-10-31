@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title data-i18n="pagina.all-work.title">All Works — Fede Kilich</title>
+<meta name="description" data-i18n-content="pagina.all-work.description" content="Catálogo completo de casos: branding, motion, comunicación institucional y fintech.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+
+<link rel="modulepreload" href="assets/js/site.js">
+<link rel="modulepreload" href="data/i18n.js">
+<link rel="modulepreload" href="data/strings.js">
+<link rel="modulepreload" href="assets/js/ui.js">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/all-work.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="wordmark" href="index.html">Fede Kilich<span>.</span></a>
+    <nav class="site-nav" data-i18n-aria-label="nav.primary" aria-label="Navegación principal">
+      <a class="site-nav__link" href="about.html" data-i18n="nav.about">About</a>
+      <a class="site-nav__link" href="all-work.html" aria-current="page" data-i18n="nav.work">Work</a>
+      <a class="site-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="site-nav__link site-nav__link--lab" href="lab.html" data-text="lab" data-i18n="nav.lab">lab</a>
+      <button type="button" class="lang-toggle" data-i18n-aria-label="nav.langLabel" aria-label="Cambiar idioma a inglés">
+        <span class="lang-toggle__opt is-active" data-lang="es">ES</span>
+        <span aria-hidden="true">/</span>
+        <span class="lang-toggle__opt" data-lang="en">EN</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="shell page-hero">
+    <span class="eyebrow page-hero__eyebrow" data-i18n="all.eyebrow">Catálogo completo</span>
+    <h1 class="display page-hero__title" data-i18n="all.title">All Works</h1>
+    <p class="page-hero__intro" data-i18n="all.intro">Todos los casos, destacados y secundarios, sin jerarquía visual fuerte.</p>
+  </section>
+
+  <section class="shell all-work">
+    <!-- Los filtros salen de los tags que se repiten en más de un caso -->
+    <div class="filters" id="filters" role="group" data-i18n-aria-label="all.filterLabel" aria-label="Filtrar por tag"></div>
+
+    <div class="case-grid" id="all-cases"></div>
+    <p class="all-work__empty" id="all-empty" data-i18n="all.empty" hidden>No hay casos con ese tag.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <nav class="site-footer__nav" data-i18n-aria-label="nav.footer" aria-label="Navegación del pie">
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="all-work.html" data-i18n="nav.work">Work</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="is-lab" href="lab.html">Lab</a>
+    </nav>
+    <div class="site-footer__links">
+      <!-- TODO: email definitivo pendiente de confirmar (PRD §5.6) -->
+      <a href="contact.html">hola@fedekilich.com</a>
+      <a href="https://www.linkedin.com/in/fedekilich" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <span class="site-footer__meta">
+      <span data-i18n="footer.rights">© 2026 Fede Kilich</span> —
+      <span data-i18n="footer.location">Buenos Aires, Argentina</span>
+    </span>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/all-work.js"></script>
+</body>
+</html>
