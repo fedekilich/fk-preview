@@ -149,6 +149,31 @@ nota = "Botón de salida de esa pantalla de error."
 es = "Ver todo el trabajo"
 en = "See all work"
 
+[ui.work.coverPending]
+nota = "Recuadro de un video del caso que todavía no tiene portada. Se borra cuando esté el frame."
+es = "Portada pendiente"
+en = "Cover pending"
+
+[ui.work.zoom]
+nota = "Lectores de pantalla: botón que abre una imagen del caso en grande. Va seguido de la descripción de la imagen."
+es = "Ampliar"
+en = "Enlarge"
+
+[ui.work.zoomDialog]
+nota = "Lectores de pantalla: nombre del visor de imágenes a pantalla completa."
+es = "Imagen ampliada"
+en = "Enlarged image"
+
+[ui.work.close]
+nota = "Lectores de pantalla: botón que cierra el visor de imágenes."
+es = "Cerrar"
+en = "Close"
+
+[ui.work.watchVideo]
+nota = "Lectores de pantalla: link de un video del caso. Va seguido del nombre del video."
+es = "Ver en YouTube"
+en = "Watch on YouTube"
+
 
 # ─── All Works ───────────────────────────────────────────────────────────
 
@@ -562,7 +587,7 @@ valor = ""
 
 [caso.inviu.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "Inviu — Grupo Financiero Galicia — Argentina, Perú, Uruguay (2021–presente)"
+es = "Inviu · Grupo Financiero Galicia"
 en = ""
 
 [caso.inviu.title]
@@ -572,29 +597,22 @@ en = "Inviu"
 
 [caso.inviu.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Cinco años construyendo una marca fintech regional."
-en = "Five years building a regional fintech brand."
+es = "Comunicación de marca en Argentina, Perú y Uruguay"
+en = ""
 
 [caso.inviu.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = "Brand Designer — Inviu"
-en = "Brand Designer — Inviu"
+es = "Senior Brand Designer"
+en = "Senior Brand Designer"
 
 [caso.inviu.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
 es = "2021 – presente"
-en = ""
-
-[caso.inviu.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-Durante casi cinco años, único diseñador de marca de la compañía, operando transversalmente a todos los equipos. Trabajo sostenido: emails segmentados, redes sociales, materiales comerciales, folletería institucional, eventos anuales kickoff por país con identidad propia. Con la expansión regional a Perú y Uruguay, el trabajo sumó la dimensión de adaptar la comunicación a nuevos mercados manteniendo coherencia de marca."""
-en = """
-For nearly five years, the company's only brand designer, working across every team. Sustained output: segmented emails, social media, sales materials, institutional print collateral, annual kickoff events with a dedicated identity for each country. With the regional expansion into Peru and Uruguay, the work took on the added dimension of adapting communication to new markets while keeping the brand coherent."""
+en = "2021 – present"
 
 [caso.inviu.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
-valor = ""
+valor = "https://inviu.lat"
 
 
 # ─── 7. AMA Studio (Zürich)   ·   id: ama-studio ─────────────────────────

@@ -56,11 +56,13 @@
       <h1 class="display detail__title" id="case-title"></h1>
       <p class="detail__line" id="case-line"></p>
       <ul class="tag-list" id="case-tags"></ul>
+      <!-- Ficha técnica del formato por secciones (casos con `sections`) -->
+      <dl class="detail__sheet" id="case-sheet" hidden></dl>
     </header>
 
     <div class="shell detail__cover" id="case-cover"></div>
 
-    <div class="shell">
+    <div class="shell" id="case-facts">
       <dl class="detail__facts">
         <div>
           <dt data-i18n="work.client">Cliente</dt>
@@ -87,6 +89,9 @@
 
     <div class="shell detail__gallery" id="case-gallery"></div>
 
+    <!-- Formato por secciones: bloques de texto, piezas y resultado -->
+    <div class="shell detail__body" id="case-body" hidden></div>
+
     <nav class="shell detail__nav" data-i18n-aria-label="nav.work" aria-label="Work">
       <a class="detail__back" href="all-work.html">← <span data-i18n="work.back">Volver al trabajo</span></a>
       <a class="detail__next" id="case-next" href="#">
@@ -97,6 +102,14 @@
   </article>
 
 </main>
+
+<!-- Visor de imágenes ampliadas (ítems con zoom: true) -->
+<dialog class="lb" id="lightbox" data-i18n-aria-label="work.zoomDialog" aria-label="Imagen ampliada">
+  <img class="lb__img" src="" alt="">
+  <button type="button" class="lb__close" data-i18n-aria-label="work.close" aria-label="Cerrar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+  </button>
+</dialog>
 
 <footer class="site-footer">
   <div class="shell site-footer__inner">

@@ -186,36 +186,758 @@
       "featured": true,
       "order": 6,
       "client": {
-        "es": "Inviu — Grupo Financiero Galicia — Argentina, Perú, Uruguay (2021–presente)",
+        "es": "Inviu · Grupo Financiero Galicia",
         "en": ""
       },
-      "url": "",
+      "url": "https://inviu.lat",
       "title": {
         "es": "Inviu",
         "en": "Inviu"
       },
       "oneLiner": {
-        "es": "Cinco años construyendo una marca fintech regional.",
-        "en": "Five years building a regional fintech brand."
+        "es": "Comunicación de marca en Argentina, Perú y Uruguay",
+        "en": ""
       },
       "role": {
-        "es": "Brand Designer — Inviu",
-        "en": "Brand Designer — Inviu"
+        "es": "Senior Brand Designer",
+        "en": "Senior Brand Designer"
       },
       "period": {
         "es": "2021 – presente",
-        "en": ""
+        "en": "2021 – present"
       },
-      "narrative": {
-        "es": "Durante casi cinco años, único diseñador de marca de la compañía, operando transversalmente a todos los equipos. Trabajo sostenido: emails segmentados, redes sociales, materiales comerciales, folletería institucional, eventos anuales kickoff por país con identidad propia. Con la expansión regional a Perú y Uruguay, el trabajo sumó la dimensión de adaptar la comunicación a nuevos mercados manteniendo coherencia de marca.",
-        "en": "For nearly five years, the company's only brand designer, working across every team. Sustained output: segmented emails, social media, sales materials, institutional print collateral, annual kickoff events with a dedicated identity for each country. With the regional expansion into Peru and Uruguay, the work took on the added dimension of adapting communication to new markets while keeping the brand coherent."
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
         "Fintech",
         "Brand Design"
-      ]
+      ],
+      "coverImage": "assets/img/cases/inviu/web-home.webp",
+      "eyebrow": {
+        "es": "Caso · Grupo Financiero Galicia",
+        "en": ""
+      },
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2021 – presente",
+            "en": "2021 – present"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "value": {
+            "es": "Senior Brand Designer",
+            "en": "Senior Brand Designer"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Web, eventos, mailings, presentaciones comerciales, paid media, redes, video, app stores, impresos",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Sitios",
+            "en": "Sites"
+          },
+          "wide": true,
+          "links": [
+            "https://inviu.lat",
+            "https://peru.eventosinviu.com/kickoff2026"
+          ]
+        }
+      ],
+      "blocks": [
+        {
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Inviu es la plataforma de inversiones del Grupo Financiero Galicia pensada para asesores financieros independientes, con operación en Argentina, Perú y Uruguay. Se encarga de la parte operativa y les suma análisis, herramientas de marketing y eventos, para que puedan dedicarles más tiempo a sus clientes y darles un mejor servicio.",
+              "en": ""
+            },
+            {
+              "es": "Por eso la marca habla en dos niveles: al asesor, que es su cliente directo, y al inversor, al que muchas veces llega a través del asesor. Todo dentro de un sector regulado y con un tono institucional estricto. El desafío: que la marca se mantenga coherente en cada punto de contacto, también cuando la comunicación sale con la firma de cada asesor.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Como único diseñador de marca, trabajo con marketing, comercial y producto en todo lo que la compañía comunica: la web institucional regional, los mailings para asesores y para inversores, las presentaciones comerciales, el paid media, las redes y los videos. Con la llegada a Perú y Uruguay, todo eso se fue adaptando a cada mercado sin perder coherencia.",
+              "en": ""
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "title": {
+            "es": "Web institucional",
+            "en": "Corporate website"
+          },
+          "rows": [
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/web-home.webp",
+                  "alt": {
+                    "es": "Home de la web institucional de Inviu en laptop",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            },
+            {
+              "columns": "1.55fr 1.54fr 1.82fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/web-tecnologia.webp",
+                  "alt": {
+                    "es": "Sección de tecnología con las plataformas para inversores y asesores",
+                    "en": ""
+                  },
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/web-plataforma-asesores.webp",
+                  "alt": {
+                    "es": "Sección de la plataforma para asesores financieros",
+                    "en": ""
+                  },
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/web-presencia-regional.webp",
+                  "alt": {
+                    "es": "Mapa con la presencia regional de Inviu en Latinoamérica",
+                    "en": ""
+                  },
+                  "zoom": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Kickoff anual",
+            "en": "Annual kickoff"
+          },
+          "intro": {
+            "es": "También diseño la identidad de los kickoffs y los cócteles de fin de año en Argentina y en Perú, y doy soporte a los eventos que organiza cada asesor.",
+            "en": ""
+          },
+          "rows": [
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/kickoff-foto.webp",
+                  "alt": {
+                    "es": "Auditorio lleno durante el Kick Off 2026",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/kickoff-web.webp",
+                  "alt": {
+                    "es": "Landing de inscripción al Kick Off Buenos Aires en laptop",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            },
+            {
+              "columns": ".554fr 1.779fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/kickoff-mailing.webp",
+                  "alt": {
+                    "es": "Mailing de invitación al Kick Off",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/kickoff-kv.webp",
+                  "alt": {
+                    "es": "Key visual del Kick Off Buenos Aires con sponsors",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            },
+            {
+              "columns": ".4fr .4fr .714fr",
+              "items": [
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/kickoff-coming-soon.webp",
+                      "alt": {
+                        "es": "Pieza de anticipo: coming soon",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/kickoff-speaker-vinci.webp",
+                      "alt": {
+                        "es": "Pieza de speaker de Vinci Compass",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/kickoff-panel.webp",
+                      "alt": {
+                        "es": "Pieza del panel sobre mercados globales en 2026",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/kickoff-speaker-schroders.webp",
+                      "alt": {
+                        "es": "Pieza de speaker de Schroders",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/kickoff-credencial.webp",
+                  "alt": {
+                    "es": "Credencial del Kick Off Buenos Aires",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Mailing a asesores",
+            "en": "Advisor mailing"
+          },
+          "intro": {
+            "es": "Buena parte de esas piezas se arman para que el asesor las comparta con sus clientes. Los asesores con un paquete especial las reciben con su propia marca junto a la de Inviu, a través de un sistema automatizado de personalización.",
+            "en": ""
+          },
+          "rows": [
+            {
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/mailing-asesor-cambio-email.webp",
+                      "alt": {
+                        "es": "Mailing a asesores sobre el cambio de email de usuario",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/mailing-asesor-buying-power.webp",
+                      "alt": {
+                        "es": "Mailing a asesores sobre Buying Power",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/mailing-asesor-pershing.webp",
+                      "alt": {
+                        "es": "Mailing a asesores sobre cuentas Pershing",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/mailing-asesor-trading-pop.webp",
+                      "alt": {
+                        "es": "Mailing sobre Trading POP",
+                        "en": ""
+                      }
+                    }
+                  ]
+                }
+              ],
+              "maxWidth": "82%"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Mailing a inversores",
+            "en": "Investor mailing"
+          },
+          "rows": [
+            {
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/mailing-inversor-asignacion-asesor.webp",
+                  "alt": {
+                    "es": "Mailing a inversores sobre la asignación de un asesor",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/mailing-inversor-fci.webp",
+                  "alt": {
+                    "es": "Mailing a inversores sobre fondos comunes de inversión",
+                    "en": ""
+                  }
+                }
+              ],
+              "maxWidth": "82%"
+            },
+            {
+              "columns": "repeat(3, 1fr)",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/mailing-inversor-offshore-promo.webp",
+                  "alt": {
+                    "es": "Mailing a inversores con promoción de cuenta offshore",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/mailing-inversor-offshore-1.webp",
+                  "alt": {
+                    "es": "Mailing a inversores sobre cuenta offshore",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/mailing-inversor-offshore-2.webp",
+                  "alt": {
+                    "es": "Mailing a inversores sobre cuenta offshore, variante",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Presentaciones comerciales",
+            "en": "Sales presentations"
+          },
+          "rows": [
+            {
+              "columns": "repeat(2, 1fr)",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/presentacion-mandato-app.webp",
+                  "alt": {
+                    "es": "Lámina de presentación comercial sobre mandato discrecional en la app",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/presentacion-mandato-web.webp",
+                  "alt": {
+                    "es": "Lámina de presentación comercial sobre mandato discrecional en la web",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/presentacion-trading-bar.webp",
+                  "alt": {
+                    "es": "Lámina de presentación sobre la trading bar",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/presentacion-buying-power.webp",
+                  "alt": {
+                    "es": "Lámina de presentación sobre Buying Power",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Paid media",
+            "en": "Paid media"
+          },
+          "rows": [
+            {
+              "columns": "repeat(4, 1fr)",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-story-mercado-internacional.webp",
+                  "alt": {
+                    "es": "Story sobre el mercado internacional",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-story-empresas.webp",
+                  "alt": {
+                    "es": "Story para apertura de cuenta empresa",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-story-mep.webp",
+                  "alt": {
+                    "es": "Story sobre dólar MEP en un click",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-story-sugerencias.webp",
+                  "alt": {
+                    "es": "Story sobre sugerencias del asesor",
+                    "en": ""
+                  }
+                }
+              ],
+              "fit": "cover",
+              "ratio": "2/3",
+              "position": "center top"
+            },
+            {
+              "columns": "repeat(4, 1fr)",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-empresas-horizontal.webp",
+                  "alt": {
+                    "es": "Posteo horizontal para cuenta empresa",
+                    "en": ""
+                  },
+                  "span": 2
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-todas-tus-inversiones.webp",
+                  "alt": {
+                    "es": "Posteo: todas tus inversiones en un solo lugar",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/paid-diversificar.webp",
+                  "alt": {
+                    "es": "Posteo sobre diversificar la cartera",
+                    "en": ""
+                  }
+                }
+              ],
+              "fit": "cover",
+              "ratio": "1/1"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Redes",
+            "en": "Social media"
+          },
+          "rows": [
+            {
+              "columns": ".4fr .4fr .45fr",
+              "items": [
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/redes-factor-humano.webp",
+                      "alt": {
+                        "es": "Posteo: el factor humano, el diferencial en un mundo digital",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/redes-40000-instrumentos.webp",
+                      "alt": {
+                        "es": "Posteo sobre más de 40.000 instrumentos del mercado internacional",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/redes-sugerencia-experto.webp",
+                      "alt": {
+                        "es": "Posteo de sugerencia de experto sobre volatilidad de fin de año",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/inviu/redes-potenciamos-asesores.webp",
+                      "alt": {
+                        "es": "Posteo: potenciamos a los asesores financieros",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/redes-linkedin-ingresar-dinero.webp",
+                  "alt": {
+                    "es": "Posteo en LinkedIn sobre cómo ingresar dinero de forma segura",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Video",
+            "en": "Video"
+          },
+          "rows": [
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "youtube",
+                  "id": "eX-R9D4qCxM",
+                  "title": "Fin de año",
+                  "poster": "assets/img/cases/inviu/video-fin-de-ano.webp",
+                  "ratio": "16/9"
+                }
+              ]
+            },
+            {
+              "columns": "1.778fr 1fr",
+              "items": [
+                {
+                  "type": "youtube",
+                  "id": "7ixCzk28l_A",
+                  "title": "Plataforma",
+                  "poster": "assets/img/cases/inviu/video-plataforma.webp",
+                  "ratio": "16/9"
+                },
+                {
+                  "type": "youtube",
+                  "id": "DsvgMG5kg5E",
+                  "title": "Vacaciones ilimitadas",
+                  "poster": "assets/img/cases/inviu/video-vacaciones.webp",
+                  "ratio": "1/1"
+                }
+              ]
+            },
+            {
+              "columns": "1fr 1.778fr",
+              "items": [
+                {
+                  "type": "youtube",
+                  "id": "xkK_BsMO0-M",
+                  "title": "Favoritos",
+                  "poster": "assets/img/cases/inviu/video-favoritos.webp",
+                  "ratio": "1/1"
+                },
+                {
+                  "type": "youtube",
+                  "id": "eBHjjgdDkkc",
+                  "title": "Dólar MEP en un click",
+                  "poster": "assets/img/cases/inviu/video-mep-one-click.webp",
+                  "ratio": "16/9"
+                }
+              ]
+            },
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "youtube",
+                  "id": "MdQKaUhpEkU",
+                  "title": "Presencia regional",
+                  "poster": "assets/img/cases/inviu/video-presencia-regional.webp",
+                  "ratio": "16/9"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "App stores",
+            "en": "App stores"
+          },
+          "rows": [
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/stores-2023.webp",
+                  "alt": {
+                    "es": "Capturas de Inviu para las tiendas de apps, versión 2023",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/stores-v1.webp",
+                  "alt": {
+                    "es": "Capturas de Inviu para las tiendas de apps, primera versión",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Material impreso",
+            "en": "Print"
+          },
+          "rows": [
+            {
+              "columns": "repeat(2, 1fr)",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/diptico-1.webp",
+                  "alt": {
+                    "es": "Díptico institucional de Inviu",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/diptico-2.webp",
+                  "alt": {
+                    "es": "Díptico institucional de Inviu",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/diptico-3.webp",
+                  "alt": {
+                    "es": "Díptico institucional de Inviu",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/inviu/diptico-4.webp",
+                  "alt": {
+                    "es": "Díptico institucional de Inviu",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "Una marca que se reconoce igual en tres países y en dos niveles: en lo que comunica Inviu y en lo que cada asesor lleva a sus clientes.",
+          "en": ""
+        },
+        "stat": {
+          "value": "4",
+          "caption": {
+            "es": "eventos al año, cada uno con identidad propia dentro del mismo sistema.",
+            "en": ""
+          }
+        }
+      }
     },
     {
       "id": "ama-studio",

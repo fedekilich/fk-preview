@@ -27,6 +27,11 @@ UI = {
     "work.back": "Link de vuelta al catálogo, al pie del detalle.",
     "work.notFound": "Mensaje cuando la URL trae un caso que no existe (?case=loquesea).",
     "work.notFoundCta": "Botón de salida de esa pantalla de error.",
+    "work.coverPending": "Recuadro de un video del caso que todavía no tiene portada. Se borra cuando esté el frame.",
+    "work.zoom": "Lectores de pantalla: botón que abre una imagen del caso en grande. Va seguido de la descripción de la imagen.",
+    "work.zoomDialog": "Lectores de pantalla: nombre del visor de imágenes a pantalla completa.",
+    "work.close": "Lectores de pantalla: botón que cierra el visor de imágenes.",
+    "work.watchVideo": "Lectores de pantalla: link de un video del caso. Va seguido del nombre del video.",
 
     "all.eyebrow": "Volanta de All Works.",
     "all.title": "Título de All Works.",

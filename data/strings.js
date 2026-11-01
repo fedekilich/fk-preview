@@ -69,12 +69,17 @@ export const STRINGS = {
     "pagina.work.title": "Caso — Fede Kilich",
     "work.back": "Volver al trabajo",
     "work.client": "Cliente",
+    "work.close": "Cerrar",
+    "work.coverPending": "Portada pendiente",
     "work.next": "Siguiente caso",
     "work.notFound": "No encontramos ese caso.",
     "work.notFoundCta": "Ver todo el trabajo",
     "work.period": "Período",
     "work.role": "Rol",
-    "work.site": "Ver sitio"
+    "work.site": "Ver sitio",
+    "work.watchVideo": "Ver en YouTube",
+    "work.zoom": "Ampliar",
+    "work.zoomDialog": "Imagen ampliada"
   },
 
   en: {
@@ -144,11 +149,16 @@ export const STRINGS = {
     "pagina.work.title": "",
     "work.back": "Back to work",
     "work.client": "Client",
+    "work.close": "Close",
+    "work.coverPending": "Cover pending",
     "work.next": "Next case",
     "work.notFound": "We couldn't find that case.",
     "work.notFoundCta": "See all work",
     "work.period": "Period",
     "work.role": "Role",
-    "work.site": "View site"
+    "work.site": "View site",
+    "work.watchVideo": "Watch on YouTube",
+    "work.zoom": "Enlarge",
+    "work.zoomDialog": "Enlarged image"
   }
 };
