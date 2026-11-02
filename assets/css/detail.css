@@ -204,7 +204,24 @@
 .tb__body p:last-child { margin-bottom: 0; }
 
 /* --- Sección de piezas ---------------------------------------- */
-.ws { padding-bottom: clamp(4rem, 9vw, 7rem); }
+/* El marco habla en oscuro y el trabajo se muestra en claro: cada sección va
+   sobre una franja clara de borde a borde, con sus propios tokens de color.
+   La franja se pinta con el box-shadow y se recorta arriba y abajo. */
+.ws {
+  --band: #ebeae6;
+  --text: #141414;
+  --text-soft: #2b2b29;
+  --muted: #5b5b58;
+  --line: #cfcdc7;
+  background: var(--band);
+  color: var(--text);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+  padding-block: clamp(3rem, 7vw, 6rem) clamp(4rem, 9vw, 7rem);
+}
+/* Dos secciones seguidas son un solo tramo claro */
+.ws + .ws { padding-top: 0; }
+.ws a { color: var(--text); }
 
 .ws__head {
   display: flex;
@@ -271,6 +288,17 @@
   background: transparent;
   border: 0;
 }
+
+/* Sobre la franja clara no hay recuadro oscuro: queda la línea fina, que
+   separa de la franja a las piezas de fondo blanco (mailings, láminas) */
+.ws .piece,
+.ws .zoombtn img { background: transparent; }
+
+/* Los controles que se apoyan sobre una imagen siguen en oscuro */
+.ws .zoombtn__icon,
+.ws .vid__tag { color: #f0f0f0; }
+.ws .vid { background: #fbfbf9; }
+.ws .vid__ph { background: #e0ded8; }
 
 /* Mosaico parejo: el único recorte es por CSS (Paid media) */
 .mosaic { align-items: stretch; }
@@ -473,12 +501,452 @@
       animation-timeline: view();
       animation-range: entry 0% cover 22%;
     }
+    /* Escalonado: las piezas de una misma fila entran una después de otra */
+    .detail__body .rv--2 { animation-range: entry 8% cover 28%; }
+    .detail__body .rv--3 { animation-range: entry 16% cover 34%; }
+    .detail__body .rv--4 { animation-range: entry 24% cover 40%; }
+
+    /* Web: primero la laptop, después las tarjetas (la derecha más tarde)
+       y al final el celular, que sube y se apoya sobre la grilla */
+    .detail__body .collage__grid img:nth-child(even) {
+      animation-range: entry 12% cover 32%;
+    }
+    .detail__body .collage__phone {
+      animation: detail-phone linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 55%;
+    }
   }
 }
 @keyframes detail-reveal {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: none; }
 }
+@keyframes detail-phone {
+  from { opacity: 0; transform: translate(-50%, -30%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ============================================================
+   Módulos de sección (casos con `flow` en cases.json)
+   El marco habla en oscuro; el trabajo se muestra en claro.
+   ============================================================ */
+
+/* Separación entre módulos de una misma sección */
+.ws__content > * + * { margin-top: var(--gap); }
+.ws__content > .anat { margin-top: clamp(3rem, 6vw, 5rem); }
+.ws__content > .prop { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.ws__content > .el__caps { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+
+/* --- Imagen con título y texto -------------------------------- */
+.fig {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 0;
+}
+.fig__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fig__box img { width: 100%; }
+.fig figcaption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.fig figcaption strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+/* --- Notas ----------------------------------------------------- */
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.notes li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.notes strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* --- Diagnóstico: el mismo logo en tres marcos ---------------- */
+.diag {
+  display: grid;
+  grid-template-columns: var(--cols, repeat(3, minmax(0, 1fr)));
+  gap: var(--gap);
+  align-items: stretch;
+}
+.diag__box {
+  position: relative;
+  background: #fbfbf9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(140px, 16vw, 230px);
+}
+.diag__box--big img { width: 58%; max-width: 220px; }
+.diag__box--wide {
+  justify-content: flex-start;
+  padding-left: 4%;
+}
+.diag__box--wide img { height: clamp(30px, 3vw, 46px); width: auto; }
+.diag__box--small img { width: clamp(22px, 2.4vw, 34px); }
+.diag__mark {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diag__mark--ok { background: var(--bg); color: #f0f0f0; }
+.diag__mark--no { background: var(--accent); color: var(--bg); }
+.diag figcaption { margin-top: 0.75rem; }
+
+/* --- Racional: dos grupos que suman una palabra --------------- */
+.rac {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--gap);
+  align-items: end;
+  text-align: center;
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+}
+.rac__word {
+  grid-column: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.6rem, 3.4vw, 3rem);
+  line-height: 1.05;
+  margin: 0;
+}
+.rac__word--b { grid-column: 3; }
+.rac__link {
+  grid-column: 1 / -1;
+  position: relative;
+  height: clamp(36px, 4.5vw, 64px);
+  margin: clamp(1rem, 2vw, 1.75rem) 16.67% 0;
+  border: 1px solid var(--muted);
+  border-top: 0;
+}
+.rac__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1px;
+  height: clamp(36px, 4.5vw, 64px);
+  background: var(--muted);
+}
+.rac__sum {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(clamp(36px, 4.5vw, 64px) + clamp(1rem, 2vw, 1.5rem));
+}
+.rac__sum .display {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  color: var(--accent);
+}
+
+/* --- Anatomía del logo ---------------------------------------- */
+.anat {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: start;
+}
+.anat__mark {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding-block: clamp(4rem, 10vw, 9rem);
+}
+.anat__mark img { width: 68%; }
+.anat__part { grid-column: 1 / span 5; }
+.anat__part + .anat__part { grid-column: 8 / span 5; }
+.anat__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.anat__txt {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Versiones del logo sobre su color ------------------------ */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.tiles__cell {
+  aspect-ratio: var(--ratio, 16 / 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tile-pad, 10%);
+}
+.tiles__cell img { width: 100%; }
+
+/* --- Paleta y tipografía -------------------------------------- */
+.pal {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--gap);
+}
+.sw {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  min-height: clamp(150px, 15vw, 240px);
+  color: #150129;
+}
+.sw--main {
+  grid-row: span 2;
+  min-height: clamp(320px, 32vw, 500px);
+}
+.sw--light { color: #fcfcfc; }
+.sw__name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.sw__hex {
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  margin: 0.2rem 0 0;
+}
+.pal2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.pal2 .sw {
+  min-height: clamp(110px, 10vw, 160px);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.sw--type { justify-content: space-between; }
+.sw--type .sw__hex { color: var(--muted); }
+.sw__family {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+.prop {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: center;
+}
+.prop__txt { grid-column: 1 / span 4; }
+.prop__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.prop__txt-body {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+.prop__bar {
+  grid-column: 5 / -1;
+  display: flex;
+  height: clamp(56px, 6vw, 88px);
+}
+
+/* --- Elementos gráficos --------------------------------------- */
+.el { padding-top: clamp(1rem, 2vw, 2rem); }
+.el__grid,
+.el__caps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.el__cell {
+  height: clamp(110px, 11vw, 170px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.el__cell img { height: 70%; width: auto; }
+.el__cell--band img { width: 100%; height: auto; }
+.el__caps {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--line);
+}
+.el__cap-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.el__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.el__txt {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --- Fila de texto dentro de la franja ------------------------ */
+.wsrow {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: 1rem;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--line);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.wsrow .eyebrow {
+  grid-column: 1 / span 3;
+  margin: 0;
+  padding-top: 0.35em;
+}
+.wsrow__body {
+  grid-column: 5 / -1;
+  max-width: 62ch;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  margin: 0;
+}
+
+/* --- Composiciones por capas ---------------------------------- */
+.duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: center;
+}
+.duo__box { position: relative; }
+.duo__box--center {
+  display: flex;
+  justify-content: center;
+}
+.duo__layer { position: relative; }
+.duo__layer--abs { position: absolute; }
+
+/* --- Web: laptop y recortes con el celular encima ------------- */
+.webpanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+  padding: clamp(2rem, 5vw, 5rem);
+}
+.webpanel__laptop { width: 86%; }
+.collage {
+  position: relative;
+  width: 100%;
+}
+.collage__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 28px);
+}
+.collage__grid img {
+  width: 100%;
+  border-radius: clamp(8px, 1vw, 14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.collage__phone {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 27%;
+  transform: translate(-50%, -50%);
+}
+
+/* --- Aplicaciones: una debajo de la otra ---------------------- */
+.apps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+/* --- Quotes de la clienta ------------------------------------- */
+.quote {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.quote p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.2vw, 3.6rem);
+  line-height: 1.02;
+  text-transform: uppercase;
+  margin: 0;
+}
+.quote .q { color: var(--accent); }
+.quote footer {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.quote footer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.res--quote { align-items: start; }
+.res--quote .res__text { grid-column: 1 / span 4; }
+.res__quote { grid-column: 6 / -1; }
+
+.closing {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  border-top: 1px solid var(--line);
+}
+.closing .quote { grid-column: 2 / span 10; }
+.closing .quote p { font-size: clamp(2.2rem, 5.4vw, 5rem); }
 
 /* --- Celular -------------------------------------------------- */
 @media (max-width: 760px) {
@@ -489,7 +957,16 @@
   .tb__body,
   .ws__intro p,
   .res__text,
-  .res__num { grid-column: 1 / -1; }
+  .res--quote .res__text,
+  .res__num,
+  .res__quote,
+  .closing .quote,
+  .anat__part,
+  .anat__part + .anat__part,
+  .prop__txt,
+  .prop__bar,
+  .wsrow .eyebrow,
+  .wsrow__body { grid-column: 1 / -1; }
 
   .ws__head { flex-wrap: wrap; gap: 0.5rem 1rem; }
 
@@ -504,4 +981,31 @@
     min-height: 0;
     aspect-ratio: 2 / 1;
   }
+
+  /* Módulos: lo que entra en dos columnas se queda en dos; el resto, en una */
+  .tiles,
+  .el__grid,
+  .el__caps,
+  .pal2,
+  .rac { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pal { grid-template-columns: 1fr 1fr; }
+  .sw--main {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 220px;
+  }
+  .rac__word--b { grid-column: 2; }
+  .rac__link { margin-inline: 25%; }
+  .diag,
+  .duo { grid-template-columns: minmax(0, 1fr); }
+  .collage__grid { grid-template-columns: minmax(0, 1fr); }
+  /* El celular sale de la superposición y queda debajo, centrado */
+  .collage__phone {
+    position: static;
+    transform: none;
+    width: 62%;
+    margin: var(--gap) auto 0;
+    animation-name: detail-reveal !important;
+  }
+  .apps img { width: 100% !important; }
 }

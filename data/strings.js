@@ -77,7 +77,9 @@ export const STRINGS = {
     "work.period": "Período",
     "work.role": "Rol",
     "work.site": "Ver sitio",
+    "work.typeface": "Tipografía",
     "work.watchVideo": "Ver en YouTube",
+    "work.weights": "Pesos",
     "work.zoom": "Ampliar",
     "work.zoomDialog": "Imagen ampliada"
   },
@@ -157,7 +159,9 @@ export const STRINGS = {
     "work.period": "Period",
     "work.role": "Role",
     "work.site": "View site",
+    "work.typeface": "Typeface",
     "work.watchVideo": "Watch on YouTube",
+    "work.weights": "Weights",
     "work.zoom": "Enlarge",
     "work.zoomDialog": "Enlarged image"
   }

@@ -42,7 +42,7 @@
       "featured": true,
       "order": 2,
       "client": {
-        "es": "Mammina Fit — Merano, Italia (2025)",
+        "es": "Mammina Fit",
         "en": ""
       },
       "url": "https://mamminafit.com",
@@ -50,28 +50,852 @@
         "es": "Mammina Fit",
         "en": "Mammina Fit"
       },
+      "eyebrow": {
+        "es": "Caso · Bretzel Brand Lab",
+        "en": ""
+      },
       "oneLiner": {
-        "es": "De una idea con energía a una marca completa.",
+        "es": "Rebranding, web y reservas online para un proyecto de entrenamiento para mamás",
         "en": ""
       },
       "role": {
-        "es": "Brand strategy y design completo. En colaboración con Bretzel Brand Lab.",
-        "en": ""
+        "es": "Brand Designer · Bretzel Brand Lab",
+        "en": "Brand Designer · Bretzel Brand Lab"
       },
       "period": {
         "es": "2025",
-        "en": ""
+        "en": "2025"
       },
-      "narrative": {
-        "es": "Mammina Fit llegó con una idea clara y mucho desorden. La clienta quería solo una actualización sutil del logo existente. Se realizó esa versión, pero también se desarrolló un rebranding completo por convicción propia. Se pidió permiso para presentarlo sin compromiso. La clienta eligió el camino nuevo. El trabajo no se limitó al diseño: Bretzel acompañó la organización del modelo de negocio y su digitalización completa.",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
         "Branding",
-        "Brand Strategy"
-      ]
+        "Web Design"
+      ],
+      "coverImage": "assets/img/cases/mammina/compo-laptop.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2025",
+            "en": "2025"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Merano, Italia",
+            "en": "Merano, Italy"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Brand Designer · Bretzel Brand Lab",
+            "en": "Brand Designer · Bretzel Brand Lab"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Identidad visual, brand guidelines, diseño web, retoque fotográfico",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Sitio",
+            "en": "Site"
+          },
+          "wide": true,
+          "links": [
+            "https://mamminafit.com"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Mammina Fit es un proyecto de entrenamiento para mamás en Merano. La idea estaba clara y tenía mucha energía, pero todo lo demás estaba por ordenarse: la marca, la forma de ofrecer las clases y la presencia online. El pedido inicial era una actualización sutil del logo que ya tenía.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "El logo anterior",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "1fr 1fr 1fr",
+              "items": [
+                {
+                  "type": "figure",
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/mammina/logo-anterior.png",
+                    "alt": {
+                      "es": "Logo anterior de Mammina Fit: círculo amarillo con zapatilla, mancuerna y el nombre en arco",
+                      "en": ""
+                    }
+                  },
+                  "imageWidth": "72%",
+                  "ratio": "1/1",
+                  "title": {
+                    "es": "Logo anterior",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "El nombre en arco, chico y descentrado, con mucho espacio vacío.",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "figure",
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/mammina/logo-actualizacion.png",
+                    "alt": {
+                      "es": "Actualización sutil del logo: el nombre centrado y con más cuerpo, enmarcado en un anillo",
+                      "en": ""
+                    }
+                  },
+                  "imageWidth": "72%",
+                  "ratio": "1/1",
+                  "title": {
+                    "es": "Actualización sutil",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "La versión que se pidió, sobre la misma idea.",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "notes",
+                  "items": [
+                    {
+                      "title": {
+                        "es": "Tipografía con más cuerpo y orientación centrada",
+                        "en": ""
+                      },
+                      "text": {
+                        "es": "Mejora la lectura del nombre.",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "title": {
+                        "es": "Maximizar el espacio",
+                        "en": ""
+                      },
+                      "text": {
+                        "es": "Evita grandes vacíos y le da más protagonismo al logo.",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "title": {
+                        "es": "Enmarcar el contenido",
+                        "en": ""
+                      },
+                      "text": {
+                        "es": "Orienta la vista y completa la forma.",
+                        "en": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diagnosis",
+              "src": "assets/img/cases/mammina/logo-actualizacion.png",
+              "columns": "2.2fr 1.6fr 1fr",
+              "items": [
+                {
+                  "variant": "big",
+                  "ok": true,
+                  "caption": {
+                    "es": "Espacios grandes: funciona.",
+                    "en": ""
+                  }
+                },
+                {
+                  "variant": "wide",
+                  "ok": false,
+                  "caption": {
+                    "es": "Espacios horizontales: pierde proporción.",
+                    "en": ""
+                  }
+                },
+                {
+                  "variant": "small",
+                  "ok": false,
+                  "caption": {
+                    "es": "Espacios pequeños: no se lee.",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Desde Bretzel hicimos esa actualización y, en paralelo, desarrollamos por nuestra cuenta un rebranding completo, sabiendo que podía terminar siendo trabajo que nadie iba a ver. En una llamada le pedimos permiso para mostrarle esa segunda propuesta sin compromiso, y eligió el camino nuevo.",
+              "en": ""
+            },
+            {
+              "es": "La identidad parte de dos cosas que conviven en la marca: la ternura de la maternidad y la energía y la disciplina del entrenamiento. De ahí sale una tipografía que combina un bold firme con una cursiva fluida, una paleta de amarillo cálido, lavanda y celeste, y elementos gráficos que mezclan geometría con líneas orgánicas.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Racional",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "rationale",
+              "left": [
+                {
+                  "es": "Amor",
+                  "en": ""
+                },
+                {
+                  "es": "Ternura",
+                  "en": ""
+                },
+                {
+                  "es": "Delicadeza",
+                  "en": ""
+                }
+              ],
+              "right": [
+                {
+                  "es": "Energía",
+                  "en": ""
+                },
+                {
+                  "es": "Fortaleza",
+                  "en": ""
+                },
+                {
+                  "es": "Templanza",
+                  "en": ""
+                }
+              ],
+              "result": {
+                "es": "Mujer",
+                "en": ""
+              }
+            },
+            {
+              "type": "logoAnatomy",
+              "src": "assets/img/cases/mammina/logo-color.svg",
+              "alt": {
+                "es": "Logo de Mammina Fit: Mammina en bold amarillo y fit en cursiva lavanda",
+                "en": ""
+              },
+              "background": "#150129",
+              "parts": [
+                {
+                  "label": {
+                    "es": "Mammina",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Bold, trazo firme y ángulos fuertes: energía, fortaleza y templanza.",
+                    "en": ""
+                  }
+                },
+                {
+                  "label": {
+                    "es": "Fit",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Trazo a mano, curvas suaves y bordes redondeados: amor, ternura y delicadeza.",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Identidad",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "tiles",
+              "ratio": "16/10",
+              "padding": "10%",
+              "items": [
+                {
+                  "src": "assets/img/cases/mammina/logo-color.svg",
+                  "bg": "#150129",
+                  "alt": {
+                    "es": "Logo en color sobre fondo oscuro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/logo-oscuro.svg",
+                  "bg": "#ffcf52",
+                  "alt": {
+                    "es": "Logo en un color oscuro sobre fondo amarillo",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/logo-blanco.svg",
+                  "bg": "#000000",
+                  "alt": {
+                    "es": "Logo en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/logo-oscuro.svg",
+                  "bg": "#fcfcfc",
+                  "alt": {
+                    "es": "Logo en un color oscuro sobre blanco",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tiles",
+              "ratio": "1/1",
+              "padding": "24%",
+              "items": [
+                {
+                  "src": "assets/img/cases/mammina/isotipo-color.svg",
+                  "bg": "#fcfcfc",
+                  "alt": {
+                    "es": "Isotipo MF en color sobre blanco",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/isotipo-oscuro.svg",
+                  "bg": "#ffcf52",
+                  "alt": {
+                    "es": "Isotipo MF oscuro sobre amarillo",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/isotipo-color.svg",
+                  "bg": "#150129",
+                  "alt": {
+                    "es": "Isotipo MF en color sobre fondo oscuro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/mammina/isotipo-blanco.svg",
+                  "bg": "#000000",
+                  "alt": {
+                    "es": "Isotipo MF en blanco sobre negro",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Color",
+            "en": ""
+          },
+          "intro": {
+            "es": "Un amarillo cálido como color principal, lavanda y celeste como acentos, y un claro y un oscuro.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "palette",
+              "typography": {
+                "family": "Lexend",
+                "weights": {
+                  "es": "Light, Regular y Bold",
+                  "en": ""
+                }
+              },
+              "main": {
+                "name": {
+                  "es": "Amarillo · principal",
+                  "en": ""
+                },
+                "hex": "#FFCF52"
+              },
+              "accents": [
+                {
+                  "name": {
+                    "es": "Lavanda · acento",
+                    "en": ""
+                  },
+                  "hex": "#CB9DF1"
+                },
+                {
+                  "name": {
+                    "es": "Celeste · acento",
+                    "en": ""
+                  },
+                  "hex": "#11BBEF"
+                }
+              ],
+              "base": [
+                {
+                  "name": {
+                    "es": "Claro",
+                    "en": ""
+                  },
+                  "hex": "#FCFCFC"
+                },
+                {
+                  "name": {
+                    "es": "Oscuro",
+                    "en": ""
+                  },
+                  "hex": "#150129",
+                  "light": true
+                }
+              ],
+              "proportions": {
+                "label": {
+                  "es": "Proporciones",
+                  "en": ""
+                },
+                "text": {
+                  "es": "El amarillo domina, los fondos claros dan aire y los acentos aparecen en detalles.",
+                  "en": ""
+                },
+                "bar": [
+                  {
+                    "hex": "#FFCF52",
+                    "flex": 5
+                  },
+                  {
+                    "hex": "#FCFCFC",
+                    "flex": 2.5
+                  },
+                  {
+                    "hex": "#CB9DF1",
+                    "flex": 1.2
+                  },
+                  {
+                    "hex": "#11BBEF",
+                    "flex": 1.2
+                  },
+                  {
+                    "hex": "#150129",
+                    "flex": 1
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Elementos gráficos",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "graphicElements",
+              "groups": [
+                {
+                  "images": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-circulo.svg",
+                      "alt": {
+                        "es": "Círculo amarillo",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-triangulo.svg",
+                      "alt": {
+                        "es": "Triángulo amarillo",
+                        "en": ""
+                      }
+                    }
+                  ],
+                  "label": {
+                    "es": "Figuras geométricas",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Estructura, disciplina y fuerza.",
+                    "en": ""
+                  }
+                },
+                {
+                  "images": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-ondas.svg",
+                      "alt": {
+                        "es": "Ondas lavanda",
+                        "en": ""
+                      },
+                      "width": "42%"
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-espiral.svg",
+                      "alt": {
+                        "es": "Espiral celeste",
+                        "en": ""
+                      }
+                    }
+                  ],
+                  "label": {
+                    "es": "Líneas curvas",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Fluidez, movimiento, energía y alegría.",
+                    "en": ""
+                  }
+                },
+                {
+                  "images": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-chevrons.svg",
+                      "alt": {
+                        "es": "Chevrons ascendentes lavanda",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/forma-flechas.svg",
+                      "alt": {
+                        "es": "Triángulos ascendentes celestes",
+                        "en": ""
+                      }
+                    }
+                  ],
+                  "label": {
+                    "es": "Composiciones ascendentes",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Motivación, crecimiento y transformación.",
+                    "en": ""
+                  }
+                },
+                {
+                  "band": true,
+                  "images": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/mammina/transicion-encastre.png",
+                      "alt": {
+                        "es": "Transición de encastre en lavanda",
+                        "en": ""
+                      }
+                    }
+                  ],
+                  "label": {
+                    "es": "Transiciones",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Un borde de encastre, como un rompecabezas: unidad, conexión y cuidado.",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "numbered": false,
+          "title": null,
+          "content": [
+            {
+              "type": "textRow",
+              "label": {
+                "es": "Todo junto",
+                "en": ""
+              },
+              "text": {
+                "es": "La tipografía, la paleta y las formas acompañan a Liudmila en cada pieza.",
+                "en": ""
+              }
+            },
+            {
+              "type": "compositions",
+              "items": [
+                {
+                  "layers": [
+                    {
+                      "src": "assets/img/cases/mammina/forma-circulo.svg",
+                      "alt": {
+                        "es": "",
+                        "en": ""
+                      },
+                      "left": "-4%",
+                      "top": "4%",
+                      "width": "46%",
+                      "z": 0,
+                      "absolute": true
+                    },
+                    {
+                      "src": "assets/img/cases/mammina/compo-laptop.webp",
+                      "alt": {
+                        "es": "Liudmila sale de la pantalla de una laptop con la web de Mammina Fit",
+                        "en": ""
+                      },
+                      "width": "84%",
+                      "marginLeft": "6%",
+                      "z": 1
+                    },
+                    {
+                      "src": "assets/img/cases/mammina/forma-chevrons-celeste.svg",
+                      "alt": {
+                        "es": "",
+                        "en": ""
+                      },
+                      "right": "3%",
+                      "top": "24%",
+                      "width": "9%",
+                      "z": 1,
+                      "absolute": true,
+                      "delay": 3
+                    }
+                  ]
+                },
+                {
+                  "center": true,
+                  "layers": [
+                    {
+                      "src": "assets/img/cases/mammina/forma-flechas-lavanda.svg",
+                      "alt": {
+                        "es": "",
+                        "en": ""
+                      },
+                      "left": "6%",
+                      "top": "12%",
+                      "width": "6%",
+                      "absolute": true,
+                      "delay": 3
+                    },
+                    {
+                      "src": "assets/img/cases/mammina/compo-hero.webp",
+                      "alt": {
+                        "es": "Liudmila con mancuernas sobre el triángulo amarillo de la marca",
+                        "en": ""
+                      },
+                      "width": "76%",
+                      "z": 1,
+                      "delay": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Web",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Con la marca definida, el proyecto siguió con la web, el retoque de todas las fotos del sitio, la organización del negocio y el sistema de reservas y pagos online. De mi lado, me tocó definir la identidad, diseñar la web y retocar las fotos.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Web",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "webShowcase",
+              "laptop": {
+                "type": "image",
+                "src": "assets/img/cases/mammina/web-laptop.webp",
+                "alt": {
+                  "es": "Home de mamminafit.com en una laptop",
+                  "en": ""
+                }
+              },
+              "cards": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-home-room.webp",
+                  "alt": {
+                    "es": "Sección The Room en la home",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-home-method.webp",
+                  "alt": {
+                    "es": "Sección MF Method en la home",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-method-recorrido.webp",
+                  "alt": {
+                    "es": "Página MF Method: un recorrido exclusivo con plazas limitadas",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-room-hero.webp",
+                  "alt": {
+                    "es": "Página The Room: clases grupales en vivo online",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-room-clases.webp",
+                  "alt": {
+                    "es": "Página The Room: elección de clase y galería de fotos",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/web-room-fitness-yoga.webp",
+                  "alt": {
+                    "es": "Página The Room: tarjetas de Fitness y Yoga",
+                    "en": ""
+                  }
+                }
+              ],
+              "phone": {
+                "type": "image",
+                "src": "assets/img/cases/mammina/web-celular.webp",
+                "alt": {
+                  "es": "Página The Room en un celular",
+                  "en": ""
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Aplicaciones",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "stack",
+              "align": "center",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/app-botellas.webp",
+                  "alt": {
+                    "es": "Botellas deportivas de Mammina Fit en violeta oscuro y amarillo",
+                    "en": ""
+                  },
+                  "width": "72%"
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/mammina/app-mochila.webp",
+                  "alt": {
+                    "es": "Mochila amarilla de Mammina Fit con el borde de encastre en lavanda",
+                    "en": ""
+                  },
+                  "width": "100%"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "Mammina Fit pasó de ser una idea con energía a un negocio funcionando, con una marca que se sostiene igual en la web, en las reservas y en todo lo que comunica.",
+          "en": ""
+        },
+        "quote": {
+          "text": {
+            "es": "Ellos han sido los creadores, los que le han dado prácticamente vida, han materializado mi proyecto de fitness online y en presencia.",
+            "en": ""
+          },
+          "author": "Liudmila Sivila",
+          "source": "Mammina Fit"
+        }
+      },
+      "closingQuote": {
+        "text": {
+          "es": "Hemos trabajado bastante, pero ha valido la pena. Muchas gracias por haber hecho de mi proyecto una realidad.",
+          "en": ""
+        },
+        "author": "Liudmila Sivila",
+        "source": "Mammina Fit"
+      }
     },
     {
       "id": "driving-team-schobloch",

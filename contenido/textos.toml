@@ -174,6 +174,16 @@ nota = "Lectores de pantalla: link de un video del caso. Va seguido del nombre d
 es = "Ver en YouTube"
 en = "Watch on YouTube"
 
+[ui.work.typeface]
+nota = "Etiqueta de la muestra de tipografía, en la sección de color de un caso."
+es = "Tipografía"
+en = "Typeface"
+
+[ui.work.weights]
+nota = "Etiqueta de los pesos tipográficos, al lado de la muestra de tipografía."
+es = "Pesos"
+en = "Weights"
+
 
 # ─── All Works ───────────────────────────────────────────────────────────
 
@@ -434,7 +444,7 @@ valor = ""
 
 [caso.mammina-fit.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "Mammina Fit — Merano, Italia (2025)"
+es = "Mammina Fit"
 en = ""
 
 [caso.mammina-fit.title]
@@ -444,24 +454,18 @@ en = "Mammina Fit"
 
 [caso.mammina-fit.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "De una idea con energía a una marca completa."
+es = "Rebranding, web y reservas online para un proyecto de entrenamiento para mamás"
 en = ""
 
 [caso.mammina-fit.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = "Brand strategy y design completo. En colaboración con Bretzel Brand Lab."
-en = ""
+es = "Brand Designer · Bretzel Brand Lab"
+en = "Brand Designer · Bretzel Brand Lab"
 
 [caso.mammina-fit.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
 es = "2025"
-en = ""
-
-[caso.mammina-fit.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-Mammina Fit llegó con una idea clara y mucho desorden. La clienta quería solo una actualización sutil del logo existente. Se realizó esa versión, pero también se desarrolló un rebranding completo por convicción propia. Se pidió permiso para presentarlo sin compromiso. La clienta eligió el camino nuevo. El trabajo no se limitó al diseño: Bretzel acompañó la organización del modelo de negocio y su digitalización completa."""
-en = ""
+en = "2025"
 
 [caso.mammina-fit.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
