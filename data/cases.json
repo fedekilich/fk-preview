@@ -70,7 +70,8 @@
         "Branding",
         "Web Design"
       ],
-      "coverImage": "assets/img/cases/mammina/compo-laptop.webp",
+      "coverImage": "assets/img/cases/mammina/portada.webp",
+      "coverFocus": "right center",
       "facts": [
         {
           "label": {

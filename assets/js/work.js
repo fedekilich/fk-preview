@@ -644,7 +644,7 @@ function render() {
 
   nodes.cover.replaceChildren(
     kase.coverImage
-      ? mediaCover({ src: kase.coverImage, alt: title })
+      ? mediaCover({ src: kase.coverImage, alt: title, focus: kase.coverFocus })
       : mediaPlaceholder({ name: title, label: t("media.imagePending", lang) })
   );
 

@@ -36,12 +36,15 @@ export function mediaPlaceholder({ className = "", name = "", label, icon = "" }
  * `media-ph`), así hereda las proporciones y el hover que ya define el CSS de
  * cada contexto: 4/3 en las cards, 21/9 arriba del detalle.
  */
-export function mediaCover({ src, alt = "", className = "" }) {
+export function mediaCover({ src, alt = "", className = "", focus = "" }) {
   const box = el("div", `media-ph media-ph--foto ${className}`.trim());
   const img = document.createElement("img");
   img.className = "media-ph__img";
   img.src = src;
   img.alt = alt;
+  // La portada se recorta al cuadro de la card: `coverFocus` elige qué parte
+  // se conserva cuando la proporción no coincide (por defecto, el centro).
+  if (focus) img.style.objectPosition = focus;
   img.loading = "lazy";
   img.decoding = "async";
   box.append(img);
@@ -89,7 +92,12 @@ export function caseCard(kase, { lang, index, aspect = "4 / 3", span = null }) {
   if (span) card.style.gridColumn = span;
 
   const media = kase.coverImage
-    ? mediaCover({ src: kase.coverImage, alt: title, className: "case-card__media" })
+    ? mediaCover({
+        src: kase.coverImage,
+        alt: title,
+        className: "case-card__media",
+        focus: kase.coverFocus
+      })
     : mediaPlaceholder({
         className: "case-card__media",
         name: title,
