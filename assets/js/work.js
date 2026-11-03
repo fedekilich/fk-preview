@@ -68,6 +68,9 @@ const ICON_NO = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" str
 
 const shortUrl = (url) => url.replace(/^https?:\/\//, "");
 
+// Medidas que los datos escriben como número: 462 → "462px"
+const len = (value) => (typeof value === "number" ? `${value}px` : value);
+
 // Cantidad de columnas de una fila: "repeat(4, 1fr)" → 4, ".4fr .4fr .714fr" → 3
 function columnCount(columns) {
   const repeat = /^repeat\(\s*(\d+)/.exec(columns);
@@ -179,8 +182,13 @@ function pieceItem(item, lang) {
     return stack;
   }
 
+  // Columna vacía: sostiene la grilla y desaparece en celular
+  if (item.type === "spacer") return el("div", "row__gap");
+
   let node;
   if (item.type === "youtube") node = videoItem(item, lang);
+  else if (item.type === "note") node = reveal(noteBody(item, lang));
+  else if (item.box) node = boxFigure(item, lang);
   else if (MODULES[item.type]) node = MODULES[item.type](item, lang);
   else node = imageItem(item, lang);
 
@@ -231,8 +239,16 @@ function plainImage(entry, lang, className = "") {
   img.decoding = "async";
   if (className) img.className = className;
   if (entry.shadow) img.classList.add("is-sh");
-  if (entry.width) img.style.width = entry.width;
-  if (entry.maxWidth) img.style.maxWidth = entry.maxWidth;
+  if (entry.rounded) img.classList.add("is-rounded");
+  if (entry.background) img.style.background = entry.background;
+  if (entry.width) img.style.width = len(entry.width);
+  // El ancho máximo cede cuando la franja es más angosta que la pieza
+  if (entry.maxWidth) {
+    img.style.maxWidth = len(entry.maxWidth);
+    if (!entry.width) img.style.width = `min(100%, ${len(entry.maxWidth)})`;
+  }
+  // Una pieza más angosta que la franja se centra sola
+  if (entry.align === "center") img.style.marginInline = "auto";
   return img;
 }
 
@@ -249,6 +265,53 @@ function figureModule(item, lang) {
   const caption = el("figcaption");
   caption.append(el("strong", "", pick(item.title, lang)), document.createTextNode(pick(item.text, lang)));
   node.append(box, caption);
+  return node;
+}
+
+/* Imagen dentro de una caja de color, centrada y con aire alrededor.
+   `maxWidth` es el ancho real de la pieza: entra entera y no se estira.
+   `highlight` le pone el borde de la marca, para marcar la opción elegida. */
+function boxFigure(item, lang, step) {
+  const box = el("div", "box");
+  if (item.box && item.box !== "white") box.style.background = item.box;
+  if (item.boxRatio) box.style.aspectRatio = item.boxRatio;
+  if (item.highlight) box.classList.add("is-pick");
+
+  const img = plainImage(item, lang);
+  if (item.maxWidth) {
+    img.style.width = `min(100%, ${len(item.maxWidth)})`;
+    img.style.maxWidth = "none";
+  }
+  box.append(img);
+
+  const caption = pick(item.caption, lang);
+  if (!caption) return reveal(box, step);
+
+  const figure = reveal(el("figure", "fig"), step);
+  figure.append(box, el("figcaption", "", caption));
+  return figure;
+}
+
+// Texto chico y gris, con un título opcional en mayúsculas arriba.
+function noteBody(item, lang) {
+  const node = el("div", "wsnote__txt");
+  const title = pick(item.title, lang);
+  if (title) node.append(el("p", "wsnote__cap", title));
+  node.append(el("p", "wsnote__body", pick(item.text, lang)));
+  return node;
+}
+
+// Nota suelta: arranca en la primera columna de la franja y no pasa de la quinta.
+function noteModule(item, lang) {
+  const node = reveal(el("div", "wsnote"));
+  node.append(noteBody(item, lang));
+  return node;
+}
+
+// Subtítulo de un tramo dentro de la sección, sobre una línea fina.
+function subheadingModule(item, lang) {
+  const node = reveal(el("div", "sub"));
+  node.append(el("p", "sub__cap", pick(item.text, lang)));
   return node;
 }
 
@@ -361,7 +424,7 @@ function swatch(entry, lang, className = "") {
 function paletteModule(item, lang) {
   if (item.swatches) {
     const node = reveal(el("div", "pal pal--sw"));
-    if (item.swatches.length >= 4) node.classList.add("pal--lead");
+    if (item.swatches.length >= 3) node.classList.add("pal--lead");
     if (item.columns) node.style.setProperty("--cols", item.columns);
     item.swatches.forEach((entry) => node.append(swatch(entry, lang)));
     return node;
@@ -465,10 +528,20 @@ function webShowcaseModule(item, lang) {
   return node;
 }
 
-// Columna centrada de imágenes, cada una con su ancho.
+/* Columna de piezas. Con `align: "center"` van centradas y bien separadas;
+   sin nada, de ancho completo y con la separación común. Un módulo adentro
+   se arma como módulo. */
 function stackModule(item, lang) {
-  const node = el("div", "apps");
-  item.items.forEach((child) => node.append(reveal(plainImage(child, lang))));
+  const centered = item.align === "center";
+  const node = el("div", centered ? "apps" : "stack stack--full");
+
+  item.items.forEach((child) => {
+    if (child.type === "image" && !child.box) {
+      node.append(reveal(plainImage(child, lang, centered ? "" : "wsimg")));
+      return;
+    }
+    node.append(contentModule(child, lang));
+  });
   return node;
 }
 
@@ -505,10 +578,55 @@ function logoHeroModule(item, lang) {
   return node;
 }
 
+/* La fuente de la muestra se carga solo cuando un caso la pide: así ningún
+   otro caso paga por ella. */
+function loadGoogleFont(spec) {
+  const href = `https://fonts.googleapis.com/css2?family=${spec.replace(/ /g, "+")}&display=swap`;
+  if (document.head.querySelector(`link[href="${href}"]`)) return;
+
+  const link = el("link");
+  link.rel = "stylesheet";
+  link.href = href;
+  document.head.append(link);
+}
+
+/* Variante de tarjetas: la familia se declara una vez para todo el módulo y
+   cada muestra elige su peso, su color y su cuerpo. */
+function typeCards(item, node, lang) {
+  const family = `"${item.fontFamily}", sans-serif`;
+
+  item.cards.forEach((card, i) => {
+    // La primera es la de títulos: columna ancha y muestra más grande
+    const cell = reveal(el("div", i === 0 ? "type__cell type__cell--lead" : "type__cell"), i + 1);
+    cell.append(el("p", "type__cap", pick(card.label, lang)));
+
+    card.samples.forEach((entry) => {
+      const sample = el("p", entry.size === "display" ? "type__sample type__sample--big" : "type__sample");
+      sample.style.fontFamily = family;
+      if (entry.weight) sample.style.fontWeight = entry.weight;
+      if (entry.color) sample.style.color = entry.color;
+      pick(entry.text, lang).split("\n").forEach((line, n) => {
+        if (n) sample.append(document.createElement("br"));
+        sample.append(document.createTextNode(line));
+      });
+      cell.append(sample);
+    });
+
+    const glyphs = el("p", "type__abc", card.chars);
+    glyphs.style.fontFamily = family;
+
+    cell.append(glyphs);
+    node.append(cell);
+  });
+  return node;
+}
+
 // Muestras tipográficas en vivo, con la fuente real del caso.
 function typeSpecimenModule(item, lang) {
   const node = el("div", "type");
   if (item.columns) node.style.setProperty("--cols", item.columns);
+  if (item.googleFont) loadGoogleFont(item.googleFont);
+  if (item.cards) return typeCards(item, node, lang);
 
   item.items.forEach((entry, i) => {
     // La primera es la de títulos: columna ancha y muestra más grande
@@ -565,12 +683,57 @@ function webStripModule(item, lang) {
   return node;
 }
 
-// Grilla de imágenes del mismo formato.
+/* Grilla de imágenes del mismo formato. `style` cambia el tratamiento:
+   "screen" les da esquinas redondeadas y sombra, como capturas de la web;
+   "feed" las junta hasta que se leen como el perfil de una cuenta. */
 function gridModule(item, lang) {
-  const node = el("div", "pgrid");
+  if (item.style === "feed") return feedModule(item, lang);
+
+  const node = el("div", item.style === "screen" ? "pgrid pgrid--screen" : "pgrid");
   node.style.setProperty("--n", item.columns);
   if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
-  item.items.forEach((entry, i) => node.append(reveal(plainImage(entry, lang), (i % item.columns) + 1)));
+
+  item.items.forEach((entry, i) => {
+    const step = (i % item.columns) + 1;
+
+    if (entry.box) {
+      node.append(boxFigure(entry, lang, step));
+      return;
+    }
+    if (item.style === "screen") {
+      const box = reveal(el("div", "scr"), step);
+      box.append(plainImage(entry, lang));
+      node.append(box);
+      return;
+    }
+    node.append(reveal(plainImage(entry, lang), step));
+  });
+  return node;
+}
+
+// Íconos sobre cuadrados de un color.
+function iconGridModule(item, lang) {
+  const node = el("div", "icons");
+  node.style.setProperty("--n", item.columns);
+  if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
+
+  item.items.forEach((entry, i) => {
+    const cell = reveal(el("div", "icons__cell"), (i % 4) + 1);
+    if (item.tile) cell.style.background = item.tile;
+    cell.append(plainImage(entry, lang));
+    node.append(cell);
+  });
+  return node;
+}
+
+// Banda de color con las piezas centradas encima.
+function bandModule(item, lang) {
+  const node = reveal(el("div", "band"));
+  if (item.background) node.style.background = item.background;
+  node.style.setProperty("--n", item.columns);
+  if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
+
+  item.items.forEach((entry) => node.append(plainImage(entry, lang, "band__img")));
   return node;
 }
 
@@ -586,7 +749,7 @@ function panelModule(item, lang) {
 function feedModule(item, lang) {
   const node = el("div", "feed");
   node.style.setProperty("--n", item.columns);
-  if (item.maxWidth) node.style.setProperty("--feed-max", item.maxWidth);
+  if (item.maxWidth) node.style.setProperty("--feed-max", len(item.maxWidth));
   item.items.forEach((entry, i) => node.append(reveal(plainImage(entry, lang), (i % item.columns) + 1)));
   return node;
 }
@@ -625,9 +788,13 @@ const MODULES = {
   pattern: patternModule,
   webStrip: webStripModule,
   grid: gridModule,
+  iconGrid: iconGridModule,
+  band: bandModule,
   panel: panelModule,
   feed: feedModule,
-  stories: storiesModule
+  stories: storiesModule,
+  note: noteModule,
+  subheading: subheadingModule
 };
 
 /* Flujo del caso: `flow` intercala textos y secciones en un solo orden.
@@ -650,12 +817,14 @@ function sectionContent(section) {
 function contentModule(item, lang) {
   const node = buildContent(item, lang);
   if (item.spacingTop === "large") node.classList.add("is-mt");
+  if (item.spacingTop === "medium") node.classList.add("is-mt-md");
   return node;
 }
 
 function buildContent(item, lang) {
   const build = MODULES[item.type];
   if (build) return build(item, lang);
+  if (item.type === "image" && item.box) return boxFigure(item, lang);
   // Imagen suelta: va directo sobre la franja, sin marco (salvo que se amplíe)
   if (item.type === "image" && !item.zoom) return reveal(plainImage(item, lang, "wsimg"));
   return pieceItem(item, lang);
@@ -736,6 +905,8 @@ function closingBlock(quote, lang) {
 
 function renderSections(kase, lang) {
   nodes.client.textContent = pick(kase.eyebrow, lang) || pick(kase.client, lang);
+  // Lo que se realza va en el color de la marca del caso, no en el del sitio
+  nodes.body.style.setProperty("--pick", kase.brandColor || "");
   nodes.sheet.replaceChildren(...(kase.facts || []).map((fact) => sheetItem(fact, lang)));
 
   let number = 0;
@@ -803,8 +974,18 @@ function render() {
 
   const client = pick(kase.client, lang);
   nodes.client.textContent = client;
-  nodes.title.textContent = title;
   nodes.line.textContent = pick(kase.oneLiner, lang);
+
+  // `titleLines` dice dónde cortar el título de la apertura
+  if (Array.isArray(kase.titleLines)) {
+    nodes.title.replaceChildren();
+    kase.titleLines.forEach((line, i) => {
+      if (i) nodes.title.append(document.createElement("br"));
+      nodes.title.append(document.createTextNode(line));
+    });
+  } else {
+    nodes.title.textContent = title;
+  }
 
   nodes.next.href = `work.html?case=${encodeURIComponent(next.id)}`;
   nodes.nextTitle.textContent = pick(next.title, lang);

@@ -2307,9 +2307,840 @@
       }
     },
     {
+      "id": "carol-wilson",
+      "featured": false,
+      "order": 5,
+      "client": {
+        "es": "Dr. Caroline Wilson",
+        "en": ""
+      },
+      "url": "https://www.zahnarztpraxis-wilson.de",
+      "title": {
+        "es": "Dr. Caroline Wilson",
+        "en": "Dr. Caroline Wilson"
+      },
+      "titleLines": [
+        "Dr. Caroline",
+        "Wilson"
+      ],
+      "eyebrow": {
+        "es": "Caso · Bretzel Brand Lab",
+        "en": ""
+      },
+      "oneLiner": {
+        "es": "Rebranding para una práctica odontológica en Ravensburg",
+        "en": ""
+      },
+      "role": {
+        "es": "Brand Designer · Bretzel Brand Lab",
+        "en": "Brand Designer · Bretzel Brand Lab"
+      },
+      "period": {
+        "es": "2024 – 2026",
+        "en": "2024 – 2026"
+      },
+      "tags": [
+        "Branding",
+        "Web Design",
+        "Social Media"
+      ],
+      "coverImage": "assets/img/cases/carol-wilson/web-laptop-home.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2024 – 2026",
+            "en": "2024 – 2026"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Ravensburg, Alemania",
+            "en": "Ravensburg, Germany"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Brand Designer · Bretzel Brand Lab",
+            "en": "Brand Designer · Bretzel Brand Lab"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Identidad visual, sistema de color y tipografía, brand guidelines, papelería, web, redes",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Sitio",
+            "en": "Site"
+          },
+          "wide": true,
+          "links": [
+            "https://www.zahnarztpraxis-wilson.de"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Caroline Wilson heredó de su madre una práctica odontológica en Ravensburg y, con ella, un logo que había acompañado al consultorio durante veinte años. El desafío: renovar la marca sin borrar lo que ya significaba para los pacientes, respetando esa historia en lugar de reemplazarla.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Logo original",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "7fr 1fr 4fr",
+              "align": "end",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/logo-original.webp",
+                  "alt": {
+                    "es": "Logo original: diente de trazo gris con el texto Zahnarztpraxis Dr. Susanne Cernovsky",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "16/10",
+                  "maxWidth": 462
+                },
+                {
+                  "type": "spacer"
+                },
+                {
+                  "type": "note",
+                  "title": {
+                    "es": "Zahnarztpraxis Dr. Susanne Cernovsky",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "La marca con la que el consultorio funcionó durante veinte años.",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Junto con Bretzel exploramos seis caminos y elegimos el que mantenía la forma del diente original y su calidez, llevado a una versión más moderna, elegante y simple, con una paleta que toma los colores de los ambos médicos y una tipografía propia.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Propuesta",
+            "en": ""
+          },
+          "intro": {
+            "es": "Los seis caminos que presentamos. La identidad final parte de la opción 1, que conserva el trazo del diente original.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "grid",
+              "columns": 3,
+              "mobileColumns": 2,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-1.webp",
+                  "alt": {
+                    "es": "Opción 1: diente de línea fina en turquesa con Dr. Caroline Wilson, Zahnarztpraxis",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 1 · elegida",
+                    "en": ""
+                  },
+                  "highlight": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-2.webp",
+                  "alt": {
+                    "es": "Opción 2: diente de contorno en azul con Caroline Wilson",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 2",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-3.webp",
+                  "alt": {
+                    "es": "Opción 3: las letras C y W forman un diente, en violeta",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 3",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-4.webp",
+                  "alt": {
+                    "es": "Opción 4: la parte superior del diente sobre el nombre en letra manuscrita",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 4",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-5.webp",
+                  "alt": {
+                    "es": "Opción 5: diente lleno con formas superpuestas en azul y verde",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 5",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-opcion-6.webp",
+                  "alt": {
+                    "es": "Opción 6: diente lleno en turquesa con el nombre en violeta",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "4/3",
+                  "caption": {
+                    "es": "Opción 6",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": {
+                "es": "Aplicaciones presentadas en la propuesta",
+                "en": ""
+              }
+            },
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-ambo.webp",
+                  "alt": {
+                    "es": "Ambo turquesa con el logo bordado en el bolsillo",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/propuesta-vinilo-puerta.webp",
+                  "alt": {
+                    "es": "Vinilo con el logo en la puerta de vidrio del consultorio",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Identidad",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "stack",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/logo-blanco-sobre-turquesa.svg",
+                  "alt": {
+                    "es": "Logo de Dr. Caroline Wilson Zahnarztpraxis en blanco sobre turquesa",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "grid",
+                  "columns": 3,
+                  "mobileColumns": 1,
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/carol-wilson/logo-color.svg",
+                      "alt": {
+                        "es": "Logo en turquesa y gris sobre blanco",
+                        "en": ""
+                      },
+                      "background": "#ffffff"
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/carol-wilson/logo-verde-sobre-turquesa.svg",
+                      "alt": {
+                        "es": "Logo en verde oscuro sobre turquesa",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/carol-wilson/logo-blanco-sobre-negro.svg",
+                      "alt": {
+                        "es": "Logo en blanco sobre negro",
+                        "en": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Color y tipografía",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "palette",
+              "columns": "2fr 1fr 1fr",
+              "swatches": [
+                {
+                  "name": {
+                    "es": "Main color",
+                    "en": ""
+                  },
+                  "hex": "#009F97"
+                },
+                {
+                  "name": {
+                    "es": "Secondary color",
+                    "en": ""
+                  },
+                  "hex": "#005952"
+                },
+                {
+                  "name": {
+                    "es": "Grey",
+                    "en": ""
+                  },
+                  "hex": "#606060"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "text": {
+                "es": "Las paletas de la propuesta salieron de los colores más usados en los ambos médicos. La marca se quedó con el turquesa.",
+                "en": ""
+              }
+            },
+            {
+              "type": "typeSpecimen",
+              "columns": "3fr 2fr",
+              "fontFamily": "Poppins",
+              "googleFont": "Poppins:wght@300;400;700",
+              "cards": [
+                {
+                  "label": {
+                    "es": "Poppins Bold",
+                    "en": ""
+                  },
+                  "samples": [
+                    {
+                      "text": "Dr. Caroline\nWilson",
+                      "weight": 700,
+                      "color": "#009F97",
+                      "size": "display"
+                    }
+                  ],
+                  "chars": "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ · 1234567890"
+                },
+                {
+                  "label": {
+                    "es": "Poppins Regular y Light",
+                    "en": ""
+                  },
+                  "samples": [
+                    {
+                      "text": "Zahnarztpraxis",
+                      "weight": 400
+                    },
+                    {
+                      "text": "Zahnarztpraxis",
+                      "weight": 300
+                    }
+                  ],
+                  "chars": "abcdefghijklmnñopqrstuvwxyz · 1234567890"
+                }
+              ],
+              "spacingTop": "medium"
+            },
+            {
+              "type": "subheading",
+              "text": {
+                "es": "Íconos de servicios",
+                "en": ""
+              }
+            },
+            {
+              "type": "iconGrid",
+              "columns": 9,
+              "mobileColumns": 3,
+              "tile": "#ffffff",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-profilaxis.svg",
+                  "alt": {
+                    "es": "Ícono de profilaxis",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-conservacion.svg",
+                  "alt": {
+                    "es": "Ícono de conservación dental",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-funcional.svg",
+                  "alt": {
+                    "es": "Ícono de terapia funcional",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-estetica.svg",
+                  "alt": {
+                    "es": "Ícono de odontología estética",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-protesis.svg",
+                  "alt": {
+                    "es": "Ícono de prótesis dental",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-implantologia.svg",
+                  "alt": {
+                    "es": "Ícono de implantología",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-cirugia.svg",
+                  "alt": {
+                    "es": "Ícono de cirugía",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-odontopediatria.svg",
+                  "alt": {
+                    "es": "Ícono de odontopediatría",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/icono-ansiedad.svg",
+                  "alt": {
+                    "es": "Ícono de tratamiento para pacientes con ansiedad",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Aplicaciones",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "A partir de ahí armamos el manual de marca, la papelería y una web nueva pensada para que los pacientes se sientan como en casa. Más adelante la marca pasó a redes, con un sistema de contenido para tips, mitos y servicios, y una serie de personajes generados con IA y retrabajados para darle un tono más cercano.",
+              "en": ""
+            },
+            {
+              "es": "De mi lado me tocó definir la identidad, llevarla a las aplicaciones, diseñar la web y el contenido de redes.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Papelería",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "stack",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/papeleria.webp",
+                  "alt": {
+                    "es": "Papelería: carpeta, hoja membretada, sobre, cuaderno, libreta y tarjetas con la marca",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/papeleria-tarjetas.webp",
+                  "alt": {
+                    "es": "Tarjetas personales, frente turquesa y dorso blanco con los datos del consultorio",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Web",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/carol-wilson/web-laptop-home.webp",
+              "alt": {
+                "es": "Home de la web en una laptop: Liebe Patientinnen, liebe Patienten",
+                "en": ""
+              },
+              "maxWidth": 1100,
+              "align": "center"
+            },
+            {
+              "type": "grid",
+              "columns": 2,
+              "mobileColumns": 1,
+              "spacingTop": "large",
+              "style": "screen",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/web-home.webp",
+                  "alt": {
+                    "es": "Home con la foto de la recepción y el saludo a los pacientes",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/web-servicios.webp",
+                  "alt": {
+                    "es": "Sección Unsere Dienstleistungen con tarjetas de servicios e íconos",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/web-team.webp",
+                  "alt": {
+                    "es": "Sección Team con los retratos del equipo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/web-galeria.webp",
+                  "alt": {
+                    "es": "Galería de fotos del consultorio y del equipo",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Redes",
+            "en": ""
+          },
+          "intro": {
+            "es": "Para el verano armamos una serie de tips con dientes como personajes, generados con IA y retrabajados, sobre un amarillo que rompe con el turquesa sin salirse de la marca.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "band",
+              "background": "#FFD775",
+              "columns": 2,
+              "mobileColumns": 1,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-personaje-helado.webp",
+                  "alt": {
+                    "es": "Personaje: un diente con un helado y gesto de dolor por sensibilidad",
+                    "en": ""
+                  },
+                  "maxWidth": 512,
+                  "rounded": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-personaje-cuidados.webp",
+                  "alt": {
+                    "es": "Personaje: un diente pensativo rodeado de cepillo, hilo dental, manzana y calendario",
+                    "en": ""
+                  },
+                  "maxWidth": 512,
+                  "rounded": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "columns": 4,
+              "mobileColumns": 2,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-sommer-tipp-1.webp",
+                  "alt": {
+                    "es": "Sommer-Tipp: tomar suficiente agua también es bueno para los dientes",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-sommer-tipp-2.webp",
+                  "alt": {
+                    "es": "Sommer-Tipp: después de bebidas ácidas, esperar 30 minutos para cepillarse",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-sommer-tipp-3.webp",
+                  "alt": {
+                    "es": "Sommer-Tipp: dientes sensibles con el helado, no hay que ignorarlo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-sommer-tipp-4.webp",
+                  "alt": {
+                    "es": "Sommer-Tipp: un comienzo fresco después del verano, también para la sonrisa",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": {
+                "es": "Datos y servicios",
+                "en": ""
+              }
+            },
+            {
+              "type": "grid",
+              "columns": 3,
+              "style": "feed",
+              "maxWidth": 960,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-dato-limpieza.webp",
+                  "alt": {
+                    "es": "Post: una limpieza profesional al año, menos caries y más salud dental",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-dato-caries.webp",
+                  "alt": {
+                    "es": "Post: las caries sin tratar son una de las enfermedades más comunes del mundo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-dato-periodontitis.webp",
+                  "alt": {
+                    "es": "Post: la periodontitis puede avanzar sin que lo notes",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-servicio-blanqueamiento.webp",
+                  "alt": {
+                    "es": "Post: así funciona nuestro blanqueamiento, en cinco pasos",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-servicio-airflow.webp",
+                  "alt": {
+                    "es": "Post: limpieza profesional con Airflow, suave, efectiva y segura",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-tip-fluor.webp",
+                  "alt": {
+                    "es": "Post: flúor, realmente necesario",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": {
+                "es": "Perfil y equipo",
+                "en": ""
+              }
+            },
+            {
+              "type": "grid",
+              "columns": 4,
+              "mobileColumns": 2,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-perfil-tradition.webp",
+                  "alt": {
+                    "es": "Post de presentación: Fürsorge mit Tradition, neu gedacht",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-perfil-neues-kapitel.webp",
+                  "alt": {
+                    "es": "Post de la cuenta anterior: ein neues Kapitel beginnt",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-team-caroline.webp",
+                  "alt": {
+                    "es": "Post del equipo: retrato de Caroline Wilson",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/carol-wilson/redes-team-marion.webp",
+                  "alt": {
+                    "es": "Post del equipo: retrato de Marion",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "Hoy la práctica tiene una marca que conserva los veinte años de confianza del consultorio y quedó lista para la próxima generación.",
+          "en": ""
+        }
+      },
+      "brandColor": "#009F97"
+    },
+    {
       "id": "arm",
       "featured": true,
-      "order": 5,
+      "order": 6,
       "client": {
         "es": "ARM — Londres, Reino Unido",
         "en": ""
@@ -2345,7 +3176,7 @@
     {
       "id": "ox-beard-care",
       "featured": true,
-      "order": 6,
+      "order": 7,
       "client": {
         "es": "ØX Beard Care — Argentina",
         "en": ""
@@ -2381,7 +3212,7 @@
     {
       "id": "inviu",
       "featured": true,
-      "order": 7,
+      "order": 8,
       "client": {
         "es": "Inviu · Grupo Financiero Galicia",
         "en": ""
@@ -3135,41 +3966,6 @@
           }
         }
       }
-    },
-    {
-      "id": "caroline-wilson",
-      "featured": false,
-      "order": 8,
-      "client": {
-        "es": "Dr. Caroline Wilson — Alemania",
-        "en": ""
-      },
-      "url": "",
-      "title": {
-        "es": "Dr. Caroline Wilson (Alemania)",
-        "en": "Dr. Caroline Wilson (Germany)"
-      },
-      "oneLiner": {
-        "es": "Rebranding respetando legado.",
-        "en": ""
-      },
-      "role": {
-        "es": "",
-        "en": ""
-      },
-      "period": {
-        "es": "",
-        "en": ""
-      },
-      "narrative": {
-        "es": "",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
-      "tags": [
-        "Branding"
-      ]
     }
   ]
 }

@@ -551,6 +551,11 @@
 .ws__content > .stories { margin-top: 1rem; }
 /* La notebook y los tres mocks de la web no se tocan */
 .ws__content > .wstrip + .pgrid { margin-top: clamp(3rem, 6vw, 6rem); }
+/* `spacingTop` abre más aire que el común antes de un módulo */
+.ws__content > .is-mt { margin-top: clamp(3rem, 6vw, 6rem); }
+.ws__content > .is-mt-md { margin-top: clamp(2.5rem, 5vw, 4rem); }
+/* Lo que viene abajo de un subtítulo se le pega */
+.ws__content > .sub + * { margin-top: 1rem; }
 
 /* --- Imagen con título y texto -------------------------------- */
 .fig {
@@ -575,6 +580,33 @@
   color: var(--text);
   font-weight: 600;
   margin-bottom: 0.15rem;
+}
+
+/* --- Pieza dentro de una caja --------------------------------- */
+/* Logos y opciones de propuesta vienen en archivos de tamaños distintos: la
+   caja les da un formato común y la pieza entra entera, sin estirarse. */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 12%;
+  overflow: hidden;
+}
+.box img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Sola en una fila la caja es más grande, y necesita menos aire relativo */
+.row > .box,
+.row > .fig > .box { padding: 8%; }
+/* El borde marca la opción elegida, en el color de la marca del caso */
+.box.is-pick {
+  outline: 2px solid var(--pick, var(--accent));
+  outline-offset: -2px;
 }
 
 /* --- Notas ----------------------------------------------------- */
@@ -1149,7 +1181,81 @@
 }
 .stories img { border-radius: clamp(8px, 1vw, 14px); }
 
+/* --- Nota: texto chico, con un título opcional arriba --------- */
+.wsnote {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.ws__content > .wsnote { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.wsnote > .wsnote__txt { grid-column: 1 / span 5; }
+.wsnote__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.wsnote__body {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --- Columna vacía dentro de una fila ------------------------- */
+/* Sostiene la grilla donde el diseño deja aire; en celular no va */
+.row__gap { display: block; }
+
+/* --- Columna de piezas de ancho completo ---------------------- */
+.stack--full > .wsimg { width: 100%; }
+
+/* --- Capturas de la web --------------------------------------- */
+.pgrid--screen { gap: clamp(16px, 2.4vw, 36px); }
+.scr {
+  border-radius: clamp(8px, 1vw, 14px);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+.scr > img { width: 100%; }
+
+/* --- Íconos sobre cuadrados ----------------------------------- */
+.icons {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 9), minmax(0, 1fr));
+  gap: var(--gap);
+}
+.icons__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 18%;
+}
+.icons__cell > img { width: 100%; }
+
+/* --- Banda de color con las piezas encima --------------------- */
+.band {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 2), minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 48px);
+  padding: clamp(2rem, 6vw, 6rem);
+}
+.band__img { margin-inline: auto; }
+.is-rounded { border-radius: clamp(12px, 1.6vw, 24px); }
+
+/* La muestra marcada como `display` manda en su tarjeta */
+.type__cell .type__sample--big {
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
 /* Imágenes de los módulos: se apoyan en la franja, sin marco */
+.pgrid > img,
+.band__img { width: 100%; }
+
 .wsimg,
 .idmain img,
 .pgrid img,
@@ -1254,4 +1360,11 @@
     animation-name: detail-reveal !important;
   }
   .apps img { width: 100% !important; }
+
+  /* La nota pasa a ocupar todo el ancho, y la columna vacía desaparece */
+  .wsnote > .wsnote__txt { grid-column: 1 / -1; }
+  .row__gap { display: none; }
+
+  .icons { grid-template-columns: repeat(var(--n-m, 3), minmax(0, 1fr)); }
+  .band { grid-template-columns: repeat(var(--n-m, 1), minmax(0, 1fr)); }
 }

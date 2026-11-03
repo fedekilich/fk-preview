@@ -533,7 +533,38 @@ en = "2025"
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://alexandermartinez.com"
 
-# ─── 5. ARM (Londres)   ·   id: arm ──────────────────────────────────────
+# ─── 5. Dr. Caroline Wilson   ·   id: carol-wilson ───────────────────────
+
+[caso.carol-wilson.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "Dr. Caroline Wilson"
+en = ""
+
+[caso.carol-wilson.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "Dr. Caroline Wilson"
+en = "Dr. Caroline Wilson"
+
+[caso.carol-wilson.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Rebranding para una práctica odontológica en Ravensburg"
+en = ""
+
+[caso.carol-wilson.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = "Brand Designer · Bretzel Brand Lab"
+en = "Brand Designer · Bretzel Brand Lab"
+
+[caso.carol-wilson.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2024 – 2026"
+en = "2024 – 2026"
+
+[caso.carol-wilson.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = "https://www.zahnarztpraxis-wilson.de"
+
+# ─── 6. ARM (Londres)   ·   id: arm ──────────────────────────────────────
 
 [caso.arm.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -571,7 +602,7 @@ en = ""
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = ""
 
-# ─── 6. ØX Beard Care   ·   id: ox-beard-care ────────────────────────────
+# ─── 7. ØX Beard Care   ·   id: ox-beard-care ────────────────────────────
 
 [caso.ox-beard-care.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -608,7 +639,7 @@ en = ""
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = ""
 
-# ─── 7. Inviu   ·   id: inviu ────────────────────────────────────────────
+# ─── 8. Inviu   ·   id: inviu ────────────────────────────────────────────
 
 [caso.inviu.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -638,43 +669,6 @@ en = "2021 – present"
 [caso.inviu.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://inviu.lat"
-
-# ─── 8. Dr. Caroline Wilson (Alemania)   ·   id: caroline-wilson ─────────
-
-[caso.caroline-wilson.client]
-nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "Dr. Caroline Wilson — Alemania"
-en = ""
-
-[caso.caroline-wilson.title]
-nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
-es = "Dr. Caroline Wilson (Alemania)"
-en = "Dr. Caroline Wilson (Germany)"
-
-[caso.caroline-wilson.oneLiner]
-nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Rebranding respetando legado."
-en = ""
-
-[caso.caroline-wilson.role]
-nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.caroline-wilson.period]
-nota = "Cuándo se hizo. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.caroline-wilson.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = ""
-en = ""
-
-[caso.caroline-wilson.url]
-nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
-valor = ""
-
 
 # ══════════════════════════════════════════════════════════════════════════
 #  LAB
