@@ -224,6 +224,7 @@ function plainImage(entry, lang, className = "") {
   img.decoding = "async";
   if (className) img.className = className;
   if (entry.width) img.style.width = entry.width;
+  if (entry.maxWidth) img.style.maxWidth = entry.maxWidth;
   return img;
 }
 
@@ -316,6 +317,8 @@ function logoAnatomyModule(item, lang) {
 // Fila de piezas, cada una sobre su color de fondo.
 function tilesModule(item, lang) {
   const node = el("div", "tiles");
+  node.style.setProperty("--n", item.items.length);
+  if (item.items.length >= 4) node.classList.add("tiles--many");
   if (item.ratio) node.style.setProperty("--ratio", item.ratio);
   if (item.padding) node.style.setProperty("--tile-pad", item.padding);
 
@@ -337,8 +340,16 @@ function swatch(entry, lang, className = "") {
   return node;
 }
 
-// Paleta: principal, acentos y base, tipografía y barra de proporciones.
+/* Paleta: principal, acentos y base, tipografía y barra de proporciones.
+   Los casos que solo traen `swatches` muestran las muestras y nada más. */
 function paletteModule(item, lang) {
+  if (item.swatches) {
+    const node = reveal(el("div", "pal pal--sw"));
+    if (item.columns) node.style.setProperty("--cols", item.columns);
+    item.swatches.forEach((entry) => node.append(swatch(entry, lang)));
+    return node;
+  }
+
   const parts = document.createDocumentFragment();
 
   const palette = reveal(el("div", "pal"));
@@ -444,6 +455,138 @@ function stackModule(item, lang) {
   return node;
 }
 
+// Logos sobre cajas de un color, con título y texto abajo.
+function logoBoxesModule(item, lang) {
+  const node = el("div", "lbox");
+  node.style.setProperty("--n", item.columns);
+  if (item.columns >= 3) node.classList.add("lbox--many");
+  if (item.ratio) node.style.setProperty("--lbox-ratio", item.ratio);
+  if (item.padding) node.style.setProperty("--lbox-pad", item.padding);
+
+  item.items.forEach((entry, i) => {
+    const figure = reveal(el("figure", "fig"), (i % item.columns) + 1);
+    const box = el("div", "lbox__box");
+    if (item.bg) box.style.background = item.bg;
+    box.append(plainImage(entry.image, lang));
+
+    const caption = el("figcaption");
+    const title = pick(entry.title, lang);
+    if (title) caption.append(el("strong", "", title));
+    caption.append(document.createTextNode(pick(entry.text, lang)));
+
+    figure.append(box, caption);
+    node.append(figure);
+  });
+  return node;
+}
+
+// Logo principal grande y centrado, sobre el color de la marca.
+function logoHeroModule(item, lang) {
+  const node = reveal(el("div", "idmain"));
+  if (item.background) node.style.background = item.background;
+  node.append(plainImage(item, lang));
+  return node;
+}
+
+// Muestras tipográficas en vivo, con la fuente real del caso.
+function typeSpecimenModule(item, lang) {
+  const node = el("div", "type");
+  if (item.columns) node.style.setProperty("--cols", item.columns);
+
+  item.items.forEach((entry, i) => {
+    // La primera es la de títulos: columna ancha y muestra más grande
+    const cell = reveal(el("div", i === 0 ? "type__cell type__cell--lead" : "type__cell"), i + 1);
+    const family = `"${entry.family}", sans-serif`;
+
+    const sample = el("p", "type__sample");
+    sample.style.fontFamily = family;
+    if (entry.weight) sample.style.fontWeight = entry.weight;
+    if (entry.uppercase) sample.style.textTransform = "uppercase";
+    if (entry.color) sample.style.color = entry.color;
+    pick(entry.sample, lang).split("\n").forEach((line, n) => {
+      if (n) sample.append(document.createElement("br"));
+      sample.append(document.createTextNode(line));
+    });
+
+    const glyphs = el("p", "type__abc", entry.glyphs);
+    glyphs.style.fontFamily = family;
+
+    cell.append(el("p", "type__cap", pick(entry.label, lang)), sample, glyphs);
+    node.append(cell);
+  });
+  return node;
+}
+
+// Etiqueta y texto a la izquierda, y las tramas sobre blanco a la derecha.
+function patternModule(item, lang) {
+  const node = el("div", "trama");
+
+  const text = reveal(el("div", "trama__txt"));
+  text.append(el("p", "trama__cap", pick(item.label, lang)), el("p", "trama__body", pick(item.text, lang)));
+
+  const images = el("div", "trama__imgs");
+  item.items.forEach((entry, i) => {
+    const box = reveal(el("div", "trama__box"), i + 1);
+    box.append(plainImage(entry, lang));
+    images.append(box);
+  });
+
+  node.append(text, images);
+  return node;
+}
+
+// La notebook arriba y, saliendo de abajo de la base, la página que sigue.
+function webStripModule(item, lang) {
+  const node = el("div", "wstrip");
+  node.append(reveal(plainImage(item.laptop, lang, "wstrip__laptop")));
+
+  const page = el("div", "wstrip__page");
+  if (item.background) page.style.background = item.background;
+  item.sections.forEach((entry) => page.append(reveal(plainImage(entry, lang))));
+
+  node.append(page);
+  return node;
+}
+
+// Grilla de imágenes del mismo formato.
+function gridModule(item, lang) {
+  const node = el("div", "pgrid");
+  node.style.setProperty("--n", item.columns);
+  item.items.forEach((entry, i) => node.append(reveal(plainImage(entry, lang), (i % item.columns) + 1)));
+  return node;
+}
+
+// Una pieza plana sobre un panel de color.
+function panelModule(item, lang) {
+  const node = reveal(el("div", "flat"));
+  if (item.background) node.style.background = item.background;
+  node.append(plainImage(item.image, lang));
+  return node;
+}
+
+// Posts con el gap mínimo y ancho acotado: se lee como un feed.
+function feedModule(item, lang) {
+  const node = el("div", "feed");
+  node.style.setProperty("--n", item.columns);
+  if (item.maxWidth) node.style.setProperty("--feed-max", item.maxWidth);
+  item.items.forEach((entry, i) => node.append(reveal(plainImage(entry, lang), (i % item.columns) + 1)));
+  return node;
+}
+
+// Fila de stories con esquinas redondeadas, bajo su etiqueta.
+function storiesModule(item, lang) {
+  const parts = document.createDocumentFragment();
+
+  const head = reveal(el("div", "sub"));
+  head.append(el("p", "sub__cap", pick(item.label, lang)));
+
+  const row = el("div", "stories");
+  item.items.forEach((entry, i) => row.append(reveal(plainImage(entry, lang), i + 1)));
+
+  parts.append(head, row);
+  return parts;
+}
+
 const MODULES = {
   row: pieceRow,
   figure: figureModule,
@@ -457,7 +600,16 @@ const MODULES = {
   textRow: textRowModule,
   compositions: compositionsModule,
   webShowcase: webShowcaseModule,
-  stack: stackModule
+  stack: stackModule,
+  logoBoxes: logoBoxesModule,
+  logoHero: logoHeroModule,
+  typeSpecimen: typeSpecimenModule,
+  pattern: patternModule,
+  webStrip: webStripModule,
+  grid: gridModule,
+  panel: panelModule,
+  feed: feedModule,
+  stories: storiesModule
 };
 
 /* Flujo del caso: `flow` intercala textos y secciones en un solo orden.
@@ -479,7 +631,10 @@ function sectionContent(section) {
 
 function contentModule(item, lang) {
   const build = MODULES[item.type];
-  return build ? build(item, lang) : pieceItem(item, lang);
+  if (build) return build(item, lang);
+  // Imagen suelta: va directo sobre la franja, sin marco (salvo que se amplíe)
+  if (item.type === "image" && !item.zoom) return reveal(plainImage(item, lang, "wsimg"));
+  return pieceItem(item, lang);
 }
 
 function workSection(section, number, lang) {

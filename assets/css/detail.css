@@ -537,6 +537,11 @@
 .ws__content > .anat { margin-top: clamp(3rem, 6vw, 5rem); }
 .ws__content > .prop { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .ws__content > .el__caps { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.ws__content > .trama { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.ws__content > .sub { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.ws__content > .stories { margin-top: 1rem; }
+/* La notebook y los tres mocks de la web no se tocan */
+.ws__content > .wstrip + .pgrid { margin-top: clamp(3rem, 6vw, 6rem); }
 
 /* --- Imagen con título y texto -------------------------------- */
 .fig {
@@ -703,7 +708,7 @@
 /* --- Versiones del logo sobre su color ------------------------ */
 .tiles {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr));
   gap: var(--gap);
 }
 .tiles__cell {
@@ -948,6 +953,201 @@
 .closing .quote { grid-column: 2 / span 10; }
 .closing .quote p { font-size: clamp(2.2rem, 5.4vw, 5rem); }
 
+/* --- Logos sobre cajas de color ------------------------------- */
+.lbox {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 2), minmax(0, 1fr));
+  gap: var(--gap);
+}
+.lbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: var(--lbox-ratio, 16 / 10);
+  padding: var(--lbox-pad, 10%);
+  overflow: hidden;
+}
+/* El logo entra completo en la caja, sin estirarse */
+.lbox__box img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* --- Logo principal sobre el color de la marca ---------------- */
+.idmain {
+  display: flex;
+  justify-content: center;
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+.idmain img { width: clamp(180px, 26vw, 380px); }
+
+/* --- Paleta: solo muestras ------------------------------------ */
+.pal--sw {
+  grid-template-columns: var(--cols, repeat(2, minmax(0, 1fr)));
+  grid-template-rows: auto;
+}
+/* Son los colores de la marca, oscuros: el nombre y el hex van en claro */
+.pal--sw .sw {
+  color: #fcfcfc;
+  min-height: clamp(220px, 24vw, 380px);
+}
+
+/* --- Muestras tipográficas ------------------------------------ */
+.type {
+  display: grid;
+  grid-template-columns: var(--cols, repeat(2, minmax(0, 1fr)));
+  gap: var(--gap);
+}
+.type__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.5vw, 2.25rem);
+  border: 1px solid var(--line);
+}
+.type__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.type__sample {
+  font-size: clamp(1.9rem, 3.4vw, 3.2rem);
+  line-height: 1.05;
+  margin: 0;
+}
+/* La muestra de títulos va en la columna ancha y con más cuerpo */
+.type__cell--lead .type__sample {
+  font-size: clamp(2.3rem, 4.8vw, 4.6rem);
+  line-height: 1;
+}
+.type__abc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* --- Trama ---------------------------------------------------- */
+.trama {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: center;
+}
+.trama__txt { grid-column: 1 / span 4; }
+.trama__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.trama__body {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+.trama__imgs {
+  grid-column: 5 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.trama__box {
+  background: #fff;
+  aspect-ratio: 1 / 1;
+}
+.trama__box img { width: 100%; }
+
+/* --- Web: la página sigue debajo de la notebook --------------- */
+/* La tira sube por detrás de la base y arranca donde la base termina */
+.wstrip {
+  position: relative;
+  width: 86%;
+  margin-inline: auto;
+}
+.wstrip__laptop {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.wstrip__page {
+  position: relative;
+  z-index: 1;
+  width: 89.3%;
+  margin: -5% auto 0;
+  padding: 5% 0 clamp(10px, 1.5vw, 22px);
+  border-radius: 0 0 clamp(10px, 1.5vw, 22px) clamp(10px, 1.5vw, 22px);
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+.wstrip__page img { width: 100%; }
+
+/* --- Grilla de imágenes --------------------------------------- */
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+/* --- Pieza plana sobre un panel de color ---------------------- */
+.flat { padding: clamp(1.5rem, 4vw, 4rem) clamp(1rem, 3vw, 3rem); }
+
+/* --- Feed ----------------------------------------------------- */
+.feed {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr));
+  gap: clamp(4px, 0.5vw, 8px);
+  max-width: var(--feed-max, none);
+  margin-inline: auto;
+}
+
+/* --- Stories -------------------------------------------------- */
+.sub {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.sub__cap {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.stories {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+}
+.stories img { border-radius: clamp(8px, 1vw, 14px); }
+
+/* Imágenes de los módulos: se apoyan en la franja, sin marco */
+.wsimg,
+.idmain img,
+.pgrid img,
+.flat img,
+.feed img,
+.stories img,
+.wstrip__page img,
+.trama__box img,
+.lbox__box img {
+  display: block;
+  height: auto;
+}
+
 /* --- Celular -------------------------------------------------- */
 @media (max-width: 760px) {
   .detail__sheet > div { grid-column: span 6; }
@@ -983,11 +1183,29 @@
   }
 
   /* Módulos: lo que entra en dos columnas se queda en dos; el resto, en una */
-  .tiles,
   .el__grid,
   .el__caps,
   .pal2,
   .rac { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Las piezas horizontales van de una; los isotipos y las opciones, de dos */
+  .tiles,
+  .lbox { grid-template-columns: minmax(0, 1fr); }
+  .tiles--many,
+  .lbox--many,
+  .pgrid,
+  .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Si la grilla queda con una suelta al final, ocupa el ancho entero */
+  .pgrid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+  .pal.pal--sw,
+  .type { grid-template-columns: minmax(0, 1fr); }
+  .type__cell--lead .type__sample { font-size: clamp(2.3rem, 9vw, 3.4rem); }
+
+  .trama__txt,
+  .trama__imgs { grid-column: 1 / -1; }
+
+  .wstrip { width: 100%; }
   .pal { grid-template-columns: 1fr 1fr; }
   .sw--main {
     grid-column: 1 / -1;

@@ -472,40 +472,34 @@ nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no a
 valor = "https://mamminafit.com"
 
 
-# ─── 3. Driving Team Schobloch   ·   id: driving-team-schobloch ──────────
+# ─── 3. Driving Team Schobloch   ·   id: driving-team ────────────────────
 
-[caso.driving-team-schobloch.client]
+[caso.driving-team.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "Driving Team Schobloch — Weingarten, Alemania (2025/2026)"
+es = "Driving Team Schobloch"
 en = ""
 
-[caso.driving-team-schobloch.title]
+[caso.driving-team.title]
 nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
 es = "Driving Team Schobloch"
 en = "Driving Team Schobloch"
 
-[caso.driving-team-schobloch.oneLiner]
+[caso.driving-team.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Dos marcas heredadas, una sola dirección."
+es = "Rebranding y aplicaciones para una escuela de manejo en Weingarten"
 en = ""
 
-[caso.driving-team-schobloch.role]
+[caso.driving-team.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = ""
-en = ""
+es = "Brand Designer · Bretzel Brand Lab"
+en = "Brand Designer · Bretzel Brand Lab"
 
-[caso.driving-team-schobloch.period]
+[caso.driving-team.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
-es = "2025 – 2026"
-en = ""
+es = "2026"
+en = "2026"
 
-[caso.driving-team-schobloch.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-La escuela venía operando bajo dos marcas distintas, sociedad heredada nunca resuelta visualmente. Dos logos completamente diferentes, dos estéticas sin relación. El desafío era unificar dos historias sin borrar ninguna. El resultado fue un sistema visual unificado que integra ambos nombres bajo una sola identidad, desplegado en todos los puntos de contacto del negocio."""
-en = ""
-
-[caso.driving-team-schobloch.url]
+[caso.driving-team.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://drivingteam-schobloch.de"
 

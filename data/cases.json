@@ -899,11 +899,11 @@
       }
     },
     {
-      "id": "driving-team-schobloch",
+      "id": "driving-team",
       "featured": true,
       "order": 3,
       "client": {
-        "es": "Driving Team Schobloch — Weingarten, Alemania (2025/2026)",
+        "es": "Driving Team Schobloch",
         "en": ""
       },
       "url": "https://drivingteam-schobloch.de",
@@ -911,28 +911,899 @@
         "es": "Driving Team Schobloch",
         "en": "Driving Team Schobloch"
       },
+      "eyebrow": {
+        "es": "Caso · Bretzel Brand Lab",
+        "en": ""
+      },
       "oneLiner": {
-        "es": "Dos marcas heredadas, una sola dirección.",
+        "es": "Rebranding y aplicaciones para una escuela de manejo en Weingarten",
         "en": ""
       },
       "role": {
-        "es": "",
-        "en": ""
+        "es": "Brand Designer · Bretzel Brand Lab",
+        "en": "Brand Designer · Bretzel Brand Lab"
       },
       "period": {
-        "es": "2025 – 2026",
-        "en": ""
+        "es": "2026",
+        "en": "2026"
       },
-      "narrative": {
-        "es": "La escuela venía operando bajo dos marcas distintas, sociedad heredada nunca resuelta visualmente. Dos logos completamente diferentes, dos estéticas sin relación. El desafío era unificar dos historias sin borrar ninguna. El resultado fue un sistema visual unificado que integra ambos nombres bajo una sola identidad, desplegado en todos los puntos de contacto del negocio.",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
         "Branding",
-        "Visual System"
-      ]
+        "Web Design",
+        "Social Media"
+      ],
+      "coverImage": "assets/img/cases/driving-team/flota-auto-frente.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2026",
+            "en": "2026"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Weingarten, Alemania",
+            "en": "Weingarten, Germany"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Brand Designer · Bretzel Brand Lab",
+            "en": "Brand Designer · Bretzel Brand Lab"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Identidad visual, brand guidelines, web, flota de autos, motos y camiones, marquesina, vinilos para oficinas, redes",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Sitio",
+            "en": "Site"
+          },
+          "wide": true,
+          "links": [
+            "https://drivingteam-schobloch.de"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Driving Team Schobloch es una escuela de manejo de Weingarten que forma conductores desde 1978. Con los años quedó funcionando con dos marcas, Driving Team y Schobloch, herencia de una sociedad que nunca se había resuelto en lo visual: dos logos y dos estéticas sin relación que se usaban en paralelo. El desafío: unir las dos historias en una sola marca, que le hable a un público joven sin perder la confianza que dan tantos años en la calle, y que funcione igual en la pantalla de un celular que en el costado de un camión.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Dos marcas",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "logoBoxes",
+              "columns": 2,
+              "ratio": "16/10",
+              "padding": "10%",
+              "bg": "#fbfbf9",
+              "items": [
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/logo-anterior-driving-team.png",
+                    "alt": {
+                      "es": "Logo anterior de Driving Team: círculo rojo con una D y el texto DRIVING-TEAM.de, Fahrer-Campus, Fahrschule",
+                      "en": ""
+                    }
+                  },
+                  "title": {
+                    "es": "Driving Team",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Logo anterior",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/logo-anterior-schobloch.png",
+                    "alt": {
+                      "es": "Logo anterior de Schobloch 2.0 en rojo",
+                      "en": ""
+                    }
+                  },
+                  "title": {
+                    "es": "Schobloch 2.0",
+                    "en": ""
+                  },
+                  "text": {
+                    "es": "Logo anterior",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Junto con Bretzel hicimos una identidad nueva que integra los dos nombres, el manual de marca y una web con inscripción y reservas online.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Propuesta",
+            "en": ""
+          },
+          "intro": {
+            "es": "Los caminos que presentamos para unir Driving Team y Schobloch en una sola marca. La identidad final parte de la opción 1.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "logoBoxes",
+              "columns": 3,
+              "ratio": "4/3",
+              "padding": "14%",
+              "bg": "#ffffff",
+              "items": [
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-1.png",
+                    "alt": {
+                      "es": "Opción 1: DS dentro de un círculo con Driving Team Schobloch debajo",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 1",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-1-2.png",
+                    "alt": {
+                      "es": "Opción 1.2: DS con una línea de velocidad que atraviesa el círculo",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 1.2",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-2.png",
+                    "alt": {
+                      "es": "Opción 2: escudo circular con una banda y el nombre",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 2",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-2-2.png",
+                    "alt": {
+                      "es": "Opción 2.2: DS en un sello circular con Seit 1978",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 2.2",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-3.png",
+                    "alt": {
+                      "es": "Opción 3: siglas DTS entre dos líneas",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 3",
+                    "en": ""
+                  }
+                },
+                {
+                  "image": {
+                    "type": "image",
+                    "src": "assets/img/cases/driving-team/propuesta-opcion-4.png",
+                    "alt": {
+                      "es": "Opción 4: DS en bloque con el nombre debajo",
+                      "en": ""
+                    }
+                  },
+                  "text": {
+                    "es": "Opción 4",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Identidad",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "logoHero",
+              "src": "assets/img/cases/driving-team/logo-principal-blanco.svg",
+              "alt": {
+                "es": "Logo principal de Driving Team Schobloch en blanco sobre rojo",
+                "en": ""
+              },
+              "background": "#c02222"
+            },
+            {
+              "type": "tiles",
+              "ratio": "16/9",
+              "padding": "0 12%",
+              "items": [
+                {
+                  "src": "assets/img/cases/driving-team/logo-horizontal-blanco.svg",
+                  "bg": "#282828",
+                  "alt": {
+                    "es": "Logo horizontal en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/driving-team/logo-horizontal-rojo.svg",
+                  "bg": "#ffffff",
+                  "alt": {
+                    "es": "Logo horizontal en rojo sobre blanco",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/driving-team/logo-horizontal-blanco.svg",
+                  "bg": "#c02222",
+                  "alt": {
+                    "es": "Logo horizontal en blanco sobre rojo",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tiles",
+              "ratio": "1/1",
+              "padding": "24%",
+              "items": [
+                {
+                  "src": "assets/img/cases/driving-team/isotipo-rojo.svg",
+                  "bg": "#ffffff",
+                  "alt": {
+                    "es": "Isotipo DS en rojo sobre blanco",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/driving-team/isotipo-blanco.svg",
+                  "bg": "#c02222",
+                  "alt": {
+                    "es": "Isotipo DS en blanco sobre rojo",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/driving-team/isotipo-blanco.svg",
+                  "bg": "#282828",
+                  "alt": {
+                    "es": "Isotipo DS en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/driving-team/isotipo-negro.svg",
+                  "bg": "#ffffff",
+                  "alt": {
+                    "es": "Isotipo DS en negro sobre blanco",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Color y tipografía",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "palette",
+              "columns": "2fr 1fr",
+              "swatches": [
+                {
+                  "name": {
+                    "es": "DTS Red",
+                    "en": ""
+                  },
+                  "hex": "#C02222"
+                },
+                {
+                  "name": {
+                    "es": "DTS Black",
+                    "en": ""
+                  },
+                  "hex": "#282828"
+                }
+              ]
+            },
+            {
+              "type": "typeSpecimen",
+              "columns": "3fr 2fr",
+              "items": [
+                {
+                  "label": {
+                    "es": "Títulos · Barlow Condensed",
+                    "en": ""
+                  },
+                  "family": "Barlow Condensed",
+                  "weight": 700,
+                  "uppercase": true,
+                  "color": "#c02222",
+                  "sample": {
+                    "es": "Driving Team\nSchobloch",
+                    "en": ""
+                  },
+                  "glyphs": "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ · 1234567890"
+                },
+                {
+                  "label": {
+                    "es": "Texto · Barlow",
+                    "en": ""
+                  },
+                  "family": "Barlow",
+                  "weight": 400,
+                  "sample": {
+                    "es": "Bold, Regular y Light",
+                    "en": ""
+                  },
+                  "glyphs": "abcdefghijklmnñopqrstuvwxyz · 1234567890"
+                }
+              ]
+            },
+            {
+              "type": "pattern",
+              "label": {
+                "es": "Trama",
+                "en": ""
+              },
+              "text": {
+                "es": "Un degradé de puntos en rojo y en negro que acompaña a la marca en la marquesina y en la web.",
+                "en": ""
+              },
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/trama-roja.png",
+                  "alt": {
+                    "es": "Trama de puntos en rojo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/trama-negra.png",
+                  "alt": {
+                    "es": "Trama de puntos en negro",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Web",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "webStrip",
+              "laptop": {
+                "type": "image",
+                "src": "assets/img/cases/driving-team/web-laptop.webp",
+                "alt": {
+                  "es": "Home de drivingteam-schobloch.de en una laptop, con la flota ploteada de fondo",
+                  "en": ""
+                }
+              },
+              "background": "#282828",
+              "sections": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-tira-1-clases.webp",
+                  "alt": {
+                    "es": "Sección de clases de licencia con tarjetas para motos, autos, camiones, buses, tractores y autoelevadores, y la sección de calificación para choferes profesionales",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-tira-2-escuela.webp",
+                  "alt": {
+                    "es": "Sección sobre la escuela: desde 1978, más de 5000 alumnos formados y 98 % de aprobación",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-tira-3-equipo.webp",
+                  "alt": {
+                    "es": "Sección del equipo con las tarjetas de los siete instructores y el personal",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "columns": 3,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-celular-1.webp",
+                  "alt": {
+                    "es": "La web en un celular, en la mano frente a un auto de la escuela",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-celular-2.webp",
+                  "alt": {
+                    "es": "La web en un celular, en la calle",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/web-inscripcion.webp",
+                  "alt": {
+                    "es": "Página de inscripción online en una laptop sobre un escritorio",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Aplicaciones",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "A partir de ahí la marca pasó a la flota de autos, motos y camiones, a la marquesina del local y a los vinilos de las oficinas. En redes armamos el concepto, el feed y cada pieza, y llevamos el contenido durante seis meses.",
+              "en": ""
+            },
+            {
+              "es": "De mi lado me tocó definir la identidad, llevarla a la flota y al local, diseñar la web y piezas de redes.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Flota",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/driving-team/flota-auto-frente.webp",
+              "alt": {
+                "es": "Golf negro con el isotipo DS en el capó y Driving Team Schobloch en el frente",
+                "en": ""
+              }
+            },
+            {
+              "type": "stack",
+              "align": "center",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/flota-auto-atardecer.webp",
+                  "alt": {
+                    "es": "El Golf ploteado en un camino rural al atardecer",
+                    "en": ""
+                  },
+                  "maxWidth": "640px"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "src": "assets/img/cases/driving-team/flota-camion.webp",
+              "alt": {
+                "es": "Camión con acoplado negro con el logo Driving Team Schobloch",
+                "en": ""
+              }
+            },
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/flota-moto.webp",
+                  "alt": {
+                    "es": "Parabrisas de una moto negra con el isotipo DS",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/flota-casco.webp",
+                  "alt": {
+                    "es": "Casco negro con el isotipo DS en rojo",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Local",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "panel",
+              "background": "#dcdad4",
+              "image": {
+                "type": "image",
+                "src": "assets/img/cases/driving-team/local-marquesina-diseno.webp",
+                "alt": {
+                  "es": "Diseño de la marquesina: Fahrschule a la izquierda, el logo al centro y el teléfono a la derecha, sobre negro con trama roja",
+                  "en": ""
+                }
+              }
+            },
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/local-marquesina-esquina.webp",
+                  "alt": {
+                    "es": "La marquesina en la esquina del local, con Fahrschule seit 1978 en rojo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/local-marquesina-frente.webp",
+                  "alt": {
+                    "es": "La marquesina a lo largo del frente del local",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "row",
+              "columns": "1.875fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/local-vinilo-puerta.webp",
+                  "alt": {
+                    "es": "Vinilo con el logo en la puerta de vidrio de la oficina",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/local-alfombra.webp",
+                  "alt": {
+                    "es": "Alfombra de entrada con el logo",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Objetos",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-gorra.webp",
+                  "alt": {
+                    "es": "Gorra negra con el isotipo DS en rojo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-bolso.webp",
+                  "alt": {
+                    "es": "Bolso negro con el logo Driving Team Schobloch en rojo",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "columns": 3,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-estuche.webp",
+                  "alt": {
+                    "es": "Estuche de cuero negro con el isotipo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-remera.webp",
+                  "alt": {
+                    "es": "Remera negra con el logo en la espalda",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-llavero.webp",
+                  "alt": {
+                    "es": "Llavero de cuero con el isotipo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-lapicera.webp",
+                  "alt": {
+                    "es": "Lapicera negra con el logo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-botella.webp",
+                  "alt": {
+                    "es": "Botella térmica negra con el logo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/objetos-carpeta.webp",
+                  "alt": {
+                    "es": "Carpeta negra con el logo",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Redes",
+            "en": ""
+          },
+          "intro": {
+            "es": "Una serie de preguntas sobre situaciones de manejo para el feed y una campaña de stories sobre el entrenamiento para emergencias, entre otras piezas.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "feed",
+              "columns": 3,
+              "maxWidth": "960px",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-01.webp",
+                  "alt": {
+                    "es": "Post: Spurwechsel, qué tenés que chequear primero",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-02.webp",
+                  "alt": {
+                    "es": "Post: arrancar en subida sin que el auto vaya para atrás",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-03.webp",
+                  "alt": {
+                    "es": "Post: manejar de noche, qué cambia",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-04.webp",
+                  "alt": {
+                    "es": "Post: te entra una llamada mientras manejás",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-05.webp",
+                  "alt": {
+                    "es": "Post: empieza a llover mientras manejás",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-06.webp",
+                  "alt": {
+                    "es": "Post: vas a doblar y viene una bicicleta",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-07.webp",
+                  "alt": {
+                    "es": "Post: frenás en el pare y seguís",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-08.webp",
+                  "alt": {
+                    "es": "Post: cuándo ponés el giro",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-post-09.webp",
+                  "alt": {
+                    "es": "Post: en la autopista, te quedás en el carril izquierdo",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "stories",
+              "label": {
+                "es": "Stories · Entrenamiento para emergencias",
+                "en": ""
+              },
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-story-01.webp",
+                  "alt": {
+                    "es": "Story: cuando hay una emergencia, cada segundo cuenta",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-story-02.webp",
+                  "alt": {
+                    "es": "Story: no alcanza con llegar rápido, también hay que llegar seguro",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-story-03.webp",
+                  "alt": {
+                    "es": "Story: en Driving Team entrenamos para eso",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/driving-team/redes-story-04.webp",
+                  "alt": {
+                    "es": "Story: cómo entrenamos para la emergencia",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "Driving Team Schobloch funciona hoy con una sola marca, que se reconoce igual en la calle, en la web y en redes.",
+          "en": ""
+        }
+      }
     },
     {
       "id": "arm",
