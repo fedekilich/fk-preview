@@ -114,6 +114,7 @@ function imageItem(item, lang) {
 
   if (!item.zoom) {
     img.className = item.transparent ? "piece piece--clear rv" : "piece rv";
+    if (item.shadow) img.classList.add("is-sh");
     return img;
   }
 
@@ -173,6 +174,7 @@ function pieceItem(item, lang) {
   // Dentro de una fila, `stack` es una columna de piezas (no el módulo `stack`)
   if (item.type === "stack") {
     const stack = el("div", "stack");
+    if (item.mobileDirection === "row") stack.classList.add("stack--mrow");
     item.items.forEach((child) => stack.append(pieceItem(child, lang)));
     return stack;
   }
@@ -193,6 +195,11 @@ function pieceRow(row, lang) {
   const node = el("div", "row");
   node.style.setProperty("--cols", row.columns);
   if (columnCount(row.columns) >= 4) node.classList.add("row--many");
+  // Columnas de distinta altura: `align` las baja (`end`) o las centra
+  if (row.align === "center" || row.align === "end") node.classList.add(`row--${row.align}`);
+  // En celular: las mismas columnas (`keepOnMobile`) u otras (`mobileColumns`)
+  if (row.keepOnMobile) node.style.setProperty("--cols-m", row.columns);
+  if (row.mobileColumns) node.style.setProperty("--cols-m", row.mobileColumns);
   if (row.maxWidth) {
     node.classList.add("row--narrow");
     node.style.setProperty("--row-max", row.maxWidth);
@@ -223,6 +230,7 @@ function plainImage(entry, lang, className = "") {
   img.loading = "lazy";
   img.decoding = "async";
   if (className) img.className = className;
+  if (entry.shadow) img.classList.add("is-sh");
   if (entry.width) img.style.width = entry.width;
   if (entry.maxWidth) img.style.maxWidth = entry.maxWidth;
   return img;
@@ -334,9 +342,17 @@ function tilesModule(item, lang) {
 // Muestra de color en HTML: nombre y hex abajo a la izquierda.
 function swatch(entry, lang, className = "") {
   const node = el("div", `sw ${className}`.trim());
-  node.style.background = entry.hex;
+  // Una muestra puede ser una textura (`image`) en lugar de un color plano
+  if (entry.image) {
+    node.classList.add("sw--tex");
+    node.style.backgroundImage = `url("${entry.image}")`;
+  } else {
+    node.style.background = entry.hex;
+  }
   if (entry.light) node.classList.add("sw--light");
-  node.append(el("p", "sw__name", pick(entry.name, lang)), el("p", "sw__hex", entry.hex));
+  if (entry.textColor) node.style.color = entry.textColor;
+  const pie = entry.caption ? pick(entry.caption, lang) : entry.hex;
+  node.append(el("p", "sw__name", pick(entry.name, lang)), el("p", "sw__hex", pie));
   return node;
 }
 
@@ -345,6 +361,7 @@ function swatch(entry, lang, className = "") {
 function paletteModule(item, lang) {
   if (item.swatches) {
     const node = reveal(el("div", "pal pal--sw"));
+    if (item.swatches.length >= 4) node.classList.add("pal--lead");
     if (item.columns) node.style.setProperty("--cols", item.columns);
     item.swatches.forEach((entry) => node.append(swatch(entry, lang)));
     return node;
@@ -552,6 +569,7 @@ function webStripModule(item, lang) {
 function gridModule(item, lang) {
   const node = el("div", "pgrid");
   node.style.setProperty("--n", item.columns);
+  if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
   item.items.forEach((entry, i) => node.append(reveal(plainImage(entry, lang), (i % item.columns) + 1)));
   return node;
 }
@@ -630,6 +648,12 @@ function sectionContent(section) {
 }
 
 function contentModule(item, lang) {
+  const node = buildContent(item, lang);
+  if (item.spacingTop === "large") node.classList.add("is-mt");
+  return node;
+}
+
+function buildContent(item, lang) {
   const build = MODULES[item.type];
   if (build) return build(item, lang);
   // Imagen suelta: va directo sobre la franja, sin marco (salvo que se amplíe)

@@ -268,6 +268,8 @@
   /* Columnas de distinta altura se alinean arriba */
   align-items: start;
 }
+.row--center { align-items: center; }
+.row--end { align-items: end; }
 .row--narrow {
   width: 100%;
   max-width: var(--row-max);
@@ -293,6 +295,13 @@
    separa de la franja a las piezas de fondo blanco (mailings, láminas) */
 .ws .piece,
 .ws .zoombtn img { background: transparent; }
+
+/* Piezas con fondo propio: sombra suave del sistema en lugar de la línea */
+.is-sh { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08); }
+.piece.is-sh { border: 0; }
+
+/* Separación grande antes de un módulo (`spacingTop: "large"`) */
+.is-mt { margin-top: clamp(3rem, 6vw, 6rem); }
 
 /* Los controles que se apoyan sobre una imagen siguen en oscuro */
 .ws .zoombtn__icon,
@@ -740,6 +749,12 @@
   min-height: clamp(320px, 32vw, 500px);
 }
 .sw--light { color: #fcfcfc; }
+.sw--tex {
+  background-color: #1a1a1a;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .sw__name {
   font-size: 0.8125rem;
   font-weight: 600;
@@ -1170,10 +1185,21 @@
 
   .ws__head { flex-wrap: wrap; gap: 0.5rem 1rem; }
 
-  /* Filas de 4+ columnas pasan a 2; el resto, a una sola */
-  .row { grid-template-columns: minmax(0, 1fr); }
+  /* Filas de 4+ columnas pasan a 2; el resto, a una sola, salvo que los
+     datos pidan otras columnas (`mobileColumns` / `keepOnMobile`) */
+  .row { grid-template-columns: var(--cols-m, minmax(0, 1fr)); }
   .row--many { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .row--narrow { max-width: none; }
+
+  /* La columna de piezas pasa a una fila propia, en horizontal */
+  .row .stack--mrow {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+  .row .stack--mrow > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 
   .row--many > .is-span { grid-column: 1 / -1; }
   .mosaic .piece.is-span {
@@ -1193,13 +1219,15 @@
   .lbox { grid-template-columns: minmax(0, 1fr); }
   .tiles--many,
   .lbox--many,
-  .pgrid,
   .stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pgrid { grid-template-columns: repeat(var(--n-m, 2), minmax(0, 1fr)); }
   /* Si la grilla queda con una suelta al final, ocupa el ancho entero */
   .pgrid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 
   .pal.pal--sw,
   .type { grid-template-columns: minmax(0, 1fr); }
+  .pal.pal--sw.pal--lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pal.pal--sw.pal--lead > :first-child { grid-column: 1 / -1; }
   .type__cell--lead .type__sample { font-size: clamp(2.3rem, 9vw, 3.4rem); }
 
   .trama__txt,

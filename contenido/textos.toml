@@ -400,6 +400,7 @@ en = "Buenos Aires, Argentina"
 # ══════════════════════════════════════════════════════════════════════════
 
 
+
 # ─── 1. GCBA / COVID-19   ·   id: gcba ───────────────────────────────────
 
 [caso.gcba.client]
@@ -439,7 +440,6 @@ On March 3, 2020, the first COVID-19 case was confirmed in Buenos Aires. Within 
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = ""
 
-
 # ─── 2. Mammina Fit   ·   id: mammina-fit ────────────────────────────────
 
 [caso.mammina-fit.client]
@@ -470,7 +470,6 @@ en = "2025"
 [caso.mammina-fit.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://mamminafit.com"
-
 
 # ─── 3. Driving Team Schobloch   ·   id: driving-team ────────────────────
 
@@ -503,8 +502,38 @@ en = "2026"
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://drivingteam-schobloch.de"
 
+# ─── 4. AMA Studio   ·   id: ama-studio ──────────────────────────────────
 
-# ─── 4. ARM (Londres)   ·   id: arm ──────────────────────────────────────
+[caso.ama-studio.client]
+nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
+es = "AMA Studio"
+en = ""
+
+[caso.ama-studio.title]
+nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
+es = "AMA Studio"
+en = "AMA Studio"
+
+[caso.ama-studio.oneLiner]
+nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
+es = "Rebranding y ecosistema digital para un estudio de entrenamiento funcional en Zúrich"
+en = ""
+
+[caso.ama-studio.role]
+nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
+es = "Brand Designer · Bretzel Brand Lab"
+en = "Brand Designer · Bretzel Brand Lab"
+
+[caso.ama-studio.period]
+nota = "Cuándo se hizo. Va en la ficha del detalle."
+es = "2025"
+en = "2025"
+
+[caso.ama-studio.url]
+nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
+valor = "https://alexandermartinez.com"
+
+# ─── 5. ARM (Londres)   ·   id: arm ──────────────────────────────────────
 
 [caso.arm.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -542,8 +571,7 @@ en = ""
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = ""
 
-
-# ─── 5. ØX Beard Care   ·   id: ox-beard-care ────────────────────────────
+# ─── 6. ØX Beard Care   ·   id: ox-beard-care ────────────────────────────
 
 [caso.ox-beard-care.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -580,8 +608,7 @@ en = ""
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = ""
 
-
-# ─── 6. Inviu   ·   id: inviu ────────────────────────────────────────────
+# ─── 7. Inviu   ·   id: inviu ────────────────────────────────────────────
 
 [caso.inviu.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
@@ -611,44 +638,6 @@ en = "2021 – present"
 [caso.inviu.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://inviu.lat"
-
-
-# ─── 7. AMA Studio (Zürich)   ·   id: ama-studio ─────────────────────────
-
-[caso.ama-studio.client]
-nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "AMA Studio — Zürich, Suiza"
-en = ""
-
-[caso.ama-studio.title]
-nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
-es = "AMA Studio (Zürich)"
-en = "AMA Studio (Zürich)"
-
-[caso.ama-studio.oneLiner]
-nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Branding system desde logo existente."
-en = ""
-
-[caso.ama-studio.role]
-nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.ama-studio.period]
-nota = "Cuándo se hizo. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.ama-studio.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = ""
-en = ""
-
-[caso.ama-studio.url]
-nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
-valor = ""
-
 
 # ─── 8. Dr. Caroline Wilson (Alemania)   ·   id: caroline-wilson ─────────
 

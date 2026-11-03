@@ -1806,9 +1806,510 @@
       }
     },
     {
+      "id": "ama-studio",
+      "featured": false,
+      "order": 4,
+      "client": {
+        "es": "AMA Studio",
+        "en": ""
+      },
+      "url": "https://alexandermartinez.com",
+      "title": {
+        "es": "AMA Studio",
+        "en": "AMA Studio"
+      },
+      "eyebrow": {
+        "es": "Caso · Bretzel Brand Lab",
+        "en": ""
+      },
+      "oneLiner": {
+        "es": "Rebranding y ecosistema digital para un estudio de entrenamiento funcional en Zúrich",
+        "en": ""
+      },
+      "role": {
+        "es": "Brand Designer · Bretzel Brand Lab",
+        "en": "Brand Designer · Bretzel Brand Lab"
+      },
+      "period": {
+        "es": "2025",
+        "en": "2025"
+      },
+      "tags": [
+        "Branding",
+        "Web Design",
+        "Social Media"
+      ],
+      "coverImage": "assets/img/cases/ama-studio/web-laptop-home.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2025",
+            "en": "2025"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Zúrich, Suiza",
+            "en": "Zurich, Switzerland"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Brand Designer · Bretzel Brand Lab",
+            "en": "Brand Designer · Bretzel Brand Lab"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Identidad visual, paleta y sistema tipográfico, brand guidelines, web, Instagram, YouTube, templates audiovisuales, indumentaria",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Sitio",
+            "en": "Site"
+          },
+          "wide": true,
+          "links": [
+            "https://alexandermartinez.com"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "AMA Studio es el estudio de entrenamiento funcional que Alexander Martinez, récord suizo de salto triple, tiene en Zúrich. Llegó con un logo que quería mantener y un objetivo concreto: sumar alumnos. Hasta ahí la marca era solo ese logo, la web estaba desactualizada y las redes no tenían un sistema detrás. El desafío: construir alrededor del logo una marca completa, que transmita la seriedad de un atleta de élite sin caer en los clichés del fitness.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Logo",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/ama-studio/logo-isologo-negro.webp",
+              "alt": {
+                "es": "Isologo de AMA: las letras A, M y A entre dos líneas cruzadas, con una pantera saltando, en blanco sobre negro",
+                "en": ""
+              },
+              "shadow": true
+            },
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/logo-horizontal-blanco-fondo.webp",
+                  "alt": {
+                    "es": "Versión horizontal: pantera y AMA con Alexander Martinez Studio debajo, en negro sobre blanco",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/logo-horizontal-negro-fondo.webp",
+                  "alt": {
+                    "es": "Versión horizontal en blanco sobre negro",
+                    "en": ""
+                  },
+                  "shadow": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Color",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "palette",
+              "columns": "2fr 1fr 1fr 1fr",
+              "swatches": [
+                {
+                  "name": {
+                    "es": "Main color",
+                    "en": ""
+                  },
+                  "hex": "#0D0D08"
+                },
+                {
+                  "name": {
+                    "es": "Accent color",
+                    "en": ""
+                  },
+                  "hex": "#F4EB6F",
+                  "textColor": "#141414"
+                },
+                {
+                  "name": {
+                    "es": "Grey",
+                    "en": ""
+                  },
+                  "hex": "#606060"
+                },
+                {
+                  "name": {
+                    "es": "Texture",
+                    "en": ""
+                  },
+                  "caption": {
+                    "es": "Dark concrete",
+                    "en": ""
+                  },
+                  "image": "assets/img/cases/ama-studio/color-textura-concreto.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Junto con Bretzel ajustamos el logo para que quedara bien construido, sin cambiar lo que significa, y armamos sus variantes para cada aplicación. A su alrededor creamos el sistema de marca: el negro como color principal, un amarillo de acento, una textura de concreto oscuro y una tipografía de líneas firmes. Con esa base diseñamos la web, la identidad de Instagram y de YouTube, los templates para los videos y las aplicaciones en indumentaria.",
+              "en": ""
+            },
+            {
+              "es": "De mi lado me tocó construir el sistema visual y diseñar la web, las piezas de redes y los templates audiovisuales.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Web",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "3.4fr 1fr",
+              "align": "end",
+              "mobileColumns": "2.4fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-laptop-home.webp",
+                  "alt": {
+                    "es": "Home de la web en una laptop: Anytime, Anyplace, No Excuses sobre una foto de entrenamiento, con el isologo a la derecha",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-shop-celular.webp",
+                  "alt": {
+                    "es": "Página de la shop de suplementos en un celular",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "columns": 2,
+              "spacingTop": "large",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-who-we-are.webp",
+                  "alt": {
+                    "es": "Sección Who we are, con la presentación de Alexander Martinez",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-services.webp",
+                  "alt": {
+                    "es": "Sección Services sobre amarillo: clases grupales, personal training y nutrition coaching",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-memberships.webp",
+                  "alt": {
+                    "es": "Sección Memberships con las tarjetas de precios de clases grupales y personal training",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-personal-training.webp",
+                  "alt": {
+                    "es": "Página de Personal Training con los paquetes por hora",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-rent-studio.webp",
+                  "alt": {
+                    "es": "Sección Rent our studio con las características del espacio",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/web-shop.webp",
+                  "alt": {
+                    "es": "Página Shop en desktop, con una entrenadora junto a los suplementos",
+                    "en": ""
+                  },
+                  "shadow": true
+                }
+              ],
+              "mobileColumns": 1
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Instagram",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": ".94fr 1fr .89fr",
+              "mobileColumns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/instagram-perfil-celular.webp",
+                  "alt": {
+                    "es": "Perfil de AMA Studio en Instagram en un celular, con el feed armado con la identidad",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/instagram-story.webp",
+                  "alt": {
+                    "es": "Story: Get Fit, Get Strong, Get Healthy sobre la textura oscura, con el logo horizontal",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "stack",
+                  "mobileDirection": "row",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ama-studio/instagram-post-1.webp",
+                      "alt": {
+                        "es": "Post con una pareja entrenando al aire libre y el isologo",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ama-studio/instagram-post-2.webp",
+                      "alt": {
+                        "es": "Post: Get Fit, Get Strong, Get Healthy sobre concreto claro",
+                        "en": ""
+                      },
+                      "shadow": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "YouTube",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "1fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/youtube-banner-1.webp",
+                  "alt": {
+                    "es": "Banner del canal: It only takes one person to change your life, you",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/youtube-banner-2.webp",
+                  "alt": {
+                    "es": "Banner del canal: Anytime anyplace, no excuses",
+                    "en": ""
+                  },
+                  "shadow": true
+                }
+              ]
+            },
+            {
+              "type": "row",
+              "columns": "1.2fr 1fr",
+              "align": "center",
+              "spacingTop": "large",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/youtube-canal-imac.webp",
+                  "alt": {
+                    "es": "Canal AMA Studio by Alexander Martinez en un iMac, con la grilla de videos",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "stack",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ama-studio/youtube-miniatura-fullbody.webp",
+                      "alt": {
+                        "es": "Miniatura: 30 min Fullbody with Alexander Martinez",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ama-studio/youtube-miniatura-insane-gap.webp",
+                      "alt": {
+                        "es": "Miniatura: 20 min Insane Gap with Ana",
+                        "en": ""
+                      },
+                      "shadow": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Indumentaria",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "1.78fr 1fr",
+              "align": "end",
+              "keepOnMobile": true,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/indumentaria-remera.webp",
+                  "alt": {
+                    "es": "Remera negra con detalles amarillos y el isologo en la espalda, en el gimnasio",
+                    "en": ""
+                  },
+                  "transparent": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ama-studio/indumentaria-pesa-rusa.webp",
+                  "alt": {
+                    "es": "Pesa rusa negra con el isologo",
+                    "en": ""
+                  },
+                  "transparent": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "AMA Studio funciona hoy con una sola identidad en la web, en Instagram, en YouTube y en el propio estudio.",
+          "en": ""
+        },
+        "quote": {
+          "text": {
+            "es": "Pero ustedes lo que han hecho es magia.",
+            "en": ""
+          },
+          "author": "Alexander Martinez",
+          "source": "AMA Studio"
+        }
+      },
+      "closingQuote": {
+        "text": {
+          "es": "Lo han hecho más de lo que esperaba.",
+          "en": ""
+        },
+        "author": "Alexander Martinez",
+        "source": "AMA Studio"
+      }
+    },
+    {
       "id": "arm",
       "featured": true,
-      "order": 4,
+      "order": 5,
       "client": {
         "es": "ARM — Londres, Reino Unido",
         "en": ""
@@ -1844,7 +2345,7 @@
     {
       "id": "ox-beard-care",
       "featured": true,
-      "order": 5,
+      "order": 6,
       "client": {
         "es": "ØX Beard Care — Argentina",
         "en": ""
@@ -1880,7 +2381,7 @@
     {
       "id": "inviu",
       "featured": true,
-      "order": 6,
+      "order": 7,
       "client": {
         "es": "Inviu · Grupo Financiero Galicia",
         "en": ""
@@ -2634,41 +3135,6 @@
           }
         }
       }
-    },
-    {
-      "id": "ama-studio",
-      "featured": false,
-      "order": 7,
-      "client": {
-        "es": "AMA Studio — Zürich, Suiza",
-        "en": ""
-      },
-      "url": "",
-      "title": {
-        "es": "AMA Studio (Zürich)",
-        "en": "AMA Studio (Zürich)"
-      },
-      "oneLiner": {
-        "es": "Branding system desde logo existente.",
-        "en": ""
-      },
-      "role": {
-        "es": "",
-        "en": ""
-      },
-      "period": {
-        "es": "",
-        "en": ""
-      },
-      "narrative": {
-        "es": "",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
-      "tags": [
-        "Branding"
-      ]
     },
     {
       "id": "caroline-wilson",
