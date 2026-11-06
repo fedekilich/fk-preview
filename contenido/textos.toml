@@ -606,7 +606,7 @@ valor = ""
 
 [caso.ox-beard-care.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "ØX Beard Care — Argentina"
+es = "ØX Beard Care"
 en = ""
 
 [caso.ox-beard-care.title]
@@ -616,24 +616,18 @@ en = "ØX Beard Care"
 
 [caso.ox-beard-care.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "De la nada a una marca premium."
+es = "Una marca de cuidado de barba armada desde el nombre"
 en = ""
 
 [caso.ox-beard-care.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = ""
-en = ""
+es = "Brand Designer"
+en = "Brand Designer"
 
 [caso.ox-beard-care.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.ox-beard-care.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-Empezó sin nombre ni marca. El brief era simple y abierto: construir una marca de cuidado masculino premium que se alejara del cliché lumberjack saturando el mercado. Miramos hacia el norte: cultura vikinga, relación histórica de la barba con identidad. ØX, "hacha" en noruego, nació así. Identidad oscura, precisa, minimal."""
-en = ""
+es = "2021 – 2024"
+en = "2021 – 2024"
 
 [caso.ox-beard-care.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."

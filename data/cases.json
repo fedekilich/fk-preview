@@ -3178,7 +3178,7 @@
       "featured": true,
       "order": 7,
       "client": {
-        "es": "ØX Beard Care — Argentina",
+        "es": "ØX Beard Care",
         "en": ""
       },
       "url": "",
@@ -3186,27 +3186,372 @@
         "es": "ØX Beard Care",
         "en": "ØX Beard Care"
       },
+      "titleLines": [
+        "ØX Beard",
+        "Care"
+      ],
+      "eyebrow": {
+        "es": "Caso",
+        "en": ""
+      },
       "oneLiner": {
-        "es": "De la nada a una marca premium.",
+        "es": "Una marca de cuidado de barba armada desde el nombre",
         "en": ""
       },
       "role": {
-        "es": "",
-        "en": ""
+        "es": "Brand Designer",
+        "en": "Brand Designer"
       },
       "period": {
-        "es": "",
-        "en": ""
+        "es": "2021 – 2024",
+        "en": "2021 – 2024"
       },
-      "narrative": {
-        "es": "Empezó sin nombre ni marca. El brief era simple y abierto: construir una marca de cuidado masculino premium que se alejara del cliché lumberjack saturando el mercado. Miramos hacia el norte: cultura vikinga, relación histórica de la barba con identidad. ØX, \"hacha\" en noruego, nació así. Identidad oscura, precisa, minimal.",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
         "Branding",
-        "Packaging"
+        "Naming",
+        "Packaging",
+        "Web Design",
+        "Social Media"
+      ],
+      "coverImage": "assets/img/cases/ox-beard-care/mockup-aceite-cepillo-tarjeta.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2021 – 2024",
+            "en": "2021 – 2024"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Argentina",
+            "en": "Argentina"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Brand Designer",
+            "en": "Brand Designer"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Naming, identidad visual, producto, packaging, papelería, web, redes",
+            "en": ""
+          }
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "ØX empezó con un producto y sin marca: peines de sándalo, aceites y accesorios para barba hechos a mano. No había nombre ni nada alrededor, y el mercado estaba lleno de una estética de leñador que ya no diferenciaba a nadie.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Fui a buscar el territorio al norte, a la cultura vikinga y su relación con la barba, y de ahí salió el nombre: ØX, hacha en noruego. La identidad siguió por el mismo lado, con el negro como color dominante, un isotipo de hachas cruzadas que también funciona como trama y un sello circular para tapas, etiquetas y bolsas.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Identidad",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "columns": "7fr 5fr",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/logo-negro.svg",
+                  "alt": {
+                    "es": "Logo de ØX: la O cruzada por un hacha, la X y la bajada Genuine Beard Care",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "boxRatio": "7/5",
+                  "padding": "14%"
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/sello.svg",
+                  "alt": {
+                    "es": "Sello circular marrón con el logo, Genuine Beard Care, dos hachas cruzadas y www.oxbeardcare.com.ar",
+                    "en": ""
+                  },
+                  "box": "white",
+                  "padding": "12%",
+                  "maxWidth": 440
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "columns": 4,
+              "mobileColumns": 2,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/logo-blanco-sobre-negro.svg",
+                  "alt": {
+                    "es": "Logo en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/isotipo-negro-sobre-blanco.svg",
+                  "alt": {
+                    "es": "Isotipo de hachas cruzadas en negro sobre blanco",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/isotipo-blanco-sobre-negro.svg",
+                  "alt": {
+                    "es": "Isotipo de hachas cruzadas en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/logo-negro-sobre-blanco.svg",
+                  "alt": {
+                    "es": "Logo en negro sobre blanco",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "row",
+              "columns": "1fr 1fr",
+              "items": [
+                {
+                  "type": "pattern",
+                  "tile": "assets/img/cases/ox-beard-care/trama-tile-blanco-sobre-negro.svg",
+                  "background": "#000000",
+                  "alt": {
+                    "es": "Trama de hachas cruzadas en blanco sobre negro",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "pattern",
+                  "tile": "assets/img/cases/ox-beard-care/trama-tile-negro-sobre-blanco.svg",
+                  "background": "#ffffff",
+                  "alt": {
+                    "es": "Trama de hachas cruzadas en negro sobre blanco",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Aplicaciones",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Con ese sistema diseñé las etiquetas y el packaging de cada producto, la papelería, la web y el contenido de redes.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Producto y redes",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/ox-beard-care/mockup-aceite-cepillo-tarjeta.webp",
+              "alt": {
+                "es": "Frasco de aceite con etiqueta ØX, cepillo de madera y tarjeta con el logo",
+                "en": ""
+              },
+              "maxWidth": 920,
+              "align": "center"
+            },
+            {
+              "type": "row",
+              "columns": "8fr 3fr",
+              "align": "center",
+              "spacingTop": "large",
+              "items": [
+                {
+                  "type": "mosaic",
+                  "columns": 4,
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ox-beard-care/producto-caja.webp",
+                      "alt": {
+                        "es": "Caja de madera con peine, jabón, aceite y bálsamo ØX sobre viruta",
+                        "en": ""
+                      },
+                      "span": 2
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ox-beard-care/producto-balsamo.webp",
+                      "alt": {
+                        "es": "Lata de bálsamo para barba abierta, con la tapa del sello",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ox-beard-care/producto-peine-bicolor.webp",
+                      "alt": {
+                        "es": "Peine de madera bicolor sobre viruta",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ox-beard-care/producto-aceite.webp",
+                      "alt": {
+                        "es": "Frasco de aceite para barba con la etiqueta ØX",
+                        "en": ""
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/ox-beard-care/producto-peine-madera.webp",
+                      "alt": {
+                        "es": "Peine de sándalo con el isotipo grabado",
+                        "en": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/redes-instagram-celular.webp",
+                  "alt": {
+                    "es": "Perfil de Instagram oxbeardcare en un celular, con el feed de fotos de producto",
+                    "en": ""
+                  },
+                  "transparent": true,
+                  "mobileWidth": "min(70%, 320px)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Papelería",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/ox-beard-care/papeleria.webp",
+              "alt": {
+                "es": "Bolsa de tela, frasco, cuaderno con la trama, tarjetas, lata de bálsamo, cepillo y peine con la marca",
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "title": {
+            "es": "Web",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/ox-beard-care/web-dispositivos.webp",
+              "alt": {
+                "es": "La web en monitor, notebook y celular: La más completa y exclusiva línea para el cuidado de la barba",
+                "en": ""
+              },
+              "maxWidth": 1100,
+              "align": "center"
+            },
+            {
+              "type": "grid",
+              "columns": 3,
+              "mobileColumns": 1,
+              "spacingTop": "large",
+              "style": "screen",
+              "maxWidth": 1100,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/web-captura-1.webp",
+                  "alt": {
+                    "es": "Home con el logo sobre la foto principal y el carrusel de productos",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/web-captura-2.webp",
+                  "alt": {
+                    "es": "Combos con sus precios y la sección de barberías que recomiendan la marca",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/ox-beard-care/web-captura-3.webp",
+                  "alt": {
+                    "es": "Testimonio, fotos de barberos, formulario de contacto y mapa",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {

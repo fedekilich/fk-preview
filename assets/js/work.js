@@ -196,6 +196,11 @@ function pieceItem(item, lang) {
     node.classList.add("is-span");
     node.style.setProperty("--span", item.span);
   }
+  // En celular, donde la fila se apila, la pieza se angosta y se centra
+  if (item.mobileWidth) {
+    node.classList.add("is-mw");
+    node.style.setProperty("--mw", len(item.mobileWidth));
+  }
   return node;
 }
 
@@ -275,6 +280,8 @@ function boxFigure(item, lang, step) {
   const box = el("div", "box");
   if (item.box && item.box !== "white") box.style.background = item.box;
   if (item.boxRatio) box.style.aspectRatio = item.boxRatio;
+  // `padding` cambia el aire de la caja cuando la pieza pide otro respiro
+  if (item.padding) box.style.padding = item.padding;
   if (item.highlight) box.classList.add("is-pick");
 
   const img = plainImage(item, lang);
@@ -652,8 +659,12 @@ function typeSpecimenModule(item, lang) {
   return node;
 }
 
-// Etiqueta y texto a la izquierda, y las tramas sobre blanco a la derecha.
+/* Trama de la marca, en dos formas:
+   con `tile`, el motivo repetido de borde a borde del bloque (ØX);
+   con `items`, etiqueta y texto a la izquierda y las muestras a la derecha. */
 function patternModule(item, lang) {
+  if (item.tile) return patternTile(item, lang);
+
   const node = el("div", "trama");
 
   const text = reveal(el("div", "trama__txt"));
@@ -667,6 +678,35 @@ function patternModule(item, lang) {
   });
 
   node.append(text, images);
+  return node;
+}
+
+/* El motivo repetido como fondo del bloque, que se desplaza al scrollear.
+   No hay una imagen con contenido propio que llevar al alt: el bloque se
+   anuncia como imagen (`role="img"`) y el alt va en `aria-label`. */
+function patternTile(item, lang) {
+  const node = reveal(el("div", "ptile"));
+  node.style.backgroundImage = `url("${item.tile}")`;
+  if (item.background) node.style.backgroundColor = item.background;
+  node.setAttribute("role", "img");
+  node.setAttribute("aria-label", pick(item.alt, lang));
+  return node;
+}
+
+/* Mosaico de fotos cuadradas, recortadas por CSS. Un ítem con `span: 2`
+   ocupa dos columnas y dos filas, y hace de pieza principal. */
+function mosaicModule(item, lang) {
+  const node = el("div", "pmos");
+  node.style.setProperty("--n", item.columns);
+
+  item.items.forEach((entry, i) => {
+    const img = reveal(plainImage(entry, lang), (i % item.columns) + 1);
+    if (entry.span) {
+      img.classList.add("is-span");
+      img.style.setProperty("--span", entry.span);
+    }
+    node.append(img);
+  });
   return node;
 }
 
@@ -692,6 +732,11 @@ function gridModule(item, lang) {
   const node = el("div", item.style === "screen" ? "pgrid pgrid--screen" : "pgrid");
   node.style.setProperty("--n", item.columns);
   if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
+  // La grilla se centra cuando no tiene que llegar al ancho de la franja
+  if (item.maxWidth) {
+    node.classList.add("pgrid--narrow");
+    node.style.setProperty("--pgrid-max", len(item.maxWidth));
+  }
 
   item.items.forEach((entry, i) => {
     const step = (i % item.columns) + 1;
@@ -786,6 +831,7 @@ const MODULES = {
   logoHero: logoHeroModule,
   typeSpecimen: typeSpecimenModule,
   pattern: patternModule,
+  mosaic: mosaicModule,
   webStrip: webStripModule,
   grid: gridModule,
   iconGrid: iconGridModule,
