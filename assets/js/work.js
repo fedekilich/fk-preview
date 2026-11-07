@@ -77,6 +77,12 @@ function columnCount(columns) {
   return repeat ? Number(repeat[1]) : columns.trim().split(/\s+/).length;
 }
 
+/* Proporciones de una fila de igual altura: "1.02fr 0.56fr" → [1.02, 0.56].
+   Cada número es el ancho/alto de esa pieza. */
+const ratios = (columns) => columns.trim().split(/\s+/).map((value) => parseFloat(value));
+
+const sum = (numbers) => numbers.reduce((total, n) => total + n, 0);
+
 function sheetItem(fact, lang) {
   const item = el("div", fact.wide ? "is-wide" : "");
   item.append(el("dt", "", pick(fact.label, lang)));
@@ -118,6 +124,8 @@ function imageItem(item, lang) {
   if (!item.zoom) {
     img.className = item.transparent ? "piece piece--clear rv" : "piece rv";
     if (item.shadow) img.classList.add("is-sh");
+    // Montaje provisorio: sin etiqueta en la página, marcado para encontrarlo
+    if (item.montage) img.classList.add("is-mk");
     return img;
   }
 
@@ -207,7 +215,10 @@ function pieceItem(item, lang) {
 function pieceRow(row, lang) {
   const node = el("div", "row");
   node.style.setProperty("--cols", row.columns);
-  if (columnCount(row.columns) >= 4) node.classList.add("row--many");
+  /* Fila de igual altura: las columnas son la proporción de cada pieza, que
+     pasa a `--r`. Todas quedan al mismo alto y la fila llena el ancho. */
+  if (row.equalHeight) node.classList.add("row--eq");
+  else if (columnCount(row.columns) >= 4) node.classList.add("row--many");
   // Columnas de distinta altura: `align` las baja (`end`) o las centra
   if (row.align === "center" || row.align === "end") node.classList.add(`row--${row.align}`);
   // En celular: las mismas columnas (`keepOnMobile`) u otras (`mobileColumns`)
@@ -223,6 +234,13 @@ function pieceRow(row, lang) {
     if (row.position) node.style.setProperty("--pos", row.position);
   }
   row.items.forEach((item) => node.append(pieceItem(item, lang)));
+
+  if (row.equalHeight) {
+    ratios(row.columns).forEach((ratio, i) => {
+      const child = node.children[i];
+      if (child) child.style.setProperty("--r", ratio);
+    });
+  }
   return node;
 }
 
@@ -245,6 +263,10 @@ function plainImage(entry, lang, className = "") {
   if (className) img.className = className;
   if (entry.shadow) img.classList.add("is-sh");
   if (entry.rounded) img.classList.add("is-rounded");
+  // Montaje provisorio: sin etiqueta en la página, marcado para encontrarlo
+  if (entry.montage) img.classList.add("is-mk");
+  // Un dibujo más chico que el resto se agranda solo (íconos)
+  if (entry.scale) img.style.scale = entry.scale;
   if (entry.background) img.style.background = entry.background;
   if (entry.width) img.style.width = len(entry.width);
   // El ancho máximo cede cuando la franja es más angosta que la pieza
@@ -756,18 +778,93 @@ function gridModule(item, lang) {
   return node;
 }
 
-// Íconos sobre cuadrados de un color.
+/* Íconos sobre cuadrados de un color. Con `tile: "none"` el ícono se apoya
+   directo, sin cuadrado; con `label` o `panel` el bloque entero se enmarca:
+   rótulo chico arriba y, si hay `panel`, ese color de fondo. */
 function iconGridModule(item, lang) {
   const node = el("div", "icons");
   node.style.setProperty("--n", item.columns);
   if (item.mobileColumns) node.style.setProperty("--n-m", item.mobileColumns);
 
+  const bare = item.tile === "none";
+  if (bare) node.classList.add("icons--bare");
+
   item.items.forEach((entry, i) => {
-    const cell = reveal(el("div", "icons__cell"), (i % 4) + 1);
+    const step = (i % 4) + 1;
+    if (bare) {
+      node.append(reveal(plainImage(entry, lang, "icons__img"), step));
+      return;
+    }
+    const cell = reveal(el("div", "icons__cell"), step);
     if (item.tile) cell.style.background = item.tile;
     cell.append(plainImage(entry, lang));
     node.append(cell);
   });
+
+  const label = pick(item.label, lang);
+  if (!label && !item.panel) return node;
+
+  const block = el("div", "icblock");
+  if (item.panel) {
+    block.classList.add("icblock--panel");
+    block.style.background = item.panel;
+  }
+  if (label) block.append(el("p", "icblock__cap rv", label));
+  block.append(node);
+  return block;
+}
+
+/* Dos columnas que cierran a la misma altura: una pieza grande a la izquierda
+   y un grupo a la derecha. El ancho de la derecha sale de las proporciones de
+   las piezas, así se mantiene exacto en cualquier ancho de pantalla.
+
+   alto izq.  = Lw / rIzq            Lw = 100% − gap − Rw
+   alto der.  = Rw · K + gap · f     (K y f salen de las piezas de la derecha)
+   igualando: Rw = (100% − gap · (1 + rIzq · f)) / (1 + rIzq · K) */
+function pairColumns(item) {
+  const left = item.left.ratio;
+  const pieces = Array.isArray(item.right) ? item.right : [item.right];
+  let factor = 0;   // K: cuánto crece el alto de la derecha con su ancho
+  let gaps = 0;     // f: separaciones, en múltiplos del gap de la grilla
+
+  pieces.forEach((piece, i) => {
+    if (i) gaps += 1;
+    if (piece.type === "row") {
+      const parts = ratios(piece.columns);
+      factor += 1 / sum(parts);
+      gaps -= (parts.length - 1) / sum(parts);
+    } else {
+      factor += 1 / piece.ratio;
+    }
+  });
+
+  const fixed = (1 + left * gaps).toFixed(4);
+  const share = (1 + left * factor).toFixed(4);
+  return `1fr calc((100% - var(--gap) * ${fixed}) / ${share})`;
+}
+
+/* La pieza de la izquierda puede traer su propia sombra transparente, que se
+   sale de la caja (`phoneShadow`): lo que se alinea con la grilla es el cuerpo
+   del teléfono, y la sombra pasa por debajo de las piezas vecinas. */
+function pairPiece(piece, lang) {
+  if (!piece.phoneShadow) return contentModule(piece, lang);
+
+  const box = reveal(el("div", "pair__phone"));
+  box.style.aspectRatio = piece.ratio;
+  box.append(plainImage(piece, lang));
+  return box;
+}
+
+function pairModule(item, lang) {
+  const node = el("div", "pair");
+  node.style.setProperty("--pair-cols", pairColumns(item));
+
+  const right = el("div", "pair__side");
+  (Array.isArray(item.right) ? item.right : [item.right]).forEach((piece) =>
+    right.append(contentModule(piece, lang))
+  );
+
+  node.append(pairPiece(item.left, lang), right);
   return node;
 }
 
@@ -835,6 +932,7 @@ const MODULES = {
   webStrip: webStripModule,
   grid: gridModule,
   iconGrid: iconGridModule,
+  duo: pairModule,
   band: bandModule,
   panel: panelModule,
   feed: feedModule,
@@ -879,11 +977,16 @@ function buildContent(item, lang) {
 function workSection(section, number, lang) {
   const node = el("section", "ws");
 
+  /* Una sección puede declarar su franja (`band`): "light" es la clara de este
+     caso y "dark" la deja sobre el fondo del sitio. Las que no declaran nada
+     siguen con la franja clara común a los demás casos. */
+  if (section.band) node.classList.add(`ws--${section.band}`);
+
   // Las secciones sin número (`numbered: false`) no llevan encabezado
   if (section.numbered !== false) {
     const head = el("div", "ws__head rv");
     head.append(
-      el("span", "ws__num", String(number).padStart(2, "0")),
+      el("span", "ws__num", section.number || String(number).padStart(2, "0")),
       el("h2", "display ws__title", pick(section.title, lang))
     );
     node.append(head);
@@ -923,7 +1026,28 @@ function quoteBlock(quote, lang, className = "") {
   return node;
 }
 
+/* Cierre en cifras: cada número con su rótulo y la fuente del dato abajo.
+   No lleva la palabra "Resultado": el rótulo lo pone el caso. */
+function numbersBlock(result, lang) {
+  const node = el("section", "nums");
+  node.append(el("p", "eyebrow rv", pick(result.label, lang)));
+
+  const grid = el("div", "numgrid");
+  result.items.forEach((entry, i) => {
+    const cell = reveal(el("div", "numgrid__cell"), (i % 4) + 1);
+    cell.append(el("p", "display nums__big", entry.value), el("p", "nums__lab", pick(entry.label, lang)));
+    const source = pick(entry.source, lang);
+    if (source) cell.append(el("p", "nums__src", source));
+    grid.append(cell);
+  });
+
+  node.append(grid);
+  return node;
+}
+
 function resultBlock(result, lang) {
+  if (result.kind === "numbers") return numbersBlock(result, lang);
+
   const node = el("section", result.quote ? "res res--quote" : "res");
 
   const text = el("div", "res__text rv");
@@ -955,11 +1079,29 @@ function renderSections(kase, lang) {
   nodes.body.style.setProperty("--pick", kase.brandColor || "");
   nodes.sheet.replaceChildren(...(kase.facts || []).map((fact) => sheetItem(fact, lang)));
 
+  const parts = [];
+
+  /* Nota aclaratoria del caso: va debajo de la ficha y antes de la apertura,
+     para que se lea antes de las piezas. */
+  const disclaimer = pick(kase.disclaimer, lang);
+  if (disclaimer) parts.push(el("p", "detail__note", disclaimer));
+
+  /* Apertura propia del caso. Con `bleed` va a todo el ancho de la pantalla,
+     sin redondeo; si no, cierra en los bordes del contenido. */
+  if (kase.heroImage) {
+    const hero = el("div", kase.heroImage.bleed ? "detail__hero detail__hero--bleed" : "detail__hero");
+    hero.append(plainImage(kase.heroImage, lang));
+    parts.push(hero);
+  }
+
   let number = 0;
-  const parts = caseFlow(kase).map((item) => {
-    if (item.kind === "block") return textBlock(item, lang);
+  caseFlow(kase).forEach((item) => {
+    if (item.kind === "block") {
+      parts.push(textBlock(item, lang));
+      return;
+    }
     if (item.numbered !== false) number += 1;
-    return workSection(item, number, lang);
+    parts.push(workSection(item, number, lang));
   });
 
   if (kase.result) parts.push(resultBlock(kase.result, lang));

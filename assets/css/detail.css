@@ -1314,6 +1314,180 @@
 }
 
 /* --- Celular -------------------------------------------------- */
+/* ============================================================
+   Caso con franjas declaradas (`band` en cada sección)
+   Todo cierra en los bordes del contenido: ninguna fila se
+   angosta ni se centra. La única excepción es la apertura, que
+   va a todo el ancho de la pantalla. Las piezas no llevan marco:
+   borde redondeado de 12 px y, las planas sobre la franja clara,
+   una sombra suave.
+   ============================================================ */
+
+/* --- Nota aclaratoria y apertura, antes del primer texto ------- */
+.detail__note {
+  margin: 2rem 0 0;
+  max-width: 68ch;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.detail__hero { margin-top: clamp(2rem, 4vw, 3.5rem); }
+.detail__hero img {
+  width: 100%;
+  border-radius: 12px;
+}
+/* A todo el ancho de la pantalla, sin redondeo */
+.detail__hero--bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+.detail__hero--bleed img { border-radius: 0; }
+/* La apertura ya separa: el bloque de texto que sigue no repite la línea */
+.detail__hero + .tb {
+  border-top: 0;
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+/* --- Franja clara y franja oscura ----------------------------- */
+.ws--light { --band: #f3f3f3; }
+.ws--dark {
+  --band: transparent;
+  --text: #f0f0f0;
+  --text-soft: #cfcfcf;
+  --muted: #8c8c8c;
+  --line: #2b2b2b;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+}
+/* Dos franjas iguales seguidas son un solo tramo; si cambia, cada una abre */
+.ws--dark + .ws,
+.ws + .ws--dark { padding-top: clamp(3rem, 7vw, 6rem); }
+
+/* Encabezado chico: número y título en una línea, sin regla abajo */
+.ws--light > .ws__head,
+.ws--dark > .ws__head {
+  gap: 0.9rem;
+  padding-bottom: 0;
+  margin-bottom: clamp(1.5rem, 2.8vw, 2.5rem);
+  border-bottom: 0;
+}
+.ws--light > .ws__head .ws__title,
+.ws--dark > .ws__head .ws__title {
+  font-size: clamp(1.25rem, 1.8vw, 1.63rem);
+  letter-spacing: 0.02em;
+}
+.ws--light > .ws__head .ws__num,
+.ws--dark > .ws__head .ws__num { font-size: clamp(1rem, 1.25vw, 1.13rem); }
+
+/* Las piezas se apoyan en la franja: sin marco y con el borde redondeado */
+.ws--light .piece,
+.ws--dark .piece,
+.ws--light .wsimg,
+.ws--dark .wsimg {
+  border: 0;
+  border-radius: 12px;
+}
+
+/* --- Fila de igual altura ------------------------------------- */
+/* Cada pieza crece según su proporción (`--r`), así todas cierran al mismo
+   alto y la fila llena el ancho del contenido */
+.row--eq {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+.row--eq > * {
+  flex: var(--r, 1) 1 0;
+  min-width: 0;
+}
+
+/* --- Dos columnas que cierran a la misma altura ---------------- */
+.pair {
+  display: grid;
+  grid-template-columns: var(--pair-cols, 1fr 1fr);
+  column-gap: var(--gap);
+  align-items: start;
+}
+.pair__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  /* La sombra del celular pasa por debajo de las piezas de esta columna */
+  position: relative;
+  z-index: 1;
+}
+.pair__side > img { width: 100%; }
+
+/* El celular trae su sombra transparente alrededor: el cuerpo del teléfono es
+   lo que se alinea con la grilla y la sombra se sale de la caja. Los
+   porcentajes son los del montaje original. */
+.pair__phone {
+  position: relative;
+  --phone-w: 127.131%;
+  --phone-x: -8.712%;
+  --phone-y: -3.628%;
+}
+.pair__phone > img {
+  position: absolute;
+  width: var(--phone-w);
+  max-width: none;
+  left: var(--phone-x);
+  top: var(--phone-y);
+}
+
+/* --- Bloque de íconos con rótulo ------------------------------ */
+.icblock {
+  padding: clamp(24px, 3.4vw, 48px);
+  border-radius: 12px;
+}
+.icblock__cap {
+  margin: 0 0 clamp(1.25rem, 2.5vw, 2.25rem);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.icblock--panel .icblock__cap { color: #141414; }
+
+/* Íconos sin cuadrado: se apoyan directo, con más aire entre ellos */
+.icons--bare { gap: clamp(28px, 3.4vw, 48px) clamp(32px, 5vw, 72px); }
+.icons__img {
+  width: 100%;
+  height: auto;
+}
+
+/* --- Cierre en cifras ----------------------------------------- */
+.nums { padding: clamp(3rem, 7vw, 6.5rem) 0 2rem; }
+.nums .eyebrow { margin: 0; }
+.numgrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--gap);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--line);
+}
+.numgrid__cell { padding-top: 1.75rem; }
+.nums__big {
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  color: var(--text);
+}
+.nums__lab {
+  margin: 0.6rem 0 0;
+  max-width: 18ch;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+.nums__src {
+  margin: 0.35rem 0 0;
+  font-size: 0.63rem;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--muted-dim);
+}
+
 @media (max-width: 760px) {
   .detail__sheet > div { grid-column: span 6; }
   .detail__sheet > .is-wide { grid-column: 1 / -1; }
@@ -1416,4 +1590,21 @@
 
   .icons { grid-template-columns: repeat(var(--n-m, 3), minmax(0, 1fr)); }
   .band { grid-template-columns: repeat(var(--n-m, 1), minmax(0, 1fr)); }
+
+  /* Las filas de igual altura y las dos columnas se apilan */
+  .row--eq { flex-direction: column; }
+  .row--eq > * { width: 100%; }
+  .pair {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--gap);
+  }
+  .icons--bare { gap: 32px; }
+  .numgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Apilado, el celular se angosta hasta que su sombra entra justo en el
+     ancho del contenido: 100 / 1.27131 de ancho, corrido 8.712% de eso */
+  .pair__phone {
+    width: 78.66%;
+    margin-left: 6.85%;
+  }
 }

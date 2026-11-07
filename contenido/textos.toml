@@ -405,36 +405,28 @@ en = "Buenos Aires, Argentina"
 
 [caso.gcba.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "Secretaría de Comunicaciones GCBA"
+es = "Gobierno de la Ciudad de Buenos Aires"
 en = ""
 
 [caso.gcba.title]
 nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
-es = "GCBA / COVID-19"
-en = "GCBA / COVID-19"
+es = "Gobierno de la Ciudad de Buenos Aires"
+en = "Buenos Aires City Government"
 
 [caso.gcba.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Coordinar comunicación de crisis para una ciudad, en tiempo real."
-en = "Coordinating crisis communication for a city, in real time."
+es = "Comunicación de la pandemia: prevención y vacunación"
+en = ""
 
 [caso.gcba.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = """
-Coordinador del equipo de diseño, Secretaría de Comunicaciones GCBA. Lideré equipo de 10+ diseñadores."""
-en = "Design team coordinator, GCBA Communications Department. Led a team of 10+ designers."
+es = "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires"
+en = ""
 
 [caso.gcba.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
 es = "Marzo 2020 – Agosto 2021"
 en = ""
-
-[caso.gcba.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-El 3 de marzo de 2020 se confirmó el primer caso de COVID-19 en Buenos Aires. En cuestión de días, la Secretaría de Comunicaciones debía responder con información clara, masiva y urgente a millones de personas. Sin manual de crisis, sin procesos remotos establecidos. Coordiné un equipo de más de 10 diseñadores que pasó a operar 100% remoto de un día para el otro. Definimos un sistema visual simple y reconocible: amarillo dominante, magenta como acento, tipografía clara, iconografía de línea consistente. Durante más de un año, el equipo sostuvo la producción de comunicación pública en uno de los momentos más complejos de la historia reciente de la ciudad."""
-en = """
-On March 3, 2020, the first COVID-19 case was confirmed in Buenos Aires. Within days, the Communications Department had to respond with clear, large-scale, urgent information for millions of people. No crisis playbook, no established remote processes. I coordinated a team of more than 10 designers that went 100% remote overnight. We defined a simple, recognizable visual system: dominant yellow, magenta as an accent, clear typography, consistent line iconography. For over a year, the team sustained public communication output through one of the most complex moments in the city's recent history."""
 
 [caso.gcba.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."

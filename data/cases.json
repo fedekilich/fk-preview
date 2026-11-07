@@ -5,37 +5,742 @@
       "featured": true,
       "order": 1,
       "client": {
-        "es": "Secretaría de Comunicaciones GCBA",
+        "es": "Gobierno de la Ciudad de Buenos Aires",
         "en": ""
       },
       "url": "",
       "title": {
-        "es": "GCBA / COVID-19",
-        "en": "GCBA / COVID-19"
+        "es": "Gobierno de la Ciudad de Buenos Aires",
+        "en": "Buenos Aires City Government"
+      },
+      "titleLines": [
+        "Gobierno de la Ciudad",
+        "de Buenos Aires"
+      ],
+      "eyebrow": {
+        "es": "Caso 01",
+        "en": ""
       },
       "oneLiner": {
-        "es": "Coordinar comunicación de crisis para una ciudad, en tiempo real.",
-        "en": "Coordinating crisis communication for a city, in real time."
+        "es": "Comunicación de la pandemia: prevención y vacunación",
+        "en": ""
       },
       "role": {
-        "es": "Coordinador del equipo de diseño, Secretaría de Comunicaciones GCBA. Lideré equipo de 10+ diseñadores.",
-        "en": "Design team coordinator, GCBA Communications Department. Led a team of 10+ designers."
+        "es": "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires",
+        "en": ""
       },
       "period": {
         "es": "Marzo 2020 – Agosto 2021",
         "en": ""
       },
-      "narrative": {
-        "es": "El 3 de marzo de 2020 se confirmó el primer caso de COVID-19 en Buenos Aires. En cuestión de días, la Secretaría de Comunicaciones debía responder con información clara, masiva y urgente a millones de personas. Sin manual de crisis, sin procesos remotos establecidos. Coordiné un equipo de más de 10 diseñadores que pasó a operar 100% remoto de un día para el otro. Definimos un sistema visual simple y reconocible: amarillo dominante, magenta como acento, tipografía clara, iconografía de línea consistente. Durante más de un año, el equipo sostuvo la producción de comunicación pública en uno de los momentos más complejos de la historia reciente de la ciudad.",
-        "en": "On March 3, 2020, the first COVID-19 case was confirmed in Buenos Aires. Within days, the Communications Department had to respond with clear, large-scale, urgent information for millions of people. No crisis playbook, no established remote processes. I coordinated a team of more than 10 designers that went 100% remote overnight. We defined a simple, recognizable visual system: dominant yellow, magenta as an accent, clear typography, consistent line iconography. For over a year, the team sustained public communication output through one of the most complex moments in the city's recent history."
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
-        "Government",
-        "Crisis Communication",
-        "Team Leadership"
-      ]
+        "Comunicación de crisis",
+        "Sistema visual",
+        "Liderazgo de equipo"
+      ],
+      "coverImage": "assets/img/cases/gcba/testeate-via-publica.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "Marzo 2020 – Agosto 2021",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Buenos Aires, Argentina",
+            "en": "Buenos Aires, Argentina"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Redes, vía pública, televisión, señalética, folletería, web, mailings",
+            "en": ""
+          }
+        }
+      ],
+      "disclaimer": {
+        "es": "Más allá de la mirada que cada uno tenga sobre cómo se manejó la pandemia en Argentina, este caso no busca defender ni evaluar esas decisiones. Lo que quiero mostrar es el trabajo de un equipo que, en plena emergencia, tuvo que cambiar de un día para el otro su forma de trabajar para seguir comunicando.",
+        "en": ""
+      },
+      "heroImage": {
+        "type": "image",
+        "src": "assets/img/cases/gcba/testeate-via-publica.webp",
+        "alt": {
+          "es": "Vía pública Testeate: hay 4 formas de testearte, con o sin síntomas",
+          "en": ""
+        },
+        "bleed": true
+      },
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Durante la pandemia, la Ciudad de Buenos Aires se vio en la necesidad de informar y llevar claridad sobre temas críticos: medidas de prevención, restricciones, protocolos para comercios y escuelas, dónde testearse y dónde vacunarse. Esa información cambiaba constantemente, en un contexto que ya era delicado. El desafío: comunicar con velocidad, claridad y sensibilidad.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Reorganizamos la forma de trabajar del equipo para poder responder en el momento: trabajo a distancia, guardias rotativas, equipos divididos por temas y por soportes. Y ordenamos la imagen institucional que ya existía para que cada mensaje llegara claro a cada audiencia, desde el ciudadano común hasta las instituciones. Las piezas de esta página son del equipo de más de diez diseñadores y diseñadoras de la Secretaría de Comunicaciones, que coordiné y con el que también diseñé.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "light",
+          "number": "01",
+          "title": {
+            "es": "Iconografía",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "iconGrid",
+              "label": {
+                "es": "Prevención y salud",
+                "en": ""
+              },
+              "columns": 6,
+              "mobileColumns": 3,
+              "tile": "none",
+              "items": [
+                {
+                  "src": "assets/img/cases/gcba/prevencion-01-toser-codo.svg",
+                  "alt": {
+                    "es": "Ícono toser en el codo",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-02-barbijo.svg",
+                  "alt": {
+                    "es": "Ícono barbijo",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-03-lavado-manos.svg",
+                  "alt": {
+                    "es": "Ícono lavado de manos",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-04-quedarse-en-casa.svg",
+                  "alt": {
+                    "es": "Ícono quedarse en casa",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-05-consultas.svg",
+                  "alt": {
+                    "es": "Ícono consultas",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-06-medicamentos.svg",
+                  "alt": {
+                    "es": "Ícono medicamentos",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-07-medico.svg",
+                  "alt": {
+                    "es": "Ícono médico",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-08-hospital.svg",
+                  "alt": {
+                    "es": "Ícono hospital",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-09-cronometro.svg",
+                  "alt": {
+                    "es": "Ícono cronómetro",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-10-checklist.svg",
+                  "alt": {
+                    "es": "Ícono checklist",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-11-receta.svg",
+                  "alt": {
+                    "es": "Ícono receta médica",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/prevencion-12-perro-guia.svg",
+                  "alt": {
+                    "es": "Ícono perro guía",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "iconGrid",
+              "label": {
+                "es": "Actividades y nuevas medidas",
+                "en": ""
+              },
+              "columns": 6,
+              "mobileColumns": 3,
+              "tile": "none",
+              "panel": "#FFD500",
+              "items": [
+                {
+                  "src": "assets/img/cases/gcba/actividades-01-calesita.svg",
+                  "alt": {
+                    "es": "Ícono calesita",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-02-gastronomia.svg",
+                  "alt": {
+                    "es": "Ícono gastronomía",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-03-musica.svg",
+                  "alt": {
+                    "es": "Ícono música",
+                    "en": ""
+                  },
+                  "scale": 1.27
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-04-bicicleta.svg",
+                  "alt": {
+                    "es": "Ícono bicicleta",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-05-running.svg",
+                  "alt": {
+                    "es": "Ícono running",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-06-rollers.svg",
+                  "alt": {
+                    "es": "Ícono rollers",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-07-tren.svg",
+                  "alt": {
+                    "es": "Ícono tren",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-08-peluqueria.svg",
+                  "alt": {
+                    "es": "Ícono peluquería",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-09-farmacia.svg",
+                  "alt": {
+                    "es": "Ícono farmacia",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-10-iglesia.svg",
+                  "alt": {
+                    "es": "Ícono iglesia",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-11-mezquita.svg",
+                  "alt": {
+                    "es": "Ícono mezquita",
+                    "en": ""
+                  }
+                },
+                {
+                  "src": "assets/img/cases/gcba/actividades-12-sinagoga.svg",
+                  "alt": {
+                    "es": "Ícono sinagoga",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "light",
+          "number": "02",
+          "title": {
+            "es": "Prevención",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "row",
+              "equalHeight": true,
+              "columns": "1.0247fr 0.5626fr 0.5626fr",
+              "align": "start",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/montaje-folleto.webp",
+                  "alt": {
+                    "es": "Folleto de lavado de manos en la mano",
+                    "en": ""
+                  },
+                  "montage": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/placa-lavado-manos.webp",
+                  "alt": {
+                    "es": "Placa de WhatsApp con los pasos del lavado de manos",
+                    "en": ""
+                  },
+                  "shadow": true
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/placa-institucional.webp",
+                  "alt": {
+                    "es": "Placa de WhatsApp institucional con prevención y síntomas",
+                    "en": ""
+                  },
+                  "shadow": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "dark",
+          "number": "03",
+          "title": {
+            "es": "Vía pública",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/gcba/montaje-cartel.webp",
+              "alt": {
+                "es": "Cartel #CuidarteEsCuidarnos en la calle",
+                "en": ""
+              },
+              "montage": true
+            },
+            {
+              "type": "image",
+              "src": "assets/img/cases/gcba/sextuple-ayudemos.webp",
+              "alt": {
+                "es": "Séxtuple Ayudemos entre todos a prevenir el coronavirus",
+                "en": ""
+              }
+            },
+            {
+              "type": "row",
+              "equalHeight": true,
+              "columns": "1.5686fr 1.444fr",
+              "align": "start",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/kiosco-107.webp",
+                  "alt": {
+                    "es": "Kiosco: si tenés fiebre, tos o dificultad para respirar, llamá gratis al 107",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/via-publica-cuidarnos.webp",
+                  "alt": {
+                    "es": "Vía pública No dejemos de cuidarnos",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "light",
+          "number": "04",
+          "title": {
+            "es": "Redes",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "duo",
+              "left": {
+                "type": "image",
+                "src": "assets/img/cases/gcba/celular-cuarentena-responsable.webp",
+                "alt": {
+                  "es": "Placa Cuarentena Responsable en un celular",
+                  "en": ""
+                },
+                "phoneShadow": true,
+                "ratio": 0.4899
+              },
+              "right": [
+                {
+                  "type": "row",
+                  "equalHeight": true,
+                  "columns": "0.5625fr 0.5622fr 0.5625fr",
+                  "align": "start",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-calesitas.webp",
+                      "alt": {
+                        "es": "Placa calesitas",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-transporte.webp",
+                      "alt": {
+                        "es": "Placa transporte y movilidad",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-culto.webp",
+                      "alt": {
+                        "es": "Placa culto",
+                        "en": ""
+                      },
+                      "shadow": true
+                    }
+                  ]
+                },
+                {
+                  "type": "row",
+                  "equalHeight": true,
+                  "columns": "1.0fr 0.7994fr 0.8fr",
+                  "align": "start",
+                  "items": [
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-gastronomia.webp",
+                      "alt": {
+                        "es": "Placa gastronomía",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-domestico.webp",
+                      "alt": {
+                        "es": "Placa servicio doméstico",
+                        "en": ""
+                      },
+                      "shadow": true
+                    },
+                    {
+                      "type": "image",
+                      "src": "assets/img/cases/gcba/placa-comercio-avellaneda.webp",
+                      "alt": {
+                        "es": "Placa actividad comercial Av. Avellaneda",
+                        "en": ""
+                      },
+                      "shadow": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "dark",
+          "number": "05",
+          "title": {
+            "es": "Testeos",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/gcba/montaje-tele-detectar.webp",
+              "alt": {
+                "es": "Pantalla del dispositivo DETECTAR en un televisor",
+                "en": ""
+              },
+              "montage": true
+            },
+            {
+              "type": "row",
+              "equalHeight": true,
+              "columns": "0.8fr 0.4256fr 0.4256fr 1.7778fr",
+              "align": "start",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/placa-testeos.webp",
+                  "alt": {
+                    "es": "Placa Testeos coronavirus",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/banner-detectar-colon.webp",
+                  "alt": {
+                    "es": "Banner DetectAr, Centro de Testeo Teatro Colón",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/banner-postesteo.webp",
+                  "alt": {
+                    "es": "Banner recomendaciones postesteo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/pantalla-hisopados.webp",
+                  "alt": {
+                    "es": "Pantalla con la cantidad de vecinos hisopados",
+                    "en": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "row",
+              "equalHeight": true,
+              "columns": "1.8605fr 1.3333fr",
+              "align": "start",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/foto-centro-testeo.webp",
+                  "alt": {
+                    "es": "Foto de una unidad de testeo",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/foto-testeo-cartel.webp",
+                  "alt": {
+                    "es": "Foto de un centro de testeo con cartelería",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "band": "light",
+          "number": "06",
+          "title": {
+            "es": "Vacunación",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "duo",
+              "left": {
+                "type": "image",
+                "src": "assets/img/cases/gcba/vacunacion-mayores-80.webp",
+                "alt": {
+                  "es": "Plan de vacunación: si vos o un familiar son mayores de 80 años, reservá un turno",
+                  "en": ""
+                },
+                "shadow": true,
+                "ratio": 2.0
+              },
+              "right": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/senaletica-puesto.webp",
+                  "alt": {
+                    "es": "Señalética Puesto 1 Vacunación",
+                    "en": ""
+                  },
+                  "shadow": true,
+                  "ratio": 2.4961
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/senaletica-espera.webp",
+                  "alt": {
+                    "es": "Señalética Sector de espera",
+                    "en": ""
+                  },
+                  "shadow": true,
+                  "ratio": 2.0
+                }
+              ]
+            },
+            {
+              "type": "row",
+              "equalHeight": true,
+              "columns": "0.7484fr 1.7778fr",
+              "align": "start",
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/foto-acreditacion.webp",
+                  "alt": {
+                    "es": "Foto de la señalética de acreditación en el vacunatorio",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/gcba/foto-sala-espera.webp",
+                  "alt": {
+                    "es": "Foto del sector de espera del vacunatorio",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": {
+        "kind": "numbers",
+        "label": {
+          "es": "La campaña en números",
+          "en": ""
+        },
+        "items": [
+          {
+            "value": "+10",
+            "label": {
+              "es": "diseñadores y diseñadoras",
+              "en": ""
+            },
+            "source": {
+              "es": "Secretaría de Comunicaciones · GCBA",
+              "en": ""
+            }
+          },
+          {
+            "value": "+500",
+            "label": {
+              "es": "piezas producidas",
+              "en": ""
+            },
+            "source": {
+              "es": "Archivo propio",
+              "en": ""
+            }
+          },
+          {
+            "value": "52",
+            "label": {
+              "es": "centros de testeo",
+              "en": ""
+            },
+            "source": {
+              "es": "Ene. 2022 · GCBA",
+              "en": ""
+            }
+          },
+          {
+            "value": "15",
+            "label": {
+              "es": "unidades móviles",
+              "en": ""
+            },
+            "source": {
+              "es": "Ene. 2022 · GCBA",
+              "en": ""
+            }
+          },
+          {
+            "value": "44",
+            "label": {
+              "es": "centros de vacunación",
+              "en": ""
+            },
+            "source": {
+              "es": "2021 · AGCBA",
+              "en": ""
+            }
+          }
+        ]
+      }
     },
     {
       "id": "mammina-fit",
