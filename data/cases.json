@@ -340,7 +340,7 @@
             {
               "type": "row",
               "equalHeight": true,
-              "columns": "1.0247fr 0.5626fr 0.5626fr",
+              "columns": "1fr 0.5626fr 0.5626fr",
               "align": "start",
               "items": [
                 {
@@ -349,8 +349,7 @@
                   "alt": {
                     "es": "Folleto de lavado de manos en la mano",
                     "en": ""
-                  },
-                  "montage": true
+                  }
                 },
                 {
                   "type": "image",
@@ -389,8 +388,7 @@
               "alt": {
                 "es": "Cartel #CuidarteEsCuidarnos en la calle",
                 "en": ""
-              },
-              "montage": true
+              }
             },
             {
               "type": "image",
@@ -537,8 +535,7 @@
               "alt": {
                 "es": "Pantalla del dispositivo DETECTAR en un televisor",
                 "en": ""
-              },
-              "montage": true
+              }
             },
             {
               "type": "row",
