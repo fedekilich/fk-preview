@@ -57,6 +57,10 @@ function applyStrings() {
     el.setAttribute("aria-label", t(el.dataset.i18nAriaLabel, lang));
   });
 
+  document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+    el.setAttribute("alt", t(el.dataset.i18nAlt, lang));
+  });
+
   // La meta description del head también se traduce
   document.querySelectorAll("[data-i18n-content]").forEach((el) => {
     el.setAttribute("content", t(el.dataset.i18nContent, lang));

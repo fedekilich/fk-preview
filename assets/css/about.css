@@ -20,27 +20,13 @@
   border: 1px solid var(--line);
 }
 
-/* Placeholder hasta que exista la foto real (PRD §8) */
-.about-photo__placeholder {
-  position: relative;
+/* La foto ya viene recortada en 4:5, igual que el recuadro: object-fit la deja
+   entrar sin deformarse si algún día se cambia una de las dos proporciones. */
+.about-photo__img {
   width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(120% 120% at 15% 0%, rgba(250, 70, 89, 0.22) 0%, transparent 55%),
-    linear-gradient(140deg, #1a1a1a 0%, #0f0f0f 100%);
-}
-
-.about-photo__label {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
+  object-fit: cover;
+  object-position: 50% 38%;
 }
 
 .about-intro__eyebrow { margin-bottom: 1.25rem; }

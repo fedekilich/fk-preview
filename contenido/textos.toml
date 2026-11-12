@@ -280,10 +280,10 @@ nota = "Tu rol, abajo del titular de About, alineado a la derecha. Enfrenta al n
 es = "Design Lead · Brand & Motion"
 en = "Design Lead · Brand & Motion"
 
-[ui.about.photoPending]
-nota = "Texto del recuadro que reemplaza a tu foto hasta que exista. Se borra la entrada cuando se cargue la imagen."
-es = "Foto pendiente"
-en = "Photo coming soon"
+[ui.about.photoAlt]
+nota = "Descripción de tu foto de About para quien no la ve (lectores de pantalla, imagen rota). No se muestra en pantalla."
+es = "Fede Kilich sentado, mirando a cámara."
+en = "Fede Kilich seated, looking at the camera."
 
 [ui.about.quote]
 nota = "Frase destacada de About, en grande y en color de acento. Es la idea que resume todo el bio."
