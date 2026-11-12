@@ -556,39 +556,32 @@ en = "2024 – 2026"
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."
 valor = "https://www.zahnarztpraxis-wilson.de"
 
-# ─── 6. ARM (Londres)   ·   id: arm ──────────────────────────────────────
+# ─── 6. Arm   ·   id: arm ────────────────────────────────────────────────
 
 [caso.arm.client]
 nota = "Cliente y contexto del caso. Se muestra como volanta arriba del título y en la ficha. No se traduce salvo que el país cambie de nombre."
-es = "ARM — Londres, Reino Unido"
-en = ""
+es = "Arm"
+en = "Arm"
 
 [caso.arm.title]
 nota = "Título del caso. Aparece en la card, en el detalle y en la pestaña del navegador."
-es = "ARM (Londres)"
-en = "ARM (London)"
+es = "Arm"
+en = "Arm"
 
 [caso.arm.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
-es = "Precisión técnica para tecnología compleja."
+es = "Dos videos de producto para presentar la nueva generación de servidores de Arm"
 en = ""
 
 [caso.arm.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
-es = """
-Motion graphics y animación. Dentro de equipo de freelancers coordinado por Vladimir Rueda. El diseño base fue de otro miembro del equipo."""
+es = "Motion Designer, en un equipo freelance"
 en = ""
 
 [caso.arm.period]
 nota = "Cuándo se hizo. Va en la ficha del detalle."
-es = ""
-en = ""
-
-[caso.arm.narrative]
-nota = "El caso contado completo: el problema, qué se hizo y cómo terminó. Es el cuerpo del detalle."
-es = """
-Videos técnicos para presentación de nueva arquitectura de servidores ARM vs estándar de industria. Infografías animadas para facilitar comprensión. Trabajo de precisión técnica y ejecución impecable dentro de parámetros definidos por el cliente y el director."""
-en = ""
+es = "2026"
+en = "2026"
 
 [caso.arm.url]
 nota = "Sitio publicado del cliente. Si está vacío, la fila «Ver sitio» no aparece."

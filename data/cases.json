@@ -3844,35 +3844,264 @@
       "featured": true,
       "order": 6,
       "client": {
-        "es": "ARM — Londres, Reino Unido",
-        "en": ""
+        "es": "Arm",
+        "en": "Arm"
       },
       "url": "",
       "title": {
-        "es": "ARM (Londres)",
-        "en": "ARM (London)"
+        "es": "Arm",
+        "en": "Arm"
+      },
+      "eyebrow": {
+        "es": "Caso · Equipo freelance",
+        "en": ""
       },
       "oneLiner": {
-        "es": "Precisión técnica para tecnología compleja.",
+        "es": "Dos videos de producto para presentar la nueva generación de servidores de Arm",
         "en": ""
       },
       "role": {
-        "es": "Motion graphics y animación. Dentro de equipo de freelancers coordinado por Vladimir Rueda. El diseño base fue de otro miembro del equipo.",
+        "es": "Motion Designer, en un equipo freelance",
         "en": ""
       },
       "period": {
-        "es": "",
-        "en": ""
+        "es": "2026",
+        "en": "2026"
       },
-      "narrative": {
-        "es": "Videos técnicos para presentación de nueva arquitectura de servidores ARM vs estándar de industria. Infografías animadas para facilitar comprensión. Trabajo de precisión técnica y ejecución impecable dentro de parámetros definidos por el cliente y el director.",
-        "en": ""
-      },
-      "media": [],
-      "coverImage": "",
       "tags": [
         "Motion Graphics",
         "Animation"
+      ],
+      "coverImage": "assets/img/cases/arm/arm-mockup-auditorio.webp",
+      "facts": [
+        {
+          "label": {
+            "es": "Período",
+            "en": "Period"
+          },
+          "value": {
+            "es": "2026",
+            "en": "2026"
+          }
+        },
+        {
+          "label": {
+            "es": "Lugar",
+            "en": "Location"
+          },
+          "value": {
+            "es": "Londres, Reino Unido",
+            "en": "London, United Kingdom"
+          }
+        },
+        {
+          "label": {
+            "es": "Rol",
+            "en": "Role"
+          },
+          "wide": true,
+          "value": {
+            "es": "Motion Designer, en un equipo freelance",
+            "en": ""
+          }
+        },
+        {
+          "label": {
+            "es": "Animación",
+            "en": "Animation"
+          },
+          "wide": true,
+          "value": {
+            "es": "Junto a Martín Motta",
+            "en": ""
+          },
+          "link": {
+            "text": "Martín Motta",
+            "href": "https://www.instagram.com/martin___motta/"
+          }
+        },
+        {
+          "label": {
+            "es": "Aplicaciones",
+            "en": "Applications"
+          },
+          "wide": true,
+          "value": {
+            "es": "Motion graphics, infografía animada, videos de producto",
+            "en": ""
+          }
+        }
+      ],
+      "flow": [
+        {
+          "kind": "block",
+          "label": {
+            "es": "Punto de partida",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "Arm diseña la arquitectura de procesadores que usa buena parte de la industria. Para presentar su nueva generación de servidores necesitaba dos videos que mostraran, frente al estándar del mercado, qué cambia en dos casos concretos: la codificación de video con inferencia de IA y la gestión de procesos de una empresa con agentes de IA. El desafío: que datos técnicos densos se entiendan de un vistazo, frente a una audiencia especializada.",
+              "en": ""
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "numbered": false,
+          "title": null,
+          "content": [
+            {
+              "type": "image",
+              "src": "assets/img/cases/arm/arm-mockup-auditorio.webp",
+              "alt": {
+                "es": "Auditorio de un keynote con la comparativa x86 contra Arm AGI en la pantalla principal",
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "kind": "block",
+          "label": {
+            "es": "Qué se hizo",
+            "en": ""
+          },
+          "paragraphs": [
+            {
+              "es": "El trabajo se hizo dentro de un equipo de freelancers. Otro diseñador armó el sistema visual y la base de cada escena, y junto a Martín Motta las llevamos al movimiento: diagramas, flujos de datos y comparaciones entre arquitecturas, con un ritmo pensado para que cada dato se lea a tiempo. Pasó por varias rondas con el cliente, con criterios muy precisos sobre cómo tenía que comportarse cada animación.",
+              "en": "",
+              "links": [
+                {
+                  "text": "Martín Motta",
+                  "href": "https://www.instagram.com/martin___motta/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "number": "01",
+          "title": {
+            "es": "Video encoding",
+            "en": "Video encoding"
+          },
+          "intro": {
+            "es": "Codificación de video con inferencia de IA: la misma carga corriendo en servidores x86 y en Arm AGI.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "youtube",
+              "id": "UPR7_BNeMjg",
+              "title": "Video encoding",
+              "duration": "1:39",
+              "poster": "assets/img/cases/arm/arm-enc-poster.webp",
+              "ratio": "28/11"
+            },
+            {
+              "type": "grid",
+              "columns": 2,
+              "mobileColumns": 1,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-enc-global.webp",
+                  "alt": {
+                    "es": "El video ocupa el 80 % del ancho de banda global de internet",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-enc-pipeline.webp",
+                  "alt": {
+                    "es": "Pipeline de codificación con detección de objetos, etiquetado y traducción",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-enc-servidores.webp",
+                  "alt": {
+                    "es": "Rack Arm AGI: 30 servidores 1U y 8160 núcleos",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-enc-racks.webp",
+                  "alt": {
+                    "es": "Pared de racks de servidores",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "section",
+          "number": "02",
+          "title": {
+            "es": "ERP agéntico",
+            "en": "Agentic ERP"
+          },
+          "intro": {
+            "es": "Un ERP con agentes de IA frente al circuito manual: de 3,2 horas a 4 minutos por factura.",
+            "en": ""
+          },
+          "content": [
+            {
+              "type": "youtube",
+              "id": "GEYrwUBUNQk",
+              "title": "ERP agéntico",
+              "duration": "1:57",
+              "poster": "assets/img/cases/arm/arm-erp-poster.webp",
+              "ratio": "28/11"
+            },
+            {
+              "type": "grid",
+              "columns": 2,
+              "mobileColumns": 1,
+              "items": [
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-erp-facturas.webp",
+                  "alt": {
+                    "es": "3400 facturas por mes, 14 pasos cada una, 1450 horas de trabajo manual",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-erp-agentes.webp",
+                  "alt": {
+                    "es": "Los agentes toman el trabajo repetitivo: total 4 minutos por factura",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-erp-48x.webp",
+                  "alt": {
+                    "es": "ERP agéntico: 48 veces más rápido, 8 veces menos errores, 250 veces más capacidad",
+                    "en": ""
+                  }
+                },
+                {
+                  "type": "image",
+                  "src": "assets/img/cases/arm/arm-erp-humanos.webp",
+                  "alt": {
+                    "es": "Personas potenciadas, no reemplazadas: roles y tiempo liberado",
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {

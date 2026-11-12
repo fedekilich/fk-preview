@@ -183,6 +183,19 @@
 }
 .detail__sheet a:hover { border-color: var(--accent); }
 
+/* Link dentro de un texto —un nombre, una cuenta—: subrayado en el acento */
+.lk,
+.ws .lk,
+.detail__sheet .lk {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  transition: color 0.25s ease;
+}
+.lk:hover,
+.ws .lk:hover,
+.detail__sheet .lk:hover { color: var(--accent); }
+
 /* --- Bloque de texto: etiqueta a la izquierda, texto a la derecha */
 .tb {
   display: grid;
@@ -305,7 +318,8 @@
 
 /* Los controles que se apoyan sobre una imagen siguen en oscuro */
 .ws .zoombtn__icon,
-.ws .vid__tag { color: #f0f0f0; }
+.ws .vid__tag,
+.ws .vid__dur { color: #f0f0f0; }
 .ws .vid { background: #fbfbf9; }
 .ws .vid__ph { background: #e0ded8; }
 
@@ -448,9 +462,9 @@
   justify-content: center;
   transition: transform 0.3s ease;
 }
-.vid__tag {
+.vid__tag,
+.vid__dur {
   position: absolute;
-  left: 12px;
   bottom: 12px;
   font-size: var(--fs-eyebrow);
   letter-spacing: 0.14em;
@@ -458,6 +472,12 @@
   color: var(--text);
   background: var(--header-bg);
   padding: 6px 10px;
+}
+.vid__tag { left: 12px; }
+/* Duración del video, en la esquina de adentro */
+.vid__dur {
+  right: 12px;
+  font-variant-numeric: tabular-nums;
 }
 .vid:hover img { transform: scale(1.03); }
 .vid:hover .vid__play { transform: scale(1.08); }

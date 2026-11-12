@@ -83,6 +83,28 @@ const ratios = (columns) => columns.trim().split(/\s+/).map((value) => parseFloa
 
 const sum = (numbers) => numbers.reduce((total, n) => total + n, 0);
 
+/* Texto con links adentro: envuelve la primera aparición de cada `text` en un
+   `<a>` a su `href`, en pestaña nueva, y deja el resto como texto. */
+function linkedText(value, links, lang) {
+  const fragment = document.createDocumentFragment();
+  let rest = pick(value, lang) || "";
+
+  (links || []).forEach((entry) => {
+    const at = rest.indexOf(entry.text);
+    if (at === -1) return;
+    if (at) fragment.append(document.createTextNode(rest.slice(0, at)));
+    const link = el("a", "lk", entry.text);
+    link.href = entry.href;
+    link.target = "_blank";
+    link.rel = "noopener";
+    fragment.append(link);
+    rest = rest.slice(at + entry.text.length);
+  });
+
+  if (rest) fragment.append(document.createTextNode(rest));
+  return fragment;
+}
+
 function sheetItem(fact, lang) {
   const item = el("div", fact.wide ? "is-wide" : "");
   item.append(el("dt", "", pick(fact.label, lang)));
@@ -97,6 +119,9 @@ function sheetItem(fact, lang) {
       link.rel = "noopener";
       value.append(link);
     });
+  } else if (fact.link) {
+    // El valor nombra a alguien o algo con su link: va dentro del texto
+    value.append(linkedText(fact.value, [fact.link], lang));
   } else {
     value.textContent = pick(fact.value, lang) || "—";
   }
@@ -109,7 +134,11 @@ function textBlock(block, lang) {
   const section = el("section", "tb");
   section.append(el("p", "eyebrow tb__label rv", pick(block.label, lang)));
   const body = el("div", "tb__body rv");
-  block.paragraphs.forEach((paragraph) => body.append(el("p", "", pick(paragraph, lang))));
+  block.paragraphs.forEach((paragraph) => {
+    const text = el("p");
+    text.append(linkedText(paragraph, paragraph.links, lang));
+    body.append(text);
+  });
   section.append(body);
   return section;
 }
@@ -162,6 +191,7 @@ function videoItem(item, lang) {
 
   link.insertAdjacentHTML("beforeend", `<span class="vid__play">${ICON_PLAY}</span>`);
   link.append(el("span", "vid__tag", "YouTube"));
+  if (item.duration) link.append(el("span", "vid__dur", item.duration));
 
   link.addEventListener("click", (event) => {
     event.preventDefault();
