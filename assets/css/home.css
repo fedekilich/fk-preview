@@ -49,7 +49,7 @@ main { overflow-x: clip; }
   position: absolute;
   top: 50%;
   right: 3vw;                  /* masa corrida a la derecha */
-  height: min(104%, 62vw);     /* el cuadrado trae su propio margen negro */
+  height: min(88.4%, 52.7vw);  /* 15% menos que el tamaño original (104% / 62vw) */
   width: auto;
   max-width: none;             /* base.css limita video a max-width: 100% */
   aspect-ratio: 1;
