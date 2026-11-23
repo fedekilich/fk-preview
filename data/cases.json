@@ -38,7 +38,7 @@
         "Sistema visual",
         "Liderazgo de equipo"
       ],
-      "coverImage": "assets/img/cases/gcba/testeate-via-publica.webp",
+      "coverImage": "assets/img/cases/gcba/portada.webp",
       "facts": [
         {
           "label": {
@@ -2508,7 +2508,7 @@
     },
     {
       "id": "ama-studio",
-      "featured": false,
+      "featured": true,
       "order": 4,
       "client": {
         "es": "AMA Studio",
@@ -3009,7 +3009,7 @@
     },
     {
       "id": "carol-wilson",
-      "featured": false,
+      "featured": true,
       "order": 5,
       "client": {
         "es": "Dr. Caroline Wilson",
@@ -4513,7 +4513,7 @@
         "Fintech",
         "Brand Design"
       ],
-      "coverImage": "assets/img/cases/inviu/web-home.webp",
+      "coverImage": "assets/img/cases/inviu/portada.webp",
       "eyebrow": {
         "es": "Caso · Grupo Financiero Galicia",
         "en": ""
