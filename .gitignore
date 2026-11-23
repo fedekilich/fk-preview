@@ -1,6 +1,11 @@
 .DS_Store
 Thumbs.db
-.claude/settings.local.json
+
+# Config local de Claude Code (incluye launch.json del server de preview)
+.claude/
+
+# Material fuente de los casos: zips pesados que no van al repo
+Contexto/
 
 # Python
 __pycache__/
