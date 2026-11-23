@@ -215,6 +215,12 @@ main { overflow-x: clip; }
 
   .hero__copy { max-width: min(100%, 40rem); }
 
+  /* En vertical el nombre es lo que tiene que pesar: que ocupe ~70% del
+     ancho util en vez del 30% que daba el minimo del clamp general.
+     El tope de 8rem evita que se dispare en las pantallas mas anchas
+     de este rango, donde ya no es un celular. */
+  .hero__title { font-size: min(27.5vw, 8rem); }
+
   .hero__video {
     top: 0;
     right: 50%;
