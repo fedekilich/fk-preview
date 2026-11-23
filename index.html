@@ -43,7 +43,17 @@
 <main id="main">
 
   <section class="shell hero">
-    <div>
+    <div class="hero__media" aria-hidden="true">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto"
+             disablepictureinpicture poster="assets/video/hero_masa_poster.webp">
+        <source src="assets/video/hero_masa_720.webm"  type="video/webm" media="(max-width: 767px)">
+        <source src="assets/video/hero_masa_720.mp4"   type="video/mp4"  media="(max-width: 767px)">
+        <source src="assets/video/hero_masa_1080.webm" type="video/webm">
+        <source src="assets/video/hero_masa_1080.mp4"  type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero__copy">
       <span class="hero__role" data-i18n="hero.role">Brand, Motion &amp; IA</span>
       <h1 class="display hero__title">
         <span class="hero__line">
@@ -60,13 +70,6 @@
         <span data-i18n="hero.scroll">Scroll</span>
         <span class="hero__cue" aria-hidden="true"></span>
       </a>
-    </div>
-
-    <!-- TODO: reemplazar por la foto real de Fede (PRD §8) -->
-    <div class="media-ph hero__photo">
-      <div class="media-ph__inner">
-        <span class="media-ph__label" data-i18n="about.photoPending">Foto pendiente</span>
-      </div>
     </div>
   </section>
 

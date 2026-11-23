@@ -3,14 +3,63 @@
    ============================================================ */
 
 /* --- Hero ----------------------------------------------------- */
+/* El 100vw de .hero__media desborda unos px por el hueco de la barra de
+   scroll. `clip` lo recorta sin crear contexto de apilamiento — con
+   `hidden` o un `overflow` que scrollee, el mix-blend-mode se rompe. */
+main { overflow-x: clip; }
+
 .hero {
+  position: relative;
   min-height: 100svh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   padding-top: clamp(1.5rem, 4vw, 2.5rem);
   padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+/* El texto no se estira a todo el ancho ahora que no hay segunda columna:
+   queda sobre el negro de la izquierda y le deja la derecha a la masa. */
+.hero__copy {
+  position: relative;
+  z-index: 1;
+  max-width: min(100%, 34rem);
+}
+
+/* Capa del video: ocupa todo el ancho de la ventana, no solo el .shell.
+   `mix-blend-mode: screen` hace desaparecer el negro del video contra el
+   --bg de la página. Para que funcione, ningún ancestro hasta <body> puede
+   crear contexto de apilamiento (transform, filter, opacity < 1,
+   isolation, will-change, o z-index en un ancestro posicionado). */
+.hero__media {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: fadeIn 1.4s var(--ease-out) 0.3s forwards;
+}
+
+.hero__video {
+  position: absolute;
+  top: 50%;
+  right: 3vw;                  /* masa corrida a la derecha */
+  height: min(104%, 62vw);     /* el cuadrado trae su propio margen negro */
+  width: auto;
+  max-width: none;             /* base.css limita video a max-width: 100% */
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .hero__role {
@@ -91,13 +140,6 @@
   animation: scrollCue 2.2s linear infinite;
 }
 
-.hero__photo {
-  aspect-ratio: 4 / 5;
-  width: 100%;
-  opacity: 0;
-  animation: fadeUp 0.9s var(--ease-out) 0.3s forwards;
-}
-
 @keyframes wipeBar {
   0%   { transform: scaleX(0); transform-origin: left; }
   46%  { transform: scaleX(1); transform-origin: left; }
@@ -157,12 +199,38 @@
   margin-top: clamp(3rem, 7vw, 5rem);
 }
 
+/* --- Hero apilado (hasta 1199px) ------------------------------ */
+/* Abajo de 1200px el texto ocupa demasiado del ancho y la masa se le viene
+   encima. En vez de achicarla hasta que no se vea, se apila: la masa arriba
+   y el texto abajo, sobre negro. El alto manda sobre el ancho (min con svh)
+   para que la masa nunca empuje al texto fuera de pantalla. */
+@media (max-width: 1199px) {
+  .hero {
+    /* El header mide 72px y empuja al hero hacia abajo: sin descontarlo, el
+       bloque de texto alineado abajo se va de pantalla. */
+    min-height: calc(100svh - 72px);
+    align-items: end;
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .hero__copy { max-width: min(100%, 40rem); }
+
+  .hero__video {
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: auto;
+    height: min(118vw, 54svh);
+    opacity: 0.75;
+  }
+}
+
 /* El barrido y los fundidos son decorativos: se apagan si molestan */
 @media (prefers-reduced-motion: reduce) {
   .hero__role,
   .hero__intro,
-  .hero__scroll,
-  .hero__photo { opacity: 1; }
+  .hero__scroll { opacity: 1; }
+  .hero__media { opacity: 1; animation: none; }
   .hero__bar { display: none; }
   .hero__word { clip-path: none; }
   .hero__cue { background-position: 0 0; }
