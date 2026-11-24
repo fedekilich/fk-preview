@@ -29,6 +29,19 @@
 <!-- .lab-stage: lo que el glitch clona y oculta durante la transición -->
 <div class="lab-stage">
 
+  <!-- Fondo de toda la página: el mismo video del hero detrás de un vidrio
+       esmerilado. Va en 720 y no en 1080 porque el desenfoque se come el
+       detalle y pesa la mitad. -->
+  <div class="lab-bg" aria-hidden="true">
+    <video class="lab-bg__video" autoplay muted loop playsinline preload="auto"
+           disablepictureinpicture tabindex="-1"
+           poster="assets/video/hero_masa_poster.webp">
+      <source src="assets/video/hero_masa_720.webm" type="video/webm">
+      <source src="assets/video/hero_masa_720.mp4" type="video/mp4">
+    </video>
+    <span class="lab-bg__glass"></span>
+  </div>
+
 <header class="site-header">
   <div class="shell site-header__inner">
     <a class="wordmark" href="index.html">Fede Kilich<span>.</span></a>
@@ -54,9 +67,22 @@
     <p class="page-hero__intro lab-flicker lab-flicker--late" data-i18n="lab.intro">Ganas de crear, probar, experimentar. De ahí salen estos proyectos, sin clientes ni deadlines.</p>
   </section>
 
-  <section class="shell lab-list">
-    <!-- Los experimentos los construye assets/js/lab.js desde data/lab.json -->
-    <div class="lab-grid" id="lab-items"></div>
+  <!-- Mientras no haya experimentos cargados, en lugar de la grilla va el
+       "Próximamente". Para devolver la grilla alcanza con reponer el markup
+       de abajo: los datos siguen en data/lab.json y lab.js los sabe dibujar.
+         <section class="shell lab-list">
+           <div class="lab-grid" id="lab-items"></div>
+         </section>
+  -->
+  <section class="shell lab-soon">
+    <p class="lab-soon__label">
+      <span class="lab-soon__word" data-i18n="lab.soon">Próximamente</span>
+      <!-- Las copias del glitch viven acá, fuera del alcance de un lector de
+           pantalla: el texto de verdad es el span de arriba. El data-text lo
+           sincroniza assets/js/lab.js, que también lo actualiza al cambiar
+           de idioma. -->
+      <span class="lab-soon__glitch" aria-hidden="true"></span>
+    </p>
   </section>
 
 </main>

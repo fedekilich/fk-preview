@@ -39,9 +39,33 @@ function render() {
   grid.replaceChildren(...items.map((item) => labCard(item, lang)));
 }
 
+/* El video del "Próximamente" es decorativo: si el sistema pide menos
+   movimiento se queda en el poster. */
+function calmarVideo() {
+  const video = document.querySelector(".lab-bg__video");
+  if (!video) return;
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  video.removeAttribute("autoplay");
+  video.pause();
+}
+
+/* Las copias del glitch salen de data-text, así que tiene que seguir al
+   texto real: cambia con el idioma (Próximamente / Coming soon). */
+function sincronizarGlitch() {
+  const palabra = document.querySelector(".lab-soon__word");
+  const copias = document.querySelector(".lab-soon__glitch");
+  if (!palabra || !copias) return;
+  copias.dataset.text = palabra.textContent.trim();
+}
+
 initSite();
 initLabGlitch();
-onLangChange(render);
+calmarVideo();
+sincronizarGlitch();
+onLangChange(() => {
+  render();
+  sincronizarGlitch();
+});
 
 loadLabItems().then((all) => {
   items = all;

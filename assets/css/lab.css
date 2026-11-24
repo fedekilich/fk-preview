@@ -252,6 +252,160 @@
 }
 
 /* El detalle del Lab lleva video, no una portada panorámica */
+/* --- Próximamente: el video es el fondo de toda la página -------------
+   Nada de recuadro con borde, que se leía como la card de un caso. El video
+   ocupa la ventana entera detrás de todo y encima va una capa de vidrio
+   esmerilado; el contenido queda por arriba.
+
+   El desenfoque va en el video y no en backdrop-filter: como el vidrio cubre
+   el 100% y no queda nada sin esmerilar con qué comparar, se ve igual y
+   cuesta muchísimo menos que filtrar un video a pantalla completa en cada
+   cuadro. */
+.lab-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  /* Al achicar el video deja de llegar a los bordes: atrás queda el fondo
+     del Lab, que la viñeta del vidrio termina de disimular */
+  background: var(--bg);
+}
+
+.lab-bg__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 15% más chica que antes (1.06 → 0.9). El desenfoque sangra hacia adentro
+     desde el canto del video, así que el encuentro con el fondo queda suave. */
+  transform: scale(0.9);
+  filter: blur(14px);
+}
+
+.lab-bg__glass {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(10, 10, 20, 0) 0 1px,
+      rgba(10, 10, 20, 0.13) 1px 3px
+    ),
+    /* Oscurecido arriba: ahí viven el header y la bajada, y el video pasa
+       por zonas claras que se comían el texto */
+    linear-gradient(180deg, rgba(10, 10, 20, 0.6) 0%, rgba(10, 10, 20, 0.1) 42%, rgba(10, 10, 20, 0) 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%),
+    radial-gradient(120% 85% at 50% 45%, rgba(10, 10, 20, 0.42) 0%, rgba(10, 10, 20, 0.84) 100%);
+}
+
+/* El contenido va por encima del fondo */
+.theme-lab .site-header,
+.theme-lab #main,
+.theme-lab .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.lab-soon {
+  min-height: clamp(260px, 44vh, 440px);
+  display: grid;
+  place-items: center;
+  padding-block: clamp(2rem, 8vw, 5rem) clamp(4rem, 10vw, 8rem);
+}
+
+.lab-soon__label {
+  position: relative;
+  margin: 0;
+  padding-inline: 1rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 8vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  /* Sombra oscura pegada para que el azul se despegue del fondo, más un halo
+     del mismo acento que lo hace leer como encendido */
+  text-shadow:
+    0 2px 18px rgba(10, 10, 20, 0.85),
+    0 0 42px rgba(85, 85, 255, 0.45);
+}
+
+/* El Próximamente hace glitch cada tanto, con el mismo vocabulario que el
+   link del nav: dos copias recortadas en franjas, una roja y una cian, que
+   se corren para lados opuestos. La diferencia es que acá no espera un hover
+   sino que corre en loop, con dos ráfagas cortas por ciclo y largos tramos
+   quieto en el medio, para que no se vuelva un metrónomo. */
+@media (prefers-reduced-motion: no-preference) {
+  .lab-soon__word {
+    display: inline-block;
+    animation: lab-soon-shift 7s steps(1, end) infinite;
+  }
+
+  .lab-soon__glitch {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .lab-soon__glitch::before,
+  .lab-soon__glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-shadow: none;
+    opacity: 0;
+  }
+
+  /* Canales fijos: el split se lee rojo/cian, no sigue al acento */
+  .lab-soon__glitch::before {
+    color: #fa4659;
+    animation: lab-soon-rojo 7s steps(1, end) infinite;
+  }
+  .lab-soon__glitch::after {
+    color: #4dffff;
+    animation: lab-soon-cian 7s steps(1, end) infinite;
+  }
+
+  @keyframes lab-soon-shift {
+    0%   { transform: translateX(0); }
+    1%   { transform: translateX(4px); }
+    2%   { transform: translateX(-3px); }
+    3%   { transform: translateX(2px); }
+    4%   { transform: translateX(0); }
+    52%  { transform: translateX(-3px); }
+    53%  { transform: translateX(2px); }
+    54%  { transform: translateX(0); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes lab-soon-rojo {
+    0%   { opacity: 0; transform: translateX(0); clip-path: inset(0 0 55% 0); }
+    1%   { opacity: 0.9; transform: translateX(-5px); clip-path: inset(0 0 55% 0); }
+    2%   { opacity: 0.9; transform: translateX(-9px); clip-path: inset(38% 0 22% 0); }
+    3%   { opacity: 0.7; transform: translateX(-3px); clip-path: inset(0 0 62% 0); }
+    4%   { opacity: 0; transform: translateX(0); }
+    52%  { opacity: 0.85; transform: translateX(-6px); clip-path: inset(24% 0 40% 0); }
+    53%  { opacity: 0.55; transform: translateX(-2px); clip-path: inset(0 0 70% 0); }
+    54%, 100% { opacity: 0; transform: translateX(0); }
+  }
+
+  /* Medio paso corrida respecto de la roja: por eso se ven alternarse */
+  @keyframes lab-soon-cian {
+    0%   { opacity: 0; transform: translateX(0); clip-path: inset(52% 0 0 0); }
+    1.5% { opacity: 0.9; transform: translateX(5px); clip-path: inset(52% 0 0 0); }
+    2.5% { opacity: 0.9; transform: translateX(9px); clip-path: inset(20% 0 45% 0); }
+    3.5% { opacity: 0.7; transform: translateX(3px); clip-path: inset(60% 0 0 0); }
+    4.5% { opacity: 0; transform: translateX(0); }
+    52.5% { opacity: 0.85; transform: translateX(6px); clip-path: inset(55% 0 0 0); }
+    53.5% { opacity: 0.55; transform: translateX(2px); clip-path: inset(30% 0 35% 0); }
+    54.5%, 100% { opacity: 0; transform: translateX(0); }
+  }
+}
+
 .theme-lab .detail__cover .media-ph { aspect-ratio: 16 / 9; }
 
 /* El corte y el parpadeo son decorativos */

@@ -237,6 +237,11 @@ Ganas de crear, probar, experimentar. De ahí salen estos proyectos, sin cliente
 en = """
 The urge to create, try, experiment. That's where these projects come from, no clients, no deadlines."""
 
+[ui.lab.soon]
+nota = "La palabra grande sobre el vidrio esmerilado, mientras Lab todavía no tenga experimentos cargados. Al lado lleva un cursor verde titilando que pone el CSS, no va en el texto."
+es = "Próximamente"
+en = "Coming soon"
+
 [ui.lab.back]
 nota = "Link de vuelta al listado de Lab, al pie del detalle."
 es = "Volver al lab"

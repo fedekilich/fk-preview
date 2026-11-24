@@ -35,6 +35,9 @@ function glitch() {
       el.setAttribute("tabindex", "-1");
       el.setAttribute("aria-hidden", "true");
     });
+    // Son 6 copias de la pantalla: si cada una arranca el video, el glitch
+    // compite con media docena de reproducciones. Se quedan en el poster.
+    clon.querySelectorAll("video").forEach((el) => el.removeAttribute("autoplay"));
     clon.classList.remove("is-glitching");
     clon.style.transform = `translateY(${desplazamiento}px)`;
     return clon;
