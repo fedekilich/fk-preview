@@ -418,6 +418,11 @@ nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo
 es = "Comunicación de la pandemia: prevención y vacunación"
 en = ""
 
+[caso.gcba.narrative]
+nota = "PROVISORIO — lorem ipsum de relleno hasta que esté escrita la narrativa real. Es el texto largo que se abre solo en el timeline del About al llegar al hito."
+es = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit."
+en = ""
+
 [caso.gcba.role]
 nota = "Qué hiciste vos en el proyecto. Va en la ficha del detalle."
 es = "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires"
@@ -633,6 +638,11 @@ en = "Inviu"
 [caso.inviu.oneLiner]
 nota = "Una línea que resume el caso. Es lo que se lee en la card del catálogo y bajo el título del detalle."
 es = "Comunicación de marca en Argentina, Perú y Uruguay"
+en = ""
+
+[caso.inviu.narrative]
+nota = "PROVISORIO — lorem ipsum de relleno hasta que esté escrita la narrativa real. Es el texto largo que se abre solo en el timeline del About al llegar al hito."
+es = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
 en = ""
 
 [caso.inviu.role]
