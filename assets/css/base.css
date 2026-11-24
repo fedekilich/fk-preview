@@ -59,7 +59,9 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
-  overflow-x: hidden;
+  /* clip y no hidden: contiene el desborde horizontal igual, pero no crea
+     contenedor de scroll, que es lo que anula position:sticky adentro. */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 
   /* El footer queda abajo aunque la página sea corta */

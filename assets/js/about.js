@@ -1,6 +1,15 @@
 // About — narrativa + timeline "Recorrido".
 // Los hitos salen de data/timeline.json; los que declaran caseId toman su texto
 // de data/cases.json (campos oneLiner y narrative).
+//
+// La descripción larga ya no se abre con un botón: el scroll decide qué hito
+// está activo, la anterior se desvanece y la nueva aparece. Dos decisiones
+// sostienen eso:
+//   1. No se anima la altura. Cada descripción ocupa siempre su lugar en el
+//      flujo y lo único que cambia es la opacidad, así nada salta debajo del
+//      dedo mientras se lee.
+//   2. El texto nunca se saca del DOM, así sigue existiendo para el buscador
+//      del navegador y para un lector de pantalla.
 
 import { pick } from "../../data/i18n.js";
 import { initSite, getLang, onLangChange, loadCases, loadMilestones } from "./site.js";
@@ -9,11 +18,37 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 
 const timelineEl = document.getElementById("timeline");
 const rowsEl = document.getElementById("timeline-rows");
+const yearEl = document.getElementById("timeline-year");
+const yearNumEl = yearEl ? yearEl.querySelector(".timeline__year-num") : null;
 
 /** Nodos de cada hito, para repintar sin reconstruir el DOM. */
 const rows = [];
 /** Casos cargados desde data/cases.json, indexados por id. */
 let casesById = new Map();
+/** Hito activo según el scroll (-1 = todavía ninguno). */
+let activeIndex = -1;
+
+/* ---------------------------------------------------------------
+   Años del hito: salen del propio período, no de un campo aparte
+   --------------------------------------------------------------- */
+
+/** Los dos años de "2006–2014". El segundo puede faltar ("2021–presente"). */
+function parseYears(hito) {
+  const raw = hito.period ? hito.period.es || hito.period.en || "" : "";
+  const found = raw.match(/\d{4}/g) || [];
+  return {
+    from: found[0] ? Number(found[0]) : null,
+    to: found[1] ? Number(found[1]) : null
+  };
+}
+
+/** La palabra con la que cierra un período abierto: "presente", "present". */
+function openEndedWord(hito, lang) {
+  const raw = pick(hito.period, lang) || "";
+  const parts = raw.split(/[–—-]/);
+  const tail = parts.length > 1 ? parts[parts.length - 1].trim() : "";
+  return /\d/.test(tail) ? "" : tail;
+}
 
 /* ---------------------------------------------------------------
    Construcción del DOM (una sola vez)
@@ -29,18 +64,9 @@ function buildRow(hito, index) {
   const heading = document.createElement("h3");
   heading.className = "tl-row__heading";
 
-  const toggle = document.createElement("button");
-  toggle.type = "button";
-  toggle.className = "tl-row__toggle";
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-controls", `panel-${hito.id}`);
-
   const label = document.createElement("span");
-  const plus = document.createElement("span");
-  plus.className = "tl-plus";
-  plus.setAttribute("aria-hidden", "true");
-  toggle.append(label, plus);
-  heading.append(toggle);
+  label.className = "tl-row__static";
+  heading.append(label);
 
   const body = document.createElement("div");
   body.className = "tl-row__body";
@@ -51,7 +77,6 @@ function buildRow(hito, index) {
   const panel = document.createElement("div");
   panel.className = "tl-row__panel";
   panel.id = `panel-${hito.id}`;
-  panel.hidden = true;
 
   const detail = document.createElement("p");
   panel.append(detail);
@@ -63,20 +88,18 @@ function buildRow(hito, index) {
 
   row.append(period, heading, body, dot);
 
-  toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!open));
-    panel.hidden = open;
-    if (!open) {
-      // reinicia la animación de apertura en cada despliegue
-      panel.style.animation = "none";
-      void panel.offsetWidth;
-      panel.style.animation = "";
-    }
-    updateProgress();
-  });
-
-  return { hito, row, period, toggle, label, plus, teaser, panel, detail, dot };
+  return {
+    hito,
+    row,
+    period,
+    label,
+    teaser,
+    panel,
+    detail,
+    dot,
+    years: parseYears(hito),
+    openEnded: ""
+  };
 }
 
 /* ---------------------------------------------------------------
@@ -104,28 +127,23 @@ function paint() {
     node.teaser.textContent = teaserText;
     node.teaser.hidden = !teaserText;
     node.detail.textContent = detailText;
+    node.openEnded = openEndedWord(hito, lang);
 
-    // Sin narrativa cargada todavía no hay nada que desplegar
-    const hasDetail = Boolean(detailText);
-    node.toggle.disabled = !hasDetail;
-    node.plus.hidden = !hasDetail;
-    if (!hasDetail) {
-      node.toggle.setAttribute("aria-expanded", "false");
-      node.panel.hidden = true;
-    }
+    // Un hito sin narrativa cargada no reserva espacio ni cruza nada
+    node.row.classList.toggle("tl-row--sin-detalle", !detailText);
   });
 
   updateProgress();
 }
 
 /* ---------------------------------------------------------------
-   Línea de progreso + puntos encendidos
+   Línea de progreso, puntos encendidos, hito activo y año de fondo
    --------------------------------------------------------------- */
 
 let progressQueued = false;
 
 function updateProgress() {
-  if (!timelineEl) return;
+  if (!timelineEl || !rows.length) return;
 
   const rect = timelineEl.getBoundingClientRect();
   const total = rect.height;
@@ -137,11 +155,63 @@ function updateProgress() {
 
   timelineEl.style.setProperty("--fill", `${(fillPx / total) * 100}%`);
 
-  rows.forEach(({ dot }) => {
+  // Posición de cada punto respecto del arranque del timeline
+  const offsets = rows.map(({ dot }) => {
     const dotRect = dot.getBoundingClientRect();
-    const offset = dotRect.top - rect.top + dotRect.height / 2;
-    dot.classList.toggle("is-lit", fillPx >= offset - 6);
+    return dotRect.top - rect.top + dotRect.height / 2;
   });
+
+  let next = -1;
+  rows.forEach(({ dot }, i) => {
+    const alcanzado = fillPx >= offsets[i] - 6;
+    dot.classList.toggle("is-lit", alcanzado);
+    if (alcanzado) next = i;
+  });
+
+  // El hito activo es el último que el cabezal de lectura ya pasó
+  if (next !== activeIndex) {
+    rows.forEach(({ row }, i) => row.classList.toggle("is-active", i === next));
+    activeIndex = next;
+  }
+
+  updateYear(fillPx, offsets, total);
+}
+
+function updateYear(fillPx, offsets, total) {
+  if (!yearEl || !yearNumEl) return;
+
+  if (activeIndex < 0) {
+    yearEl.classList.remove("is-on");
+    return;
+  }
+  yearEl.classList.add("is-on");
+
+  const node = rows[activeIndex];
+  const { from, to } = node.years;
+  if (!from) return;
+
+  // Cuánto se recorrió del hito activo: de su punto al del siguiente.
+  // Como los períodos son contiguos (2006–2014, 2014–2016, …) el número
+  // termina contando de corrido a lo largo de toda la sección.
+  const start = offsets[activeIndex];
+  const end = activeIndex + 1 < offsets.length ? offsets[activeIndex + 1] : total;
+  const span = Math.max(1, end - start);
+  const t = prefersReducedMotion.matches
+    ? 0
+    : Math.max(0, Math.min(1, (fillPx - start) / span));
+
+  let text;
+  if (to) {
+    text = String(Math.round(from + (to - from) * t));
+  } else if (node.openEnded && t >= 0.6) {
+    // Período abierto: el número llega a su año y resuelve en la palabra
+    text = node.openEnded.toUpperCase();
+  } else {
+    text = String(from);
+  }
+
+  yearNumEl.classList.toggle("is-word", /\D/.test(text));
+  if (yearNumEl.textContent !== text) yearNumEl.textContent = text;
 }
 
 function queueProgress() {
@@ -200,12 +270,31 @@ function init() {
   initSite();
   if (!rowsEl) return;
 
-  window.addEventListener("scroll", queueProgress, { passive: true });
-  window.addEventListener("resize", queueProgress, { passive: true });
+  if (prefersReducedMotion.matches) {
+    timelineEl.classList.add("timeline--estatico");
+  }
 
-  // Abrir un hito cambia la altura del timeline: recalcular la línea
+  window.addEventListener("scroll", queueProgress, { passive: true });
+
+  // Al cambiar el ancho cambia el alto de las descripciones: hay que remedir
+  let resizeTimer = 0;
+  window.addEventListener(
+    "resize",
+    () => {
+      queueProgress();
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(updateProgress, 150);
+    },
+    { passive: true }
+  );
+
   if ("ResizeObserver" in window) {
     new ResizeObserver(queueProgress).observe(timelineEl);
+  }
+
+  // Las tipografías llegan después del primer pintado y mueven los puntos
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(updateProgress);
   }
 
   onLangChange(paint);

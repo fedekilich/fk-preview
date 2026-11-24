@@ -109,9 +109,48 @@
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
+  z-index: 1;
 }
 .timeline__track { top: 0; bottom: 0; background: var(--line-track); }
 .timeline__fill { top: 0; height: var(--fill); background: var(--accent); }
+
+/* --- Año gigante de fondo ------------------------------------- */
+/* Queda pegado a media altura mientras la sección pasa por delante. Vive en
+   una caja de alto 0 para no empujar ni un pixel del layout, y el número
+   desborda hacia arriba y abajo centrado sobre esa línea. */
+.timeline__year {
+  position: sticky;
+  top: 42vh;
+  z-index: 0;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out);
+}
+.timeline__year.is-on { opacity: 0.075; }
+
+.timeline__year-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(7rem, 22vw, 18rem);
+  line-height: 0.78;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  /* Sin tabular-nums los dígitos cambian de ancho y el número bailotea
+     mientras incrementa */
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transform: translateY(-50%);
+}
+/* Cuando en vez de un año muestra la palabra de un período abierto */
+.timeline__year-num.is-word {
+  font-size: clamp(2.6rem, 9vw, 7rem);
+  letter-spacing: -0.01em;
+}
+
+.timeline__rows { position: relative; z-index: 2; }
 
 .tl-row {
   position: relative;
@@ -158,52 +197,21 @@
   font-size: clamp(1.1rem, 2.2vw, 1.6rem);
   letter-spacing: -0.01em;
   line-height: 1.1;
+  transition: color 0.4s var(--ease-out);
 }
+/* El hito que se está leyendo se tiñe de acento, igual que su punto */
+.tl-row.is-active .tl-row__heading { color: var(--accent); }
 
-.tl-row__toggle,
+/* Ya no hay botón: el título es texto y la descripción la abre el scroll */
 .tl-row__static {
   display: flex;
   align-items: baseline;
   gap: 1rem;
   width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--text);
-  font: inherit;
-  text-align: inherit;
+  color: inherit;
   justify-content: flex-start;
 }
-.tl-row__toggle { cursor: pointer; transition: color 0.25s ease; }
-.tl-row__toggle:hover { color: var(--accent); }
-/* Hito sin narrativa cargada: se comporta como texto, no como control */
-.tl-row__toggle:disabled,
-.tl-row__toggle:disabled:hover { cursor: default; color: var(--text); }
-
-.tl-row--left .tl-row__toggle,
 .tl-row--left .tl-row__static { justify-content: flex-end; }
-
-/* Icono +/− : dos barras, la vertical se oculta al abrir */
-.tl-plus {
-  position: relative;
-  flex: 0 0 auto;
-  width: 14px;
-  height: 14px;
-  align-self: center;
-}
-.tl-plus::before,
-.tl-plus::after {
-  content: "";
-  position: absolute;
-  inset: 50% 0 auto 0;
-  height: 1px;
-  background: currentColor;
-}
-.tl-plus::after {
-  transform: rotate(90deg);
-  transition: transform 0.3s var(--ease-out), opacity 0.3s ease;
-}
-[aria-expanded="true"] .tl-plus::after { transform: rotate(0deg); opacity: 0; }
 
 .tl-row__body { grid-row: 3; }
 
@@ -213,22 +221,25 @@
   color: var(--muted);
 }
 
+/* El panel nunca se saca del flujo: ocupa siempre su lugar y lo único que
+   cruza es la opacidad con un desplazamiento corto. Animar la altura movería
+   la página debajo del dedo justo mientras se lee. */
 .tl-row__panel {
   margin-top: 1.1rem;
-  animation: hitoAbrir 0.4s var(--ease-out) both;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.5s var(--ease-out),
+    transform 0.5s var(--ease-out);
 }
-.tl-row__panel[hidden] { display: none; }
+.tl-row.is-active .tl-row__panel { opacity: 1; transform: none; }
+
 .tl-row__panel p {
   font-size: 0.92rem;
   margin: 0 0 1em;
   color: var(--text-soft);
 }
 .tl-row__panel p:last-child { margin-bottom: 0; }
-
-@keyframes hitoAbrir {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: none; }
-}
 
 .tl-row__dot {
   grid-column: 2;
@@ -264,15 +275,46 @@
   .tl-row--left .tl-row__heading,
   .tl-row--left .tl-row__body { grid-column: 2; text-align: left; }
 
-  .tl-row--left .tl-row__toggle,
   .tl-row--left .tl-row__static { justify-content: flex-start; }
 
   .tl-row__dot { grid-column: 1; }
+
+  /* En el teléfono entra un hito por pantalla, así que el cruce no se llega
+     a percibir y en cambio deja huecos grandes donde está el texto apagado.
+     Acá las descripciones quedan todas a la vista: la coreografía del scroll
+     la sostienen el punto encendido, el título en acento y el año. */
+  .tl-row__panel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* El año pasa a ser textura: más grande y más tenue, para que no compita
+     con el texto que ahora le cruza por encima a todo lo ancho */
+  .timeline__year.is-on { opacity: 0.05; }
+  .timeline__year-num { font-size: clamp(8rem, 44vw, 14rem); }
+  .timeline__year-num.is-word { font-size: clamp(2.4rem, 15vw, 5rem); }
 }
 
-/* Sin animación de entrada si el usuario pidió menos movimiento */
+/* Sin animación si el usuario pidió menos movimiento: todas las
+   descripciones quedan abiertas y el año no interpola */
+.timeline--estatico .tl-row__panel {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tl-row,
   .tl-row--left,
   .tl-row--right { opacity: 1; transform: none; }
+
+  .tl-row__panel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tl-row__heading { transition: none; }
+  .timeline__year { transition: none; }
 }
