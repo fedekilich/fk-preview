@@ -87,6 +87,14 @@
 .about-story__rest p { margin: 1.4em 0 0; }
 .about-story__rest p:first-child { margin-top: clamp(2rem, 4vw, 2.75rem); }
 
+/* El borde del revelado del texto. Registrarlo como <percentage> es lo que
+   permite animarlo: una custom property sin tipo no interpola, salta. */
+@property --revelado {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
 /* --- Recorrido (timeline) ------------------------------------- */
 .about-path { padding-block: clamp(4rem, 10vw, 9rem); }
 
@@ -224,15 +232,44 @@
 /* El panel nunca se saca del flujo: ocupa siempre su lugar y lo único que
    cruza es la opacidad con un desplazamiento corto. Animar la altura movería
    la página debajo del dedo justo mientras se lee. */
+/* El --ease-out del sitio (0.22, 1, 0.36, 1) mete el 95% del recorrido en los
+   primeros 100ms: perfecto para que un control responda, pero deja la entrada
+   de un párrafo en seco y no da tiempo a que el barrido se lea. Para el texto
+   va una curva que reparte el movimiento a lo largo de toda la duración. */
 .tl-row__panel {
+  --ease-texto: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   margin-top: 1.1rem;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(14px);
+  /* El desenfoque hace que el texto entre como enfocando, en vez de
+     simplemente aclararse */
+  filter: blur(6px);
+  /* Y la máscara lo revela de arriba hacia abajo con un borde blando, que
+     es lo que le da el orden de lectura a la entrada */
+  --revelado: 0%;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--revelado) - 28%),
+    transparent var(--revelado)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--revelado) - 28%),
+    transparent var(--revelado)
+  );
   transition:
-    opacity 0.5s var(--ease-out),
-    transform 0.5s var(--ease-out);
+    opacity 1.2s var(--ease-texto),
+    transform 1.4s var(--ease-texto),
+    filter 1.2s var(--ease-texto),
+    --revelado 1.7s var(--ease-texto);
 }
-.tl-row.is-active .tl-row__panel { opacity: 1; transform: none; }
+.tl-row.is-active .tl-row__panel {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+  /* 128 y no 100: el borde blando de la máscara termina de salir por abajo */
+  --revelado: 128%;
+}
 
 .tl-row__panel p {
   font-size: 0.92rem;
@@ -286,6 +323,9 @@
   .tl-row__panel {
     opacity: 1;
     transform: none;
+    filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
     transition: none;
   }
 
@@ -301,6 +341,9 @@
 .timeline--estatico .tl-row__panel {
   opacity: 1;
   transform: none;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
   transition: none;
 }
 
@@ -312,6 +355,9 @@
   .tl-row__panel {
     opacity: 1;
     transform: none;
+    filter: none;
+    -webkit-mask-image: none;
+    mask-image: none;
     transition: none;
   }
 
