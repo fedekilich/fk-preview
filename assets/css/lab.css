@@ -253,49 +253,107 @@
 
 /* El detalle del Lab lleva video, no una portada panorámica */
 /* --- Próximamente: el video es el fondo de toda la página -------------
-   Nada de recuadro con borde, que se leía como la card de un caso. El video
-   ocupa la ventana entera detrás de todo y encima va una capa de vidrio
-   esmerilado; el contenido queda por arriba.
+   Nada de recuadro: el video ocupa la ventana entera detrás de todo y
+   encima va un vidrio esmerilado.
+
+   Un desenfoque solo no alcanza: eso simula una lente fuera de foco, donde
+   la superficie es lisa e invisible. El esmerilado es una superficie rugosa,
+   y se arma con cuatro capas:
+     1. grano quieto, que es lo que hace que se lea una superficie;
+     2. pérdida de transmisión (menos saturación y contraste, velo claro),
+        porque el vidrio no transmite perfecto;
+     3. un reflejo especular amplio y suave, la luz del ambiente en la cara;
+     4. el desenfoque, que pasa a ser un ingrediente más.
+
+   Los cuatro se gradúan juntos con las variables de abajo.
 
    El desenfoque va en el video y no en backdrop-filter: como el vidrio cubre
    el 100% y no queda nada sin esmerilar con qué comparar, se ve igual y
    cuesta muchísimo menos que filtrar un video a pantalla completa en cada
    cuadro. */
 .lab-bg {
+  /* Nivel del esmerilado: más alto, menos se ve el video */
+  /* La difusión la hace el filtro SVG: ruido grueso que ondula + ruido fino
+     encima + desenfoque. Un blur solo esparce parejo y se lee como lente
+     fuera de foco, no como superficie rugosa. */
+  --frost-difusion: url(#esmerilado-dos-escalas);
+  --frost-blur: 11px; /* solo el respaldo, si se saca el filtro */
+  --frost-sat: 0.96;
+  --frost-contrast: 0.98;
+  --frost-film: 0.045;
+  --frost-dim: 0.42;
+  --frost-grain: 0.18;
+  --frost-escala: 1.15;
+
   position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
   /* Al achicar el video deja de llegar a los bordes: atrás queda el fondo
-     del Lab, que la viñeta del vidrio termina de disimular */
+     del Lab, que la viñeta termina de disimular */
   background: var(--bg);
 }
 
 .lab-bg__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  /* 15% más chica que antes (1.06 → 0.9). El desenfoque sangra hacia adentro
-     desde el canto del video, así que el encuentro con el fondo queda suave. */
-  transform: scale(0.9);
-  filter: blur(14px);
+  /* contain y no cover: con cover el cuadrado se escala hasta tapar la
+     ventana y pierde más de un tercio arriba y abajo. Con contain entra
+     entero y el scale decide cuánto se recorta. */
+  object-fit: contain;
+  transform: scale(var(--frost-escala));
+  /* El fondo del video es negro puro: con screen ese negro se vuelve
+     transparente y el canto del cuadrado deja de verse contra la página.
+     Es lo que hace el hero de la Home, y acá pasó a hacer falta cuando el
+     video dejó de cubrir la ventana entera. */
+  mix-blend-mode: screen;
+  /* --frost-difusion es el desenfoque o el filtro SVG completo, según la
+     variante; el resto de la cadena no cambia */
+  filter:
+    var(--frost-difusion, blur(var(--frost-blur)))
+    saturate(var(--frost-sat))
+    contrast(var(--frost-contrast));
 }
 
 .lab-bg__glass {
   position: absolute;
   inset: 0;
   background:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(10, 10, 20, 0) 0 1px,
-      rgba(10, 10, 20, 0.13) 1px 3px
-    ),
-    /* Oscurecido arriba: ahí viven el header y la bajada, y el video pasa
-       por zonas claras que se comían el texto */
+    /* Reflejo especular: una zona apenas más clara cruzando la superficie,
+       no un brillo marcado */
+    linear-gradient(118deg,
+      rgba(255, 255, 255, calc(var(--frost-film) * 1.5)) 0%,
+      rgba(255, 255, 255, 0) 45%),
+    /* Velo de transmisión */
+    linear-gradient(180deg,
+      rgba(255, 255, 255, var(--frost-film)) 0%,
+      rgba(255, 255, 255, calc(var(--frost-film) * 0.4)) 100%),
+    /* Oscurecido arriba, fijo en todos los niveles: ahí van el header y la
+       bajada, y tienen que leerse igual */
     linear-gradient(180deg, rgba(10, 10, 20, 0.6) 0%, rgba(10, 10, 20, 0.1) 42%, rgba(10, 10, 20, 0) 60%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%),
-    radial-gradient(120% 85% at 50% 45%, rgba(10, 10, 20, 0.42) 0%, rgba(10, 10, 20, 0.84) 100%);
+    /* Viñeta */
+    radial-gradient(120% 85% at 50% 45%,
+      rgba(10, 10, 20, calc(var(--frost-dim) * 0.78)) 0%,
+      rgba(10, 10, 20, calc(var(--frost-dim) * 1.52)) 100%);
+}
+
+/* Ruido irregular, no un patrón regular: un patrón con periodo fijo se
+   remuestrea desigual en pantallas con escalado fraccionario y genera
+   bandas que parecen moverse, que es lo que pasaba con las scanlines. */
+.lab-filtros {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.lab-bg__grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+  opacity: var(--frost-grain);
 }
 
 /* El contenido va por encima del fondo */

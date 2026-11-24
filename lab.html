@@ -33,6 +33,35 @@
        esmerilado, con la misma lista de fuentes que index.html — 720 en
        teléfono, 1080 de ahí para arriba. Acá el cuadrado se recorta a lo
        ancho de la ventana, así que el de 1080 llega mucho menos estirado. -->
+  <!-- El esmerilado de verdad: un ruido alimenta un feDisplacementMap que
+       desplaza la imagen de forma irregular ANTES de desenfocarla. Es lo que
+       hace una superficie rugosa: no esparce parejo, ondula. Un blur solo
+       simula una lente fuera de foco, que es otra cosa. -->
+  <svg class="lab-filtros" aria-hidden="true" focusable="false" width="0" height="0">
+    <filter id="esmerilado" color-interpolation-filters="sRGB"
+            x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="11" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="16"
+                         xChannelSelector="R" yChannelSelector="G" result="roto"/>
+      <feGaussianBlur in="roto" stdDeviation="5"/>
+    </filter>
+
+    <!-- Variante con dos escalas de rugosidad: fina y gruesa a la vez, como
+         un esmerilado desparejo -->
+    <filter id="esmerilado-dos-escalas" color-interpolation-filters="sRGB"
+            x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.012" numOctaves="1" seed="5" result="grueso"/>
+      <feDisplacementMap in="SourceGraphic" in2="grueso" scale="26"
+                         xChannelSelector="R" yChannelSelector="G" result="ondulado"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.14" numOctaves="2" seed="11" result="fino"/>
+      <feDisplacementMap in="ondulado" in2="fino" scale="12"
+                         xChannelSelector="R" yChannelSelector="G" result="roto"/>
+      <!-- 9 y no 4.5: el desplazamiento esconde menos que el desenfoque,
+           así el nivel de visión queda igualado al elegido (N2) -->
+      <feGaussianBlur in="roto" stdDeviation="9"/>
+    </filter>
+  </svg>
+
   <div class="lab-bg" aria-hidden="true">
     <video class="lab-bg__video" autoplay muted loop playsinline preload="auto"
            disablepictureinpicture tabindex="-1"
@@ -43,6 +72,10 @@
       <source src="assets/video/hero_masa_1080.mp4"  type="video/mp4">
     </video>
     <span class="lab-bg__glass"></span>
+    <!-- Grano quieto: es lo que hace leer la superficie. Que no se mueva
+         mientras el video sí lo hace es justamente lo que lo delata como
+         vidrio y no como una imagen fuera de foco. -->
+    <span class="lab-bg__grain"></span>
   </div>
 
 <header class="site-header">
