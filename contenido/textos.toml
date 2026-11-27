@@ -341,6 +341,26 @@ nota = "Titular de Contact."
 es = "Hablemos."
 en = "Let's talk."
 
+[ui.contact.whatsappLabel]
+nota = "Etiqueta de la fila de WhatsApp."
+es = "WhatsApp"
+en = "WhatsApp"
+
+[ui.contact.hintCopy]
+nota = "Acción del email que aparece al pasar el mouse por la fila, al lado de la etiqueta."
+es = "· Copiar"
+en = "· Copy"
+
+[ui.contact.hintWhatsapp]
+nota = "Acción de WhatsApp que aparece al pasar el mouse por la fila, al lado de la etiqueta (la flecha la pone el HTML)."
+es = "· Abrir chat"
+en = "· Open chat"
+
+[ui.contact.hintLinkedin]
+nota = "Acción de LinkedIn que aparece al pasar el mouse por la fila, al lado de la etiqueta (la flecha la pone el HTML)."
+es = "· Ver perfil"
+en = "· View profile"
+
 [ui.contact.emailLabel]
 nota = "Etiqueta de la fila del email."
 es = "Email"
@@ -976,7 +996,7 @@ en = ""
 
 [contacto.email]
 nota = "Tu email. Se copia al portapapeles en Contact y aparece en el pie de las 7 páginas."
-valor = "hola@fedekilich.com"
+valor = "fedekilich@gmail.com"
 
 [contacto.linkedin]
 nota = "URL completa de tu perfil de LinkedIn."

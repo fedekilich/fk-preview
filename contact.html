@@ -52,14 +52,25 @@
       <button type="button" class="contact__row" id="copy-email" data-i18n-aria-label="contact.copyHint" aria-label="Click para copiar el email">
         <span class="contact__label">
           <span data-i18n="contact.emailLabel">Email</span>
+          <span class="contact__hint" aria-hidden="true" data-i18n="contact.hintCopy">· Copiar</span>
           <span class="contact__status" id="copy-status" role="status" aria-live="polite"></span>
         </span>
-        <!-- TODO: email definitivo pendiente de confirmar (PRD §5.6) -->
-        <span class="contact__value" id="email-value">hola@fedekilich.com</span>
+        <span class="contact__value" id="email-value">fedekilich@gmail.com</span>
       </button>
 
+      <a class="contact__row" href="https://wa.me/5491150571992" target="_blank" rel="noopener">
+        <span class="contact__label">
+          <span data-i18n="contact.whatsappLabel">WhatsApp</span>
+          <span class="contact__hint" aria-hidden="true"><span data-i18n="contact.hintWhatsapp">· Abrir chat</span> ↗</span>
+        </span>
+        <span class="contact__value">+54 9 11 5057-1992</span>
+      </a>
+
       <a class="contact__row contact__row--last" href="https://www.linkedin.com/in/fedekilich" target="_blank" rel="noopener">
-        <span class="contact__label" data-i18n="contact.linkedinLabel">LinkedIn</span>
+        <span class="contact__label">
+          <span data-i18n="contact.linkedinLabel">LinkedIn</span>
+          <span class="contact__hint" aria-hidden="true"><span data-i18n="contact.hintLinkedin">· Ver perfil</span> ↗</span>
+        </span>
         <span class="contact__value">/in/fedekilich</span>
       </a>
     </div>
@@ -78,7 +89,7 @@
       <a class="is-lab" href="lab.html">Lab</a>
     </nav>
     <div class="site-footer__links">
-      <a href="contact.html">hola@fedekilich.com</a>
+      <a href="contact.html">fedekilich@gmail.com</a>
       <a href="https://www.linkedin.com/in/fedekilich" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <span class="site-footer__meta">

@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-/* Email y LinkedIn comparten la misma fila: label a la izquierda, valor a la derecha */
+/* Email, WhatsApp y LinkedIn comparten la misma fila: label a la izquierda, valor a la derecha */
 .contact__row {
   display: flex;
   justify-content: space-between;
@@ -46,6 +46,21 @@ button.contact__row { cursor: pointer; }
   font-size: clamp(0.9rem, 1.6vw, 1.05rem);
   color: var(--text);
 }
+
+/* Acción de cada fila (Copiar / Abrir chat / Ver perfil): aparece en hover o foco
+   de teclado. En pantallas táctiles no se muestra: no hay hover. */
+.contact__hint {
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+@media (hover: hover) {
+  .contact__row:hover .contact__hint { opacity: 1; }
+}
+.contact__row:focus-visible .contact__hint { opacity: 1; }
+/* Mientras se ve "· Copiado", se oculta "· Copiar" para no duplicar */
+.contact__row:has(.contact__status.is-shown) .contact__hint { display: none; }
 
 /* Confirmación de copiado: aparece al instante y se desvanece sola */
 .contact__status {
