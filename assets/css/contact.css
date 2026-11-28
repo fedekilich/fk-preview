@@ -24,7 +24,12 @@
   text-align: left;
   text-decoration: none;
   border-radius: 6px;
+  /* El <button> del email no hereda tipografía: el navegador le pone su
+     propia font-size y line-height: normal, y la fila quedaba 9 px más baja
+     que las dos que son <a>. Heredando las tres, miden igual. */
   font-family: var(--font-body);
+  font-size: inherit;
+  line-height: inherit;
   transition: background 0.2s ease;
 }
 .contact__row:hover { background: var(--surface); }

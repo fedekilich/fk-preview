@@ -16,6 +16,7 @@ import { patchToml, bloqueCasoToml, quitarBloquesCaso } from "./admin-toml.js";
 
 const RUTA_CASOS = "data/cases.json";
 const RUTA_TOML = "contenido/textos.toml";
+const RUTA_TAGS = "data/tags.json";
 const CAMPOS_TEXTO = ["client", "title", "oneLiner", "role", "period", "narrative"];
 
 const IMAGENES = { "image/jpeg": [".jpg", ".jpeg"], "image/png": [".png"], "image/webp": [".webp"], "image/avif": [".avif"] };
@@ -40,7 +41,8 @@ const app = {
   seleccion: null,
   sucio: false,
   subidas: new Map(),  // ruta → File pendiente de escribir al guardar
-  vistas: new Map()    // ruta → objectURL para las miniaturas
+  vistas: new Map(),   // ruta → objectURL para las miniaturas
+  tags: []             // catálogo de data/tags.json, o [] si el proyecto no lo tiene
 };
 
 const soportado = "showDirectoryPicker" in window;
@@ -123,6 +125,11 @@ async function abrirProyecto() {
     }
     app.casos = (JSON.parse(await archivo.text()).cases || []).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
     app.original = clon(app.casos);
+
+    const tags = await leer(RUTA_TAGS);
+    app.tags = tags
+      ? (JSON.parse(await tags.text()).tags || []).sort((a, b) => (a.order ?? 99) - (b.order ?? 99))
+      : [];
 
     const toml = await leer(RUTA_TOML);
     app.toml = toml ? await toml.text() : null;
@@ -307,6 +314,45 @@ function campoBilingue(caso, clave, etiqueta, { area = false } = {}) {
     </div>`;
 }
 
+/** Los tags del caso son ids del catálogo (data/tags.json) y el nombre que se ve
+    en el sitio sale del .toml. Por eso acá se eligen de una lista en vez de
+    escribirse: a mano era fácil guardar un id que el sitio no sabe resolver. */
+function campoTags(caso) {
+  const puestos = caso.tags || [];
+
+  if (!app.tags.length) {
+    return `
+      <div class="campo">
+        <label>Tags</label>
+        <input type="text" data-bind="tags" value="${esc(puestos.join(", "))}">
+        <span class="ayuda">
+          Ids separados por coma. No encontré <code>${RUTA_TAGS}</code>, así que van a mano.
+        </span>
+      </div>`;
+  }
+
+  const sueltos = puestos.filter((id) => !app.tags.some((t) => t.id === id));
+  return `
+    <div class="campo">
+      <label>Tags</label>
+      <div class="tags">
+        ${app.tags.map((t) => `
+          <label class="tag-check">
+            <input type="checkbox" data-tag="${esc(t.id)}" ${puestos.includes(t.id) ? "checked" : ""}>
+            <span>${esc(t.label?.es || t.id)}</span>
+          </label>`).join("")}
+      </div>
+      <span class="ayuda">
+        Alimentan los filtros de All Works, que muestra solo los que tienen algún caso.
+        El nombre se edita en <code>contenido/textos.toml</code>.
+        ${sueltos.length
+          ? `<br><strong>Ojo:</strong> este caso tiene ids que no están en el catálogo:
+             <code>${esc(sueltos.join(", "))}</code>. Se guardan igual.`
+          : ""}
+      </span>
+    </div>`;
+}
+
 async function pintarEditor() {
   const c = seleccionado();
   if (!c) {
@@ -328,11 +374,7 @@ async function pintarEditor() {
         <div><label>Orden</label><input type="number" min="1" data-bind="order" value="${c.order}"></div>
         <div><label>URL del proyecto</label><input type="text" data-bind="url" value="${esc(c.url || "")}"></div>
       </div>
-      <div class="campo">
-        <label>Tags</label>
-        <input type="text" data-bind="tags" value="${esc((c.tags || []).join(", "))}">
-        <span class="ayuda">Separados por coma. Alimentan los filtros de All Works.</span>
-      </div>
+      ${campoTags(c)}
     </fieldset>
 
     <fieldset>
@@ -439,6 +481,18 @@ ui.editor.addEventListener("input", (e) => {
   const c = seleccionado();
   if (!c) return;
   const campo = e.target;
+
+  if (campo.dataset.tag) {
+    const id = campo.dataset.tag;
+    const puestos = new Set(c.tags || []);
+    campo.checked ? puestos.add(id) : puestos.delete(id);
+    // Se guardan en el orden del catálogo, más los que no están en él.
+    const delCatalogo = app.tags.map((t) => t.id).filter((x) => puestos.has(x));
+    const sueltos = [...puestos].filter((x) => !app.tags.some((t) => t.id === x));
+    c.tags = [...delCatalogo, ...sueltos];
+    marcarSucio();
+    return;
+  }
 
   if (campo.dataset.bind) {
     const ruta = campo.dataset.bind;

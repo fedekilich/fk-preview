@@ -12,13 +12,17 @@
         "es": "Antarctica Films",
         "en": "Antarctica Films"
       },
+      "role": {
+        "es": "Motion Designer y Artista 3D",
+        "en": ""
+      },
       "teaser": {
-        "es": "Motion, 3D y posproducción para TV. Ahí aprendí el oficio.",
-        "en": "Motion, 3D, and post-production for TV. That's where I learned the craft."
+        "es": "Motion, 3D y posproducción para TV y contenido audiovisual.",
+        "en": ""
       },
       "expanded": {
-        "es": "Entré como Motion Designer y 3D Artist, después pasé a coordinar el equipo. Piezas para cable (bumpers, cortinas, transiciones), motion, 3D y posproducción en cada entrega. Con los años empecé a organizar cronogramas y liderar proyectos clave del equipo.",
-        "en": "I started as a Motion Designer and 3D Artist, later moving into team coordination. Pieces for cable TV (bumpers, lower thirds, transitions), motion, 3D, and post-production on every delivery. Over time I started organizing schedules and leading key projects for the team."
+        "es": "Diseñé y animé bumpers, zócalos y transiciones para la pantalla de distintas señales. Realicé trabajos de edición y posproducción para otros proyectos de la productora. Con los años me ascendieron a Coordinador Creativo y, sin dejar de animar, empecé a supervisar las entregas, los cronogramas y los proyectos clave del equipo.",
+        "en": ""
       }
     },
     {
@@ -33,13 +37,17 @@
         "es": "Ideapolis",
         "en": "Ideapolis"
       },
+      "role": {
+        "es": "Diseñador Gráfico y Artista 3D",
+        "en": ""
+      },
       "teaser": {
-        "es": "3D para activaciones de marca: stands, ferias, puntos de venta.",
-        "en": "3D for brand activations: stands, trade shows, points of sale."
+        "es": "3D y gráfica para activaciones de marca.",
+        "en": ""
       },
       "expanded": {
-        "es": "Diseñé, modelé y rendericé espacios físicos para activaciones en ferias y puntos de venta. Esas visualizaciones eran tanto para mostrarle la idea al cliente como guía técnica para arquitectos y proveedores. El stand del Banco Central en Tecnópolis, ganado por concurso, es lo que más recuerdo de esta etapa.",
-        "en": "I designed, modeled, and rendered physical spaces for activations at trade shows and points of sale. Those visualizations worked both to show the client the idea and as technical guides for architects and vendors. The Central Bank's stand at Tecnópolis, won through a competitive bid, is what I remember most from this stage."
+        "es": "Diseñé, modelé y rendericé espacios para ferias, congresos y puntos de venta, que servían para presentarle la idea al cliente y como guía técnica para construirlos. También trabajé en las campañas de marcas como Heineken, Supervielle, Air New Zealand, Schneider, Higienol y Sussex. Lo más destacado fue el stand del Banco Central en Tecnópolis, elegido por concurso y exhibido en dos ediciones seguidas.",
+        "en": ""
       }
     },
     {
@@ -54,13 +62,17 @@
         "es": "Al Margen BA",
         "en": "Al Margen BA"
       },
+      "role": {
+        "es": "Motion Designer y Generalista 3D",
+        "en": ""
+      },
       "teaser": {
-        "es": "Motion graphics para publicidad. Un año de mucho ritmo.",
-        "en": "Motion graphics for advertising. A fast-paced year."
+        "es": "Motion y 3D para publicidad.",
+        "en": ""
       },
       "expanded": {
-        "es": "Motion graphics, animación 3D y compositing para campañas digitales y de TV, con clientes como Despegar, ICBC y Garbarino. También sumé posproducción de cine: correcciones visuales de época para la película El Ángel (2018), con rotoscopía y motion tracking.",
-        "en": "Motion graphics, 3D animation, and compositing for digital and TV campaigns, with clients like Despegar, ICBC, and Garbarino. I also picked up film post-production: period-accurate visual corrections for the film El Ángel (2018), using rotoscoping and motion tracking."
+        "es": "Animé campañas digitales y de TV de marcas como Despegar, ICBC y Garbarino, y participé en la posproducción y VFX de la película El Ángel (2018).",
+        "en": ""
       }
     },
     {
@@ -72,16 +84,20 @@
       },
       "caseId": "",
       "title": {
-        "es": "GCBA — Diseñador",
-        "en": "GCBA — Designer"
+        "es": "Gobierno de la Ciudad de Buenos Aires",
+        "en": ""
+      },
+      "role": {
+        "es": "Diseñador Gráfico Senior",
+        "en": ""
       },
       "teaser": {
-        "es": "Piezas de campaña y comunicación institucional para la Ciudad.",
-        "en": "Campaign pieces and institutional communication for the City."
+        "es": "Campañas y comunicación institucional multiformato.",
+        "en": ""
       },
       "expanded": {
-        "es": "Diseñé piezas para campañas de concientización, eventos culturales y comunicación institucional, en digital e impreso, incluyendo vía pública y gran formato. Trabajé en la presentación del nuevo Código Urbanístico de Buenos Aires (2019) y participé en la comunicación de los Juegos Olímpicos de la Juventud 2018.",
-        "en": "I designed pieces for awareness campaigns, cultural events, and institutional communication, across digital and print, including outdoor and large-format work. I worked on the presentation of the new Buenos Aires Urban Code (2019) and took part in the communication for the 2018 Youth Olympic Games."
+        "es": "Diseñé campañas de concientización y de eventos culturales para redes, mailings, banners, videos, flyers, gráfica y vía pública. Entre otros proyectos, participé en la comunicación de los Juegos Olímpicos de la Juventud 2018 y tuve a cargo el diseño de la presentación del nuevo Código Urbanístico de Buenos Aires (2019).",
+        "en": ""
       }
     },
     {
@@ -91,17 +107,20 @@
         "es": "2019–2021",
         "en": "2019–2021"
       },
-      "caseId": "gcba",
       "title": {
-        "es": "GCBA — Coordinador",
-        "en": "GCBA — Coordinator"
+        "es": "Gobierno de la Ciudad de Buenos Aires",
+        "en": ""
+      },
+      "role": {
+        "es": "Líder de diseño",
+        "en": ""
       },
       "teaser": {
-        "es": "",
+        "es": "Dirección de diseño de la comunicación de la Ciudad.",
         "en": ""
       },
       "expanded": {
-        "es": "",
+        "es": "Lideré un equipo de más de diez diseñadores, para el que implementé un nuevo flujo de producción que acortó los tiempos de entrega. Planificaba y repartía las tareas, definía los plazos y supervisaba la calidad de cada pieza, en conjunto con los equipos de redacción, motion y edición. Durante la pandemia estuve al frente de las campañas de prevención y vacunación contra el COVID-19.",
         "en": ""
       }
     },
@@ -112,17 +131,44 @@
         "es": "2021–presente",
         "en": "2021–present"
       },
-      "caseId": "inviu",
       "title": {
         "es": "Inviu",
         "en": "Inviu"
       },
+      "role": {
+        "es": "Senior Brand Designer",
+        "en": ""
+      },
       "teaser": {
-        "es": "",
+        "es": "Comunicación visual de una compañía del Grupo Financiero Galicia.",
         "en": ""
       },
       "expanded": {
-        "es": "",
+        "es": "Como responsable de la identidad visual, tomo las decisiones de marca y valido su uso en todo lo que comunica la compañía en Argentina, Uruguay, Perú y Estados Unidos. Diseño campañas, mailings, presentaciones comerciales, contenido para redes, video y gráfica. Desde marketing trabajo con comercial y producto, y doy dirección de arte y feedback a agencias, productoras y demás proveedores externos. Lideré el diseño del sitio institucional y coordiné su desarrollo entre las distintas áreas involucradas. También ideé un sistema automatizado para que los asesores compartan piezas con su propia marca, y desarrollé procesos con IA para agilizar la producción. Creé la identidad de los principales eventos de la compañía con sus clientes: los kickoffs y los cocktails de fin de año en Argentina y Perú.",
+        "en": ""
+      }
+    },
+    {
+      "id": "bretzel",
+      "order": 7,
+      "period": {
+        "es": "2024–presente",
+        "en": "2024–present"
+      },
+      "title": {
+        "es": "Bretzel Brand Lab",
+        "en": "Bretzel Brand Lab"
+      },
+      "role": {
+        "es": "Responsable de diseño de marca · Part time",
+        "en": ""
+      },
+      "teaser": {
+        "es": "Proyectos de branding, diseño web y redes.",
+        "en": ""
+      },
+      "expanded": {
+        "es": "Defino la identidad visual de cada proyecto y la llevo al diseño web, las redes y el resto de sus aplicaciones. Trabajo junto a un equipo de estrategia y desarrollo, con clientes principalmente de Europa.",
         "en": ""
       }
     }

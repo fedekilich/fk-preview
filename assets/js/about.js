@@ -68,6 +68,13 @@ function buildRow(hito, index) {
   label.className = "tl-row__static";
   heading.append(label);
 
+  /* Cargo del hito: celda propia, del otro lado de la línea y a la altura
+     del nombre. Aparece y se va con el detalle. En el teléfono, donde no hay
+     otro lado, el CSS lo baja debajo del nombre. Es lo que diferencia a los
+     dos hitos del Gobierno de la Ciudad, que se llaman igual. */
+  const role = document.createElement("p");
+  role.className = "tl-row__role";
+
   const body = document.createElement("div");
   body.className = "tl-row__body";
 
@@ -86,13 +93,14 @@ function buildRow(hito, index) {
   dot.className = "tl-row__dot";
   dot.setAttribute("aria-hidden", "true");
 
-  row.append(period, heading, body, dot);
+  row.append(period, heading, role, body, dot);
 
   return {
     hito,
     row,
     period,
     label,
+    role,
     teaser,
     panel,
     detail,
@@ -122,8 +130,12 @@ function paint() {
       }
     }
 
+    const roleText = hito.role ? pick(hito.role, lang) : "";
+
     node.period.textContent = pick(hito.period, lang);
     node.label.textContent = pick(hito.title, lang);
+    node.role.textContent = roleText;
+    node.role.hidden = !roleText;
     node.teaser.textContent = teaserText;
     node.teaser.hidden = !teaserText;
     node.detail.textContent = detailText;
@@ -200,8 +212,18 @@ function updateYear(fillPx, offsets, total) {
     ? 0
     : Math.max(0, Math.min(1, (fillPx - start) / span));
 
+  /* Una vez que el recorrido llegó a "presente", se queda ahí: Bretzel
+     (2024–presente) se superpone con Inviu (2021–presente) y el número no
+     tiene que retroceder a 2024. Al subir de nuevo por encima del primer
+     período abierto vuelve a contar solo. */
+  const yaEnPresente = rows
+    .slice(0, activeIndex)
+    .find((anterior) => !anterior.years.to && anterior.openEnded);
+
   let text;
-  if (to) {
+  if (yaEnPresente) {
+    text = (node.openEnded || yaEnPresente.openEnded).toUpperCase();
+  } else if (to) {
     text = String(Math.round(from + (to - from) * t));
   } else if (node.openEnded && t >= 0.6) {
     // Período abierto: el número llega a su año y resuelve en la palabra

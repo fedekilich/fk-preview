@@ -1,6 +1,7 @@
 // Piezas de DOM que comparten varias páginas.
 
 import { t, pick } from "../../data/i18n.js";
+import { tagLabel } from "./site.js";
 
 export function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -73,9 +74,14 @@ export function mediaItem(entry, lang) {
   return figure;
 }
 
-export function tagList(tags) {
+/* `tags` son ids del catálogo. Un id que el catálogo no conoce se saltea,
+   para que no quede una etiqueta vacía colgada. */
+export function tagList(tags, lang) {
   const list = el("ul", "tag-list");
-  tags.forEach((tag) => list.append(el("li", "tag", tag)));
+  tags.forEach((id) => {
+    const label = tagLabel(id, lang);
+    if (label) list.append(el("li", "tag", label));
+  });
   return list;
 }
 
@@ -116,7 +122,7 @@ export function caseCard(kase, { lang, index, aspect = "4 / 3", span = null }) {
   if (oneLiner) info.append(el("p", "case-card__line", oneLiner));
 
   const tags = (kase.tags || []).slice(0, 3);
-  if (tags.length) info.append(tagList(tags));
+  if (tags.length) info.append(tagList(tags, lang));
 
   meta.append(info, el("span", "case-card__index", String(index + 1).padStart(2, "0")));
   card.append(media, meta);

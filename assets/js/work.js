@@ -1,7 +1,7 @@
 // Detalle de caso — se resuelve con ?case=<id>; sin parámetro cae al primero.
 
 import { t, pick } from "../../data/i18n.js";
-import { initSite, getLang, onLangChange, loadCases, queryParam } from "./site.js";
+import { initSite, getLang, onLangChange, loadCases, loadTags, tagLabel, queryParam } from "./site.js";
 import { el, mediaPlaceholder, mediaItem, mediaCover } from "./ui.js";
 
 const notFoundEl = document.getElementById("not-found");
@@ -128,6 +128,17 @@ function sheetItem(fact, lang) {
 
   item.append(value);
   return item;
+}
+
+/* Línea de crédito al equipo, en los casos que no son de Bretzel (COVID, Arm).
+   Va entre el relato y las piezas, con estilo de nota y no de párrafo: el
+   crédito no entra en el relato, pero tiene que estar junto al trabajo. */
+function creditLine(item, lang) {
+  const section = el("section", "tb tb--credit");
+  const body = el("div", "tb__body rv");
+  body.append(el("p", "tb__credit", pick(item.text, lang)));
+  section.append(body);
+  return section;
 }
 
 function textBlock(block, lang) {
@@ -1130,6 +1141,10 @@ function renderSections(kase, lang) {
       parts.push(textBlock(item, lang));
       return;
     }
+    if (item.kind === "credit") {
+      parts.push(creditLine(item, lang));
+      return;
+    }
     if (item.numbered !== false) number += 1;
     parts.push(workSection(item, number, lang));
   });
@@ -1177,7 +1192,7 @@ function render() {
   if (index === -1) {
     notFoundEl.hidden = false;
     articleEl.hidden = true;
-    document.title = `${t("work.notFound", lang)} — Fede Kilich`;
+    document.title = `${t("work.notFound", lang)} - Fede Kilich`;
     return;
   }
 
@@ -1188,7 +1203,7 @@ function render() {
   const next = cases[(index + 1) % cases.length];
   const title = pick(kase.title, lang);
 
-  document.title = `${title} — Fede Kilich`;
+  document.title = `${title} - Fede Kilich`;
 
   const client = pick(kase.client, lang);
   nodes.client.textContent = client;
@@ -1211,8 +1226,8 @@ function render() {
   const sectioned = Array.isArray(kase.flow) || Array.isArray(kase.sections);
   setFormat(sectioned);
 
-  const tags = kase.tags || [];
-  nodes.tags.replaceChildren(...tags.map((tag) => el("li", "tag", tag)));
+  const tags = (kase.tags || []).map((id) => tagLabel(id, lang)).filter(Boolean);
+  nodes.tags.replaceChildren(...tags.map((label) => el("li", "tag", label)));
   nodes.tags.hidden = sectioned || tags.length === 0;
 
   if (sectioned) {
@@ -1245,7 +1260,7 @@ function render() {
 initSite();
 onLangChange(render);
 
-loadCases().then((all) => {
+Promise.all([loadCases(), loadTags()]).then(([all]) => {
   cases = all;
   render();
 });

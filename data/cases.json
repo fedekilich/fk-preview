@@ -10,23 +10,23 @@
       },
       "url": "",
       "title": {
-        "es": "Gobierno de la Ciudad de Buenos Aires",
+        "es": "Gobierno de la Ciudad · COVID-19",
         "en": "Buenos Aires City Government"
       },
       "titleLines": [
         "Gobierno de la Ciudad",
-        "de Buenos Aires"
+        "COVID-19"
       ],
       "eyebrow": {
-        "es": "Caso 01",
+        "es": "Caso",
         "en": ""
       },
       "oneLiner": {
-        "es": "Comunicación de la pandemia: prevención y vacunación",
+        "es": "Comunicación de crisis, de la prevención a la vacunación",
         "en": ""
       },
       "role": {
-        "es": "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires",
+        "es": "Líder de diseño · Secretaría de Comunicaciones",
         "en": ""
       },
       "period": {
@@ -34,9 +34,10 @@
         "en": ""
       },
       "tags": [
-        "Comunicación de crisis",
-        "Sistema visual",
-        "Liderazgo de equipo"
+        "crisis-communication",
+        "visual-system",
+        "team-leadership",
+        "social-media"
       ],
       "coverImage": "assets/img/cases/gcba/portada.webp",
       "facts": [
@@ -67,7 +68,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Líder de diseño, Secretaría de Comunicaciones del Gobierno de la Ciudad de Buenos Aires",
+            "es": "Líder de diseño · Secretaría de Comunicaciones",
             "en": ""
           }
         },
@@ -84,7 +85,7 @@
         }
       ],
       "disclaimer": {
-        "es": "Más allá de la mirada que cada uno tenga sobre cómo se manejó la pandemia en Argentina, este caso no busca defender ni evaluar esas decisiones. Lo que quiero mostrar es el trabajo de un equipo que, en plena emergencia, tuvo que cambiar de un día para el otro su forma de trabajar para seguir comunicando.",
+        "es": "Más allá de la mirada que cada uno tenga sobre cómo se manejó la pandemia en Argentina, este caso no busca defender ni evaluar esas decisiones. Quiero mostrar lo que hizo un equipo que, en plena emergencia, tuvo que cambiar de un día para el otro su forma de trabajar para seguir comunicando.",
         "en": ""
       },
       "heroImage": {
@@ -105,7 +106,7 @@
           },
           "paragraphs": [
             {
-              "es": "Durante la pandemia, la Ciudad de Buenos Aires se vio en la necesidad de informar y llevar claridad sobre temas críticos: medidas de prevención, restricciones, protocolos para comercios y escuelas, dónde testearse y dónde vacunarse. Esa información cambiaba constantemente, en un contexto que ya era delicado. El desafío: comunicar con velocidad, claridad y sensibilidad.",
+              "es": "Durante la pandemia, la Ciudad de Buenos Aires tuvo que informar sobre temas críticos, como las medidas de prevención, las restricciones, los protocolos para comercios y escuelas, y dónde testearse y vacunarse. Esa información cambiaba constantemente, en un contexto que ya era delicado. El desafío: comunicar con velocidad, claridad y sensibilidad.",
               "en": ""
             }
           ]
@@ -118,10 +119,17 @@
           },
           "paragraphs": [
             {
-              "es": "Reorganizamos la forma de trabajar del equipo para poder responder en el momento: trabajo a distancia, guardias rotativas, equipos divididos por temas y por soportes. Y ordenamos la imagen institucional que ya existía para que cada mensaje llegara claro a cada audiencia, desde el ciudadano común hasta las instituciones. Las piezas de esta página son del equipo de más de diez diseñadores y diseñadoras de la Secretaría de Comunicaciones, que coordiné y con el que también diseñé.",
+              "es": "Reorganicé el equipo para responder en el momento, con trabajo a distancia, guardias rotativas y grupos divididos por temas y por soportes. Con ese esquema adaptamos la estética institucional que ya existía para que cada tipo de audiencia, desde el ciudadano común hasta las instituciones, tuviera su propio sistema y recibiera la información ordenada.",
               "en": ""
             }
           ]
+        },
+        {
+          "kind": "credit",
+          "text": {
+            "es": "Piezas del equipo de diseño que coordinaba en la Secretaría de Comunicaciones.",
+            "en": ""
+          }
         },
         {
           "kind": "section",
@@ -533,7 +541,7 @@
               "type": "image",
               "src": "assets/img/cases/gcba/montaje-tele-detectar.webp",
               "alt": {
-                "es": "Pantalla del dispositivo DETECTAR en un televisor",
+                "es": "Pantalla del dispositivo DetectAr en un televisor",
                 "en": ""
               }
             },
@@ -547,7 +555,7 @@
                   "type": "image",
                   "src": "assets/img/cases/gcba/placa-testeos.webp",
                   "alt": {
-                    "es": "Placa Testeos coronavirus",
+                    "es": "Placa de testeos de coronavirus",
                     "en": ""
                   }
                 },
@@ -688,7 +696,7 @@
               "en": ""
             },
             "source": {
-              "es": "Secretaría de Comunicaciones · GCBA",
+              "es": "Secretaría de Comunicaciones",
               "en": ""
             }
           },
@@ -710,7 +718,7 @@
               "en": ""
             },
             "source": {
-              "es": "Ene. 2022 · GCBA",
+              "es": "Enero 2022 · Gobierno de la Ciudad de Buenos Aires",
               "en": ""
             }
           },
@@ -721,7 +729,7 @@
               "en": ""
             },
             "source": {
-              "es": "Ene. 2022 · GCBA",
+              "es": "Enero 2022 · Gobierno de la Ciudad de Buenos Aires",
               "en": ""
             }
           },
@@ -732,15 +740,11 @@
               "en": ""
             },
             "source": {
-              "es": "2021 · AGCBA",
+              "es": "2021 · Gobierno de la Ciudad de Buenos Aires",
               "en": ""
             }
           }
         ]
-      },
-      "narrative": {
-        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.",
-        "en": ""
       }
     },
     {
@@ -761,20 +765,20 @@
         "en": ""
       },
       "oneLiner": {
-        "es": "Rebranding, web y reservas online para un proyecto de entrenamiento para mamás",
+        "es": "Rebranding y web de un proyecto de fitness para mamás en Merano",
         "en": ""
       },
       "role": {
-        "es": "Brand Designer · Bretzel Brand Lab",
-        "en": "Brand Designer · Bretzel Brand Lab"
+        "es": "Brand Designer",
+        "en": "Brand Designer"
       },
       "period": {
         "es": "2025",
         "en": "2025"
       },
       "tags": [
-        "Branding",
-        "Web Design"
+        "brand-design",
+        "web-design"
       ],
       "coverImage": "assets/img/cases/mammina/portada.webp",
       "facts": [
@@ -805,8 +809,8 @@
           },
           "wide": true,
           "value": {
-            "es": "Brand Designer · Bretzel Brand Lab",
-            "en": "Brand Designer · Bretzel Brand Lab"
+            "es": "Brand Designer",
+            "en": "Brand Designer"
           }
         },
         {
@@ -816,7 +820,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Identidad visual, brand guidelines, diseño web, retoque fotográfico",
+            "es": "Identidad visual, brand guidelines, diseño web, retoque fotográfico, merchandising",
             "en": ""
           }
         },
@@ -840,7 +844,7 @@
           },
           "paragraphs": [
             {
-              "es": "Mammina Fit es un proyecto de entrenamiento para mamás en Merano. La idea estaba clara y tenía mucha energía, pero todo lo demás estaba por ordenarse: la marca, la forma de ofrecer las clases y la presencia online. El pedido inicial era una actualización sutil del logo que ya tenía.",
+              "es": "Liudmila Sivila arrancó Mammina Fit para entrenar a mamás, online y en persona. Tenía la idea clara, pero la marca, la manera de organizar las clases y su presencia en internet todavía estaban por resolverse. El pedido: una actualización sutil de su logo.",
               "en": ""
             }
           ]
@@ -903,11 +907,11 @@
                   "items": [
                     {
                       "title": {
-                        "es": "Tipografía con más cuerpo y orientación centrada",
+                        "es": "Darle más cuerpo al nombre y centrarlo",
                         "en": ""
                       },
                       "text": {
-                        "es": "Mejora la lectura del nombre.",
+                        "es": "Mejora la lectura.",
                         "en": ""
                       }
                     },
@@ -976,11 +980,11 @@
           },
           "paragraphs": [
             {
-              "es": "Desde Bretzel hicimos esa actualización y, en paralelo, desarrollamos por nuestra cuenta un rebranding completo, sabiendo que podía terminar siendo trabajo que nadie iba a ver. En una llamada le pedimos permiso para mostrarle esa segunda propuesta sin compromiso, y eligió el camino nuevo.",
+              "es": "Junto a Bretzel hicimos esa actualización, pero al trabajarla vi que un ajuste no iba a resolver lo que fallaba: el logo perdía proporción en espacios horizontales y no se leía en los chicos. Por eso desarrollamos también una marca nueva, le pedimos permiso a Liudmila para mostrársela sin compromiso en una llamada, y fue la que eligió.",
               "en": ""
             },
             {
-              "es": "La identidad parte de dos cosas que conviven en la marca: la ternura de la maternidad y la energía y la disciplina del entrenamiento. De ahí sale una tipografía que combina un bold firme con una cursiva fluida, una paleta de amarillo cálido, lavanda y celeste, y elementos gráficos que mezclan geometría con líneas orgánicas.",
+              "es": "Para el concepto partí de la mujer, en la que conviven su ternura como madre y toda su fortaleza, y desde ahí construimos la identidad.",
               "en": ""
             }
           ]
@@ -1084,7 +1088,7 @@
                   "src": "assets/img/cases/mammina/logo-oscuro.svg",
                   "bg": "#ffcf52",
                   "alt": {
-                    "es": "Logo en un color oscuro sobre fondo amarillo",
+                    "es": "Logo en violeta oscuro sobre amarillo",
                     "en": ""
                   }
                 },
@@ -1100,7 +1104,7 @@
                   "src": "assets/img/cases/mammina/logo-oscuro.svg",
                   "bg": "#fcfcfc",
                   "alt": {
-                    "es": "Logo en un color oscuro sobre blanco",
+                    "es": "Logo en violeta oscuro sobre blanco",
                     "en": ""
                   }
                 }
@@ -1123,7 +1127,7 @@
                   "src": "assets/img/cases/mammina/isotipo-oscuro.svg",
                   "bg": "#ffcf52",
                   "alt": {
-                    "es": "Isotipo MF oscuro sobre amarillo",
+                    "es": "Isotipo MF en violeta oscuro sobre amarillo",
                     "en": ""
                   }
                 },
@@ -1151,10 +1155,6 @@
           "kind": "section",
           "title": {
             "es": "Color",
-            "en": ""
-          },
-          "intro": {
-            "es": "Un amarillo cálido como color principal, lavanda y celeste como acentos, y un claro y un oscuro.",
             "en": ""
           },
           "content": [
@@ -1354,7 +1354,7 @@
                     "en": ""
                   },
                   "text": {
-                    "es": "Un borde de encastre, como un rompecabezas: unidad, conexión y cuidado.",
+                    "es": "Un borde de encastre, como el de un rompecabezas, que habla de unidad, conexión y cuidado.",
                     "en": ""
                   }
                 }
@@ -1459,7 +1459,7 @@
           },
           "paragraphs": [
             {
-              "es": "Con la marca definida, el proyecto siguió con la web, el retoque de todas las fotos del sitio, la organización del negocio y el sistema de reservas y pagos online. De mi lado, me tocó definir la identidad, diseñar la web y retocar las fotos.",
+              "es": "Con la marca definida, diseñamos el sitio y le sumamos reservas y pagos online.",
               "en": ""
             }
           ]
@@ -1582,7 +1582,7 @@
           "en": ""
         },
         "text": {
-          "es": "Mammina Fit pasó de ser una idea con energía a un negocio funcionando, con una marca que se sostiene igual en la web, en las reservas y en todo lo que comunica.",
+          "es": "La idea de Liudmila se convirtió en un negocio en marcha, con una marca que ahora funciona en cualquier espacio.",
           "en": ""
         },
         "quote": {
@@ -1593,14 +1593,6 @@
           "author": "Liudmila Sivila",
           "source": "Mammina Fit"
         }
-      },
-      "closingQuote": {
-        "text": {
-          "es": "Hemos trabajado bastante, pero ha valido la pena. Muchas gracias por haber hecho de mi proyecto una realidad.",
-          "en": ""
-        },
-        "author": "Liudmila Sivila",
-        "source": "Mammina Fit"
       }
     },
     {
@@ -1621,21 +1613,22 @@
         "en": ""
       },
       "oneLiner": {
-        "es": "Rebranding y aplicaciones para una escuela de manejo en Weingarten",
+        "es": "Rebranding, web y aplicaciones de una escuela de manejo en Weingarten",
         "en": ""
       },
       "role": {
-        "es": "Brand Designer · Bretzel Brand Lab",
-        "en": "Brand Designer · Bretzel Brand Lab"
+        "es": "Brand Designer",
+        "en": "Brand Designer"
       },
       "period": {
         "es": "2026",
         "en": "2026"
       },
       "tags": [
-        "Branding",
-        "Web Design",
-        "Social Media"
+        "brand-design",
+        "web-design",
+        "social-media",
+        "generative-ai"
       ],
       "coverImage": "assets/img/cases/driving-team/flota-auto-frente.webp",
       "facts": [
@@ -1666,8 +1659,8 @@
           },
           "wide": true,
           "value": {
-            "es": "Brand Designer · Bretzel Brand Lab",
-            "en": "Brand Designer · Bretzel Brand Lab"
+            "es": "Brand Designer",
+            "en": "Brand Designer"
           }
         },
         {
@@ -1677,7 +1670,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Identidad visual, brand guidelines, web, flota de autos, motos y camiones, marquesina, vinilos para oficinas, redes",
+            "es": "Identidad visual, brand guidelines, diseño web, flota, señalética, merchandising, redes",
             "en": ""
           }
         },
@@ -1701,7 +1694,7 @@
           },
           "paragraphs": [
             {
-              "es": "Driving Team Schobloch es una escuela de manejo de Weingarten que forma conductores desde 1978. Con los años quedó funcionando con dos marcas, Driving Team y Schobloch, herencia de una sociedad que nunca se había resuelto en lo visual: dos logos y dos estéticas sin relación que se usaban en paralelo. El desafío: unir las dos historias en una sola marca, que le hable a un público joven sin perder la confianza que dan tantos años en la calle, y que funcione igual en la pantalla de un celular que en el costado de un camión.",
+              "es": "Driving Team Schobloch forma conductores desde 1978. Con los años quedó funcionando con dos marcas, Driving Team y Schobloch, herencia de una sociedad que nunca se había resuelto en lo visual, con dos logos y dos estéticas sin relación que se usaban en paralelo. El desafío: unir las dos historias en una sola marca, que le hable a un público joven sin perder la confianza que dan tantos años en la calle, y que funcione igual en la pantalla de un celular que en el costado de un camión.",
               "en": ""
             }
           ]
@@ -1768,7 +1761,7 @@
           },
           "paragraphs": [
             {
-              "es": "Junto con Bretzel hicimos una identidad nueva que integra los dos nombres, el manual de marca y una web con inscripción y reservas online.",
+              "es": "Junto a Bretzel hicimos el rebranding. Diseñé una identidad nueva que integra los dos nombres, con su manual de marca, y después el sitio, al que sumamos inscripción y reservas online.",
               "en": ""
             }
           ]
@@ -1780,7 +1773,7 @@
             "en": ""
           },
           "intro": {
-            "es": "Los caminos que presentamos para unir Driving Team y Schobloch en una sola marca. La identidad final parte de la opción 1.",
+            "es": "Para unir Driving Team y Schobloch exploramos varios caminos, y la identidad final parte de la opción 1.",
             "en": ""
           },
           "content": [
@@ -2144,11 +2137,7 @@
           },
           "paragraphs": [
             {
-              "es": "A partir de ahí la marca pasó a la flota de autos, motos y camiones, a la marquesina del local y a los vinilos de las oficinas. En redes armamos el concepto, el feed y cada pieza, y llevamos el contenido durante seis meses.",
-              "en": ""
-            },
-            {
-              "es": "De mi lado me tocó definir la identidad, llevarla a la flota y al local, diseñar la web y piezas de redes.",
+              "es": "A partir de ahí llevamos la marca a la flota de autos, motos y camiones, a la marquesina del local, a los vinilos de las oficinas y a una línea de merchandising. También diseñé las piezas para redes, donde armamos el concepto y gestionamos el contenido durante seis meses.",
               "en": ""
             }
           ]
@@ -2372,7 +2361,7 @@
             "en": ""
           },
           "intro": {
-            "es": "Una serie de preguntas sobre situaciones de manejo para el feed y una campaña de stories sobre el entrenamiento para emergencias, entre otras piezas.",
+            "es": "Para el feed hicimos una serie de preguntas sobre situaciones de manejo.",
             "en": ""
           },
           "content": [
@@ -2385,7 +2374,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-01.webp",
                   "alt": {
-                    "es": "Post: Spurwechsel, qué tenés que chequear primero",
+                    "es": "Post sobre qué chequear antes de cambiar de carril",
                     "en": ""
                   }
                 },
@@ -2393,7 +2382,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-02.webp",
                   "alt": {
-                    "es": "Post: arrancar en subida sin que el auto vaya para atrás",
+                    "es": "Post sobre arrancar en subida sin que el auto vaya para atrás",
                     "en": ""
                   }
                 },
@@ -2401,7 +2390,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-03.webp",
                   "alt": {
-                    "es": "Post: manejar de noche, qué cambia",
+                    "es": "Post sobre qué cambia al manejar de noche",
                     "en": ""
                   }
                 },
@@ -2409,7 +2398,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-04.webp",
                   "alt": {
-                    "es": "Post: te entra una llamada mientras manejás",
+                    "es": "Post sobre qué hacer si entra una llamada mientras se maneja",
                     "en": ""
                   }
                 },
@@ -2417,7 +2406,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-05.webp",
                   "alt": {
-                    "es": "Post: empieza a llover mientras manejás",
+                    "es": "Post sobre qué hacer si empieza a llover mientras se maneja",
                     "en": ""
                   }
                 },
@@ -2425,7 +2414,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-06.webp",
                   "alt": {
-                    "es": "Post: vas a doblar y viene una bicicleta",
+                    "es": "Post sobre doblar cuando viene una bicicleta",
                     "en": ""
                   }
                 },
@@ -2433,7 +2422,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-07.webp",
                   "alt": {
-                    "es": "Post: frenás en el pare y seguís",
+                    "es": "Post sobre frenar en el pare y seguir",
                     "en": ""
                   }
                 },
@@ -2441,7 +2430,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-08.webp",
                   "alt": {
-                    "es": "Post: cuándo ponés el giro",
+                    "es": "Post sobre cuándo poner el giro",
                     "en": ""
                   }
                 },
@@ -2449,7 +2438,7 @@
                   "type": "image",
                   "src": "assets/img/cases/driving-team/redes-post-09.webp",
                   "alt": {
-                    "es": "Post: en la autopista, te quedás en el carril izquierdo",
+                    "es": "Post sobre quedarse en el carril izquierdo de la autopista",
                     "en": ""
                   }
                 }
@@ -2505,7 +2494,7 @@
           "en": ""
         },
         "text": {
-          "es": "Driving Team Schobloch funciona hoy con una sola marca, que se reconoce igual en la calle, en la web y en redes.",
+          "es": "Las dos marcas pasaron a ser una sola, que se reconoce igual en la flota, en el local, en la web y en redes.",
           "en": ""
         }
       }
@@ -2528,21 +2517,21 @@
         "en": ""
       },
       "oneLiner": {
-        "es": "Rebranding y ecosistema digital para un estudio de entrenamiento funcional en Zúrich",
+        "es": "Identidad, web y redes de un estudio de entrenamiento funcional en Zúrich",
         "en": ""
       },
       "role": {
-        "es": "Brand Designer · Bretzel Brand Lab",
-        "en": "Brand Designer · Bretzel Brand Lab"
+        "es": "Brand Designer",
+        "en": "Brand Designer"
       },
       "period": {
         "es": "2025",
         "en": "2025"
       },
       "tags": [
-        "Branding",
-        "Web Design",
-        "Social Media"
+        "brand-design",
+        "web-design",
+        "social-media"
       ],
       "coverImage": "assets/img/cases/ama-studio/portada.webp",
       "facts": [
@@ -2573,8 +2562,8 @@
           },
           "wide": true,
           "value": {
-            "es": "Brand Designer · Bretzel Brand Lab",
-            "en": "Brand Designer · Bretzel Brand Lab"
+            "es": "Brand Designer",
+            "en": "Brand Designer"
           }
         },
         {
@@ -2584,7 +2573,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Identidad visual, paleta y sistema tipográfico, brand guidelines, web, Instagram, YouTube, templates audiovisuales, indumentaria",
+            "es": "Identidad visual, brand guidelines, diseño web, Instagram, YouTube, templates audiovisuales, merchandising",
             "en": ""
           }
         },
@@ -2608,7 +2597,7 @@
           },
           "paragraphs": [
             {
-              "es": "AMA Studio es el estudio de entrenamiento funcional que Alexander Martinez, récord suizo de salto triple, tiene en Zúrich. Llegó con un logo que quería mantener y un objetivo concreto: sumar alumnos. Hasta ahí la marca era solo ese logo, la web estaba desactualizada y las redes no tenían un sistema detrás. El desafío: construir alrededor del logo una marca completa, que transmita la seriedad de un atleta de élite sin caer en los clichés del fitness.",
+              "es": "Alexander Martinez, récord suizo de salto triple, llegó con un logo que quería mantener, pero la marca no iba más allá de eso. La web estaba desactualizada y las redes no tenían un sistema detrás. Había que construir alrededor del logo una marca completa, que transmitiera la energía y la determinación de un atleta de su nivel.",
               "en": ""
             }
           ]
@@ -2668,14 +2657,14 @@
               "swatches": [
                 {
                   "name": {
-                    "es": "Main color",
+                    "es": "Negro · principal",
                     "en": ""
                   },
                   "hex": "#0D0D08"
                 },
                 {
                   "name": {
-                    "es": "Accent color",
+                    "es": "Amarillo · acento",
                     "en": ""
                   },
                   "hex": "#F4EB6F",
@@ -2683,18 +2672,18 @@
                 },
                 {
                   "name": {
-                    "es": "Grey",
+                    "es": "Gris",
                     "en": ""
                   },
                   "hex": "#606060"
                 },
                 {
                   "name": {
-                    "es": "Texture",
+                    "es": "Textura",
                     "en": ""
                   },
                   "caption": {
-                    "es": "Dark concrete",
+                    "es": "Concreto oscuro",
                     "en": ""
                   },
                   "image": "assets/img/cases/ama-studio/color-textura-concreto.webp"
@@ -2711,11 +2700,7 @@
           },
           "paragraphs": [
             {
-              "es": "Junto con Bretzel ajustamos el logo para que quedara bien construido, sin cambiar lo que significa, y armamos sus variantes para cada aplicación. A su alrededor creamos el sistema de marca: el negro como color principal, un amarillo de acento, una textura de concreto oscuro y una tipografía de líneas firmes. Con esa base diseñamos la web, la identidad de Instagram y de YouTube, los templates para los videos y las aplicaciones en indumentaria.",
-              "en": ""
-            },
-            {
-              "es": "De mi lado me tocó construir el sistema visual y diseñar la web, las piezas de redes y los templates audiovisuales.",
+              "es": "Junto a Bretzel ajustamos el logo para que quedara bien construido, sin cambiar lo que significa, y armamos sus variantes para cada aplicación. Sobre esa base diseñé el sistema de marca, que después bajamos a la web, a Instagram, a YouTube y a los templates de video.",
               "en": ""
             }
           ]
@@ -2951,7 +2936,7 @@
         {
           "kind": "section",
           "title": {
-            "es": "Indumentaria",
+            "es": "Merchandising",
             "en": ""
           },
           "content": [
@@ -2990,12 +2975,12 @@
           "en": ""
         },
         "text": {
-          "es": "AMA Studio funciona hoy con una sola identidad en la web, en Instagram, en YouTube y en el propio estudio.",
+          "es": "El logo que Alexander quería mantener hoy tiene detrás una marca completa y el sistema que la sostiene.",
           "en": ""
         },
         "quote": {
           "text": {
-            "es": "Pero ustedes lo que han hecho es magia.",
+            "es": "Ustedes lo que han hecho es magia.",
             "en": ""
           },
           "author": "Alexander Martinez",
@@ -3004,7 +2989,7 @@
       },
       "closingQuote": {
         "text": {
-          "es": "Lo han hecho más de lo que esperaba.",
+          "es": "Es más de lo que esperaba.",
           "en": ""
         },
         "author": "Alexander Martinez",
@@ -3033,21 +3018,22 @@
         "en": ""
       },
       "oneLiner": {
-        "es": "Rebranding para una práctica odontológica en Ravensburg",
+        "es": "Rebranding, web y redes de un consultorio odontológico en Ravensburg",
         "en": ""
       },
       "role": {
-        "es": "Brand Designer · Bretzel Brand Lab",
-        "en": "Brand Designer · Bretzel Brand Lab"
+        "es": "Brand Designer",
+        "en": "Brand Designer"
       },
       "period": {
         "es": "2024 – 2026",
         "en": "2024 – 2026"
       },
       "tags": [
-        "Branding",
-        "Web Design",
-        "Social Media"
+        "brand-design",
+        "web-design",
+        "social-media",
+        "generative-ai"
       ],
       "coverImage": "assets/img/cases/carol-wilson/portada.webp",
       "facts": [
@@ -3078,8 +3064,8 @@
           },
           "wide": true,
           "value": {
-            "es": "Brand Designer · Bretzel Brand Lab",
-            "en": "Brand Designer · Bretzel Brand Lab"
+            "es": "Brand Designer",
+            "en": "Brand Designer"
           }
         },
         {
@@ -3089,7 +3075,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Identidad visual, sistema de color y tipografía, brand guidelines, papelería, web, redes",
+            "es": "Identidad visual, brand guidelines, papelería, diseño web, redes",
             "en": ""
           }
         },
@@ -3113,7 +3099,7 @@
           },
           "paragraphs": [
             {
-              "es": "Caroline Wilson heredó de su madre una práctica odontológica en Ravensburg y, con ella, un logo que había acompañado al consultorio durante veinte años. El desafío: renovar la marca sin borrar lo que ya significaba para los pacientes, respetando esa historia en lugar de reemplazarla.",
+              "es": "Caroline Wilson heredó de su madre el consultorio y, con él, un logo que lo acompañaba desde hacía veinte años. Quería renovar la marca sin borrar lo que ese logo ya significaba para los pacientes.",
               "en": ""
             }
           ]
@@ -3151,7 +3137,7 @@
                     "en": ""
                   },
                   "text": {
-                    "es": "La marca con la que el consultorio funcionó durante veinte años.",
+                    "es": "La marca con la que funcionó el consultorio hasta entonces.",
                     "en": ""
                   }
                 }
@@ -3167,7 +3153,7 @@
           },
           "paragraphs": [
             {
-              "es": "Junto con Bretzel exploramos seis caminos y elegimos el que mantenía la forma del diente original y su calidez, llevado a una versión más moderna, elegante y simple, con una paleta que toma los colores de los ambos médicos y una tipografía propia.",
+              "es": "Junto a Bretzel exploramos seis caminos y elegimos el que conservaba la forma del diente original, con un trazo más fino y el nombre de la doctora por delante.",
               "en": ""
             }
           ]
@@ -3179,7 +3165,7 @@
             "en": ""
           },
           "intro": {
-            "es": "Los seis caminos que presentamos. La identidad final parte de la opción 1, que conserva el trazo del diente original.",
+            "es": "Los seis caminos que presentamos. La identidad final parte de la opción 1.",
             "en": ""
           },
           "content": [
@@ -3375,21 +3361,21 @@
               "swatches": [
                 {
                   "name": {
-                    "es": "Main color",
+                    "es": "Turquesa · principal",
                     "en": ""
                   },
                   "hex": "#009F97"
                 },
                 {
                   "name": {
-                    "es": "Secondary color",
+                    "es": "Verde oscuro · secundario",
                     "en": ""
                   },
                   "hex": "#005952"
                 },
                 {
                   "name": {
-                    "es": "Grey",
+                    "es": "Gris",
                     "en": ""
                   },
                   "hex": "#606060"
@@ -3399,7 +3385,7 @@
             {
               "type": "note",
               "text": {
-                "es": "Las paletas de la propuesta salieron de los colores más usados en los ambos médicos. La marca se quedó con el turquesa.",
+                "es": "Las paletas de la propuesta salieron de los colores más usados en los uniformes médicos. La marca se quedó con el turquesa.",
                 "en": ""
               }
             },
@@ -3541,11 +3527,7 @@
           },
           "paragraphs": [
             {
-              "es": "A partir de ahí armamos el manual de marca, la papelería y una web nueva pensada para que los pacientes se sientan como en casa. Más adelante la marca pasó a redes, con un sistema de contenido para tips, mitos y servicios, y una serie de personajes generados con IA y retrabajados para darle un tono más cercano.",
-              "en": ""
-            },
-            {
-              "es": "De mi lado me tocó definir la identidad, llevarla a las aplicaciones, diseñar la web y el contenido de redes.",
+              "es": "A partir de ahí armamos el manual de marca, la papelería y una web nueva. Más adelante la marca llegó a las redes, donde diseñé un sistema de contenido para tips, datos y servicios.",
               "en": ""
             }
           ]
@@ -3751,7 +3733,7 @@
                   "type": "image",
                   "src": "assets/img/cases/carol-wilson/redes-dato-periodontitis.webp",
                   "alt": {
-                    "es": "Post: la periodontitis puede avanzar sin que lo notes",
+                    "es": "Post: la periodontitis puede avanzar sin que se note",
                     "en": ""
                   }
                 },
@@ -3836,7 +3818,7 @@
           "en": ""
         },
         "text": {
-          "es": "Hoy la práctica tiene una marca que conserva los veinte años de confianza del consultorio y quedó lista para la próxima generación.",
+          "es": "El consultorio tiene una marca renovada, que conserva el espíritu con el que nació.",
           "en": ""
         }
       },
@@ -3856,15 +3838,15 @@
         "en": "Arm"
       },
       "eyebrow": {
-        "es": "Caso · Equipo freelance",
+        "es": "Caso",
         "en": ""
       },
       "oneLiner": {
-        "es": "Dos videos de producto para presentar la nueva generación de servidores de Arm",
+        "es": "Motion graphics para videos de producto sobre servidores",
         "en": ""
       },
       "role": {
-        "es": "Motion Designer, en un equipo freelance",
+        "es": "Motion Designer · Equipo freelance",
         "en": ""
       },
       "period": {
@@ -3872,8 +3854,7 @@
         "en": "2026"
       },
       "tags": [
-        "Motion Graphics",
-        "Animation"
+        "motion-design"
       ],
       "coverImage": "assets/img/cases/arm/arm-mockup-auditorio.webp",
       "facts": [
@@ -3904,7 +3885,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Motion Designer, en un equipo freelance",
+            "es": "Motion Designer · Equipo freelance",
             "en": ""
           }
         },
@@ -3930,7 +3911,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Motion graphics, infografía animada, videos de producto",
+            "es": "Motion graphics",
             "en": ""
           }
         }
@@ -3944,7 +3925,7 @@
           },
           "paragraphs": [
             {
-              "es": "Arm diseña la arquitectura de procesadores que usa buena parte de la industria. Para presentar su nueva generación de servidores necesitaba dos videos que mostraran, frente al estándar del mercado, qué cambia en dos casos concretos: la codificación de video con inferencia de IA y la gestión de procesos de una empresa con agentes de IA. El desafío: que datos técnicos densos se entiendan de un vistazo, frente a una audiencia especializada.",
+              "es": "Arm diseña la arquitectura de procesadores que usa buena parte de la industria. Necesitaba piezas audiovisuales que mostraran qué cambia con su tecnología en dos casos concretos con IA, la codificación de video y la gestión de una empresa. Los datos eran técnicos y densos, y tenían que entenderse de un vistazo.",
               "en": ""
             }
           ]
@@ -3958,7 +3939,7 @@
               "type": "image",
               "src": "assets/img/cases/arm/arm-mockup-auditorio.webp",
               "alt": {
-                "es": "Auditorio de un keynote con la comparativa x86 contra Arm AGI en la pantalla principal",
+                "es": "Auditorio con la comparativa x86 contra Arm AGI en la pantalla del escenario",
                 "en": ""
               }
             }
@@ -3972,16 +3953,17 @@
           },
           "paragraphs": [
             {
-              "es": "El trabajo se hizo dentro de un equipo de freelancers. Otro diseñador armó el sistema visual y la base de cada escena, y junto a Martín Motta las llevamos al movimiento: diagramas, flujos de datos y comparaciones entre arquitecturas, con un ritmo pensado para que cada dato se lea a tiempo. Pasó por varias rondas con el cliente, con criterios muy precisos sobre cómo tenía que comportarse cada animación.",
-              "en": "",
-              "links": [
-                {
-                  "text": "Martín Motta",
-                  "href": "https://www.instagram.com/martin___motta/"
-                }
-              ]
+              "es": "Partimos de escenas ya diseñadas y las llevamos al movimiento: diagramas, flujos de datos y comparativas, con un ritmo pensado para que cada dato se lea a tiempo. El trabajo pasó por varias rondas con el cliente, que tenía criterios muy precisos sobre cómo debía comportarse cada animación.",
+              "en": ""
             }
           ]
+        },
+        {
+          "kind": "credit",
+          "text": {
+            "es": "El sistema visual y la base de las escenas son de otro diseñador del equipo.",
+            "en": ""
+          }
         },
         {
           "kind": "section",
@@ -3991,7 +3973,7 @@
             "en": "Video encoding"
           },
           "intro": {
-            "es": "Codificación de video con inferencia de IA: la misma carga corriendo en servidores x86 y en Arm AGI.",
+            "es": "La misma carga de codificación de video con inferencia de IA, corriendo en servidores x86 y en Arm AGI.",
             "en": ""
           },
           "content": [
@@ -4052,7 +4034,7 @@
             "en": "Agentic ERP"
           },
           "intro": {
-            "es": "Un ERP con agentes de IA frente al circuito manual: de 3,2 horas a 4 minutos por factura.",
+            "es": "Un ERP con agentes de IA que baja cada factura de 3,2 horas a 4 minutos, frente al circuito manual.",
             "en": ""
           },
           "content": [
@@ -4073,7 +4055,7 @@
                   "type": "image",
                   "src": "assets/img/cases/arm/arm-erp-facturas.webp",
                   "alt": {
-                    "es": "3400 facturas por mes, 14 pasos cada una, 1450 horas de trabajo manual",
+                    "es": "3400 facturas por mes, con un promedio de 14 pasos cada una y 1450 horas de trabajo manual",
                     "en": ""
                   }
                 },
@@ -4097,7 +4079,7 @@
                   "type": "image",
                   "src": "assets/img/cases/arm/arm-erp-humanos.webp",
                   "alt": {
-                    "es": "Personas potenciadas, no reemplazadas: roles y tiempo liberado",
+                    "es": "Personas potenciadas, no reemplazadas: roles y capacidad liberada",
                     "en": ""
                   }
                 }
@@ -4105,7 +4087,17 @@
             }
           ]
         }
-      ]
+      ],
+      "result": {
+        "label": {
+          "es": "Resultado",
+          "en": ""
+        },
+        "text": {
+          "es": "Logramos piezas audiovisuales con ritmo y claridad, que le permitieron a Arm destacar sus avances.",
+          "en": ""
+        }
+      }
     },
     {
       "id": "ox-beard-care",
@@ -4129,23 +4121,23 @@
         "en": ""
       },
       "oneLiner": {
-        "es": "Una marca de cuidado de barba armada desde el nombre",
+        "es": "Desarrollo integral de una marca de cuidado de barba",
         "en": ""
       },
       "role": {
-        "es": "Brand Designer",
-        "en": "Brand Designer"
+        "es": "Brand Designer · A cargo de todo el proyecto",
+        "en": ""
       },
       "period": {
         "es": "2021 – 2024",
         "en": "2021 – 2024"
       },
       "tags": [
-        "Branding",
-        "Naming",
-        "Packaging",
-        "Web Design",
-        "Social Media"
+        "brand-design",
+        "naming",
+        "packaging",
+        "web-design",
+        "social-media"
       ],
       "coverImage": "assets/img/cases/ox-beard-care/portada.webp",
       "facts": [
@@ -4176,8 +4168,8 @@
           },
           "wide": true,
           "value": {
-            "es": "Brand Designer",
-            "en": "Brand Designer"
+            "es": "Brand Designer · A cargo de todo el proyecto",
+            "en": ""
           }
         },
         {
@@ -4187,7 +4179,7 @@
           },
           "wide": true,
           "value": {
-            "es": "Naming, identidad visual, producto, packaging, papelería, web, redes",
+            "es": "Naming, identidad visual, packaging, papelería, diseño web, redes",
             "en": ""
           }
         }
@@ -4201,7 +4193,7 @@
           },
           "paragraphs": [
             {
-              "es": "ØX empezó con un producto y sin marca: peines de sándalo, aceites y accesorios para barba hechos a mano. No había nombre ni nada alrededor, y el mercado estaba lleno de una estética de leñador que ya no diferenciaba a nadie.",
+              "es": "El proyecto arrancó con peines de sándalo, aceites y accesorios para barba hechos a mano, pero sin nombre ni marca. Además, tenía que hacerse un lugar en un mercado lleno de una estética de leñador que ya no diferenciaba a nadie.",
               "en": ""
             }
           ]
@@ -4214,7 +4206,7 @@
           },
           "paragraphs": [
             {
-              "es": "Fui a buscar el territorio al norte, a la cultura vikinga y su relación con la barba, y de ahí salió el nombre: ØX, hacha en noruego. La identidad siguió por el mismo lado, con el negro como color dominante, un isotipo de hachas cruzadas que también funciona como trama y un sello circular para tapas, etiquetas y bolsas.",
+              "es": "Fui a buscar el territorio al norte, a la cultura vikinga y su relación con la barba, y de ahí salió el nombre: ØX, hacha en nórdico antiguo. La identidad siguió por el mismo lado, con un estilo minimalista, el negro como color dominante y un isotipo de hachas cruzadas que también funciona como trama.",
               "en": ""
             }
           ]
@@ -4327,7 +4319,7 @@
           },
           "paragraphs": [
             {
-              "es": "Con ese sistema diseñé las etiquetas y el packaging de cada producto, la papelería, la web y el contenido de redes.",
+              "es": "Con ese sistema diseñé las etiquetas y el packaging de cada producto, el contenido de redes, la papelería y la web.",
               "en": ""
             }
           ]
@@ -4372,7 +4364,7 @@
                       "type": "image",
                       "src": "assets/img/cases/ox-beard-care/producto-balsamo.webp",
                       "alt": {
-                        "es": "Lata de bálsamo para barba abierta, con la tapa del sello",
+                        "es": "Lata abierta de bálsamo para barba, con el sello en la tapa",
                         "en": ""
                       }
                     },
@@ -4444,7 +4436,7 @@
               "type": "image",
               "src": "assets/img/cases/ox-beard-care/web-dispositivos.webp",
               "alt": {
-                "es": "La web en monitor, notebook y celular: La más completa y exclusiva línea para el cuidado de la barba",
+                "es": "La web en monitor, notebook y celular, con el título \"La más completa y exclusiva línea para el cuidado de la barba\"",
                 "en": ""
               },
               "maxWidth": 1100,
@@ -4502,7 +4494,7 @@
         "en": "Inviu"
       },
       "oneLiner": {
-        "es": "Comunicación de marca en Argentina, Perú y Uruguay",
+        "es": "Comunicación visual de una compañía regional de servicios para asesores financieros",
         "en": ""
       },
       "role": {
@@ -4514,12 +4506,14 @@
         "en": "2021 – present"
       },
       "tags": [
-        "Fintech",
-        "Brand Design"
+        "brand-design",
+        "web-design",
+        "social-media",
+        "motion-design"
       ],
       "coverImage": "assets/img/cases/inviu/portada.webp",
       "eyebrow": {
-        "es": "Caso · Grupo Financiero Galicia",
+        "es": "Caso",
         "en": ""
       },
       "facts": [
@@ -4550,19 +4544,18 @@
           },
           "wide": true,
           "value": {
-            "es": "Web, eventos, mailings, presentaciones comerciales, paid media, redes, video, app stores, impresos",
+            "es": "Diseño web, eventos, mailings, presentaciones comerciales, paid media, redes, video, app stores, gráfica",
             "en": ""
           }
         },
         {
           "label": {
-            "es": "Sitios",
-            "en": "Sites"
+            "es": "Sitio",
+            "en": "Site"
           },
           "wide": true,
           "links": [
-            "https://inviu.lat",
-            "https://peru.eventosinviu.com/kickoff2026"
+            "https://inviu.lat"
           ]
         }
       ],
@@ -4574,11 +4567,11 @@
           },
           "paragraphs": [
             {
-              "es": "Inviu es la plataforma de inversiones del Grupo Financiero Galicia pensada para asesores financieros independientes, con operación en Argentina, Perú y Uruguay. Se encarga de la parte operativa y les suma análisis, herramientas de marketing y eventos, para que puedan dedicarles más tiempo a sus clientes y darles un mejor servicio.",
+              "es": "Inviu es la compañía del Grupo Financiero Galicia que brinda servicio a asesores financieros independientes en toda Latinoamérica, con oficinas en Argentina, Uruguay, Perú y Estados Unidos. Su propuesta es que el asesor pueda dedicarles más tiempo a sus clientes y atenderlos mejor.",
               "en": ""
             },
             {
-              "es": "Por eso la marca habla en dos niveles: al asesor, que es su cliente directo, y al inversor, al que muchas veces llega a través del asesor. Todo dentro de un sector regulado y con un tono institucional estricto. El desafío: que la marca se mantenga coherente en cada punto de contacto, también cuando la comunicación sale con la firma de cada asesor.",
+              "es": "Por eso la marca habla en dos niveles: al asesor, que es su cliente directo, y al inversor, al que muchas veces llega a través de él. Y tiene que mantenerse coherente en cada punto de contacto, también cuando la comunicación sale con la firma de cada asesor.",
               "en": ""
             }
           ]
@@ -4590,7 +4583,7 @@
           },
           "paragraphs": [
             {
-              "es": "Como único diseñador de marca, trabajo con marketing, comercial y producto en todo lo que la compañía comunica: la web institucional regional, los mailings para asesores y para inversores, las presentaciones comerciales, el paid media, las redes y los videos. Con la llegada a Perú y Uruguay, todo eso se fue adaptando a cada mercado sin perder coherencia.",
+              "es": "Como responsable de la identidad visual, trabajo desde marketing junto a los equipos de comercial y producto para llevar la marca a todo lo que la compañía comunica, y me ocupo de la dirección de arte y el feedback con los proveedores externos que participan en cada pieza: agencias, productoras, diseñadores, maquetadores, fotógrafos y filmmakers.",
               "en": ""
             }
           ]
@@ -4657,7 +4650,7 @@
             "en": "Annual kickoff"
           },
           "intro": {
-            "es": "También diseño la identidad de los kickoffs y los cócteles de fin de año en Argentina y en Perú, y doy soporte a los eventos que organiza cada asesor.",
+            "es": "Diseñé las identidades de los eventos de kickoffs y cocktails de fin de año en Argentina y en Perú, y cada año las aplico a las piezas de la nueva edición. También doy soporte a los que organizan los asesores.",
             "en": ""
           },
           "rows": [
@@ -4668,7 +4661,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/kickoff-foto.webp",
                   "alt": {
-                    "es": "Auditorio lleno durante el Kick Off 2026",
+                    "es": "Auditorio durante el Kick Off 2026",
                     "en": ""
                   }
                 }
@@ -4773,7 +4766,7 @@
             "en": "Advisor mailing"
           },
           "intro": {
-            "es": "Buena parte de esas piezas se arman para que el asesor las comparta con sus clientes. Los asesores con un paquete especial las reciben con su propia marca junto a la de Inviu, a través de un sistema automatizado de personalización.",
+            "es": "Muchas piezas están pensadas para que el asesor las comparta con sus clientes. Para quienes contratan el plan de co-branding ideé una herramienta web en la que cada pieza toma automáticamente el logo y los colores del asesor.",
             "en": ""
           },
           "rows": [
@@ -4917,7 +4910,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/presentacion-trading-bar.webp",
                   "alt": {
-                    "es": "Lámina de presentación sobre la trading bar",
+                    "es": "Lámina de presentación sobre la Trading Bar",
                     "en": ""
                   },
                   "transparent": true
@@ -4988,7 +4981,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/paid-empresas-horizontal.webp",
                   "alt": {
-                    "es": "Posteo horizontal para cuenta empresa",
+                    "es": "Post horizontal para cuenta empresa",
                     "en": ""
                   },
                   "span": 2
@@ -4997,7 +4990,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/paid-todas-tus-inversiones.webp",
                   "alt": {
-                    "es": "Posteo: todas tus inversiones en un solo lugar",
+                    "es": "Post sobre tener todas las inversiones en un solo lugar",
                     "en": ""
                   }
                 },
@@ -5005,7 +4998,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/paid-diversificar.webp",
                   "alt": {
-                    "es": "Posteo sobre diversificar la cartera",
+                    "es": "Post sobre diversificar la cartera",
                     "en": ""
                   }
                 }
@@ -5031,7 +5024,7 @@
                       "type": "image",
                       "src": "assets/img/cases/inviu/redes-factor-humano.webp",
                       "alt": {
-                        "es": "Posteo: el factor humano, el diferencial en un mundo digital",
+                        "es": "Post: el factor humano, el diferencial en un mundo digital",
                         "en": ""
                       }
                     },
@@ -5039,7 +5032,7 @@
                       "type": "image",
                       "src": "assets/img/cases/inviu/redes-40000-instrumentos.webp",
                       "alt": {
-                        "es": "Posteo sobre más de 40.000 instrumentos del mercado internacional",
+                        "es": "Post sobre más de 40.000 instrumentos del mercado internacional",
                         "en": ""
                       }
                     }
@@ -5052,7 +5045,7 @@
                       "type": "image",
                       "src": "assets/img/cases/inviu/redes-sugerencia-experto.webp",
                       "alt": {
-                        "es": "Posteo de sugerencia de experto sobre volatilidad de fin de año",
+                        "es": "Post de sugerencia de experto sobre volatilidad de fin de año",
                         "en": ""
                       }
                     },
@@ -5060,7 +5053,7 @@
                       "type": "image",
                       "src": "assets/img/cases/inviu/redes-potenciamos-asesores.webp",
                       "alt": {
-                        "es": "Posteo: potenciamos a los asesores financieros",
+                        "es": "Post: potenciamos a los asesores financieros",
                         "en": ""
                       }
                     }
@@ -5070,7 +5063,7 @@
                   "type": "image",
                   "src": "assets/img/cases/inviu/redes-linkedin-ingresar-dinero.webp",
                   "alt": {
-                    "es": "Posteo en LinkedIn sobre cómo ingresar dinero de forma segura",
+                    "es": "Post en LinkedIn sobre cómo ingresar dinero de forma segura",
                     "en": ""
                   }
                 }
@@ -5234,7 +5227,7 @@
           "en": ""
         },
         "text": {
-          "es": "Una marca que se reconoce igual en tres países y en dos niveles: en lo que comunica Inviu y en lo que cada asesor lleva a sus clientes.",
+          "es": "Hoy la marca es la misma en lo que comunica Inviu y en lo que los asesores llevan a sus clientes.",
           "en": ""
         },
         "stat": {
@@ -5244,10 +5237,6 @@
             "en": ""
           }
         }
-      },
-      "narrative": {
-        "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        "en": ""
       }
     }
   ]

@@ -17,7 +17,8 @@ APLICAR = "--aplicar" in sys.argv
 
 CAMPOS_CASO = ("client", "title", "oneLiner", "role", "period", "narrative")
 CAMPOS_LAB = ("client", "title", "role", "period", "text", "narrative")
-CAMPOS_HITO = ("period", "title", "teaser", "expanded")
+CAMPOS_HITO = ("period", "title", "role", "teaser", "expanded")
+CAMPOS_TAG = ("label",)
 
 
 CLAVES_ENTRADA = ("nota", "es", "en", "valor")
@@ -50,7 +51,7 @@ def revisar(entradas):
             problemas.append(f"{ruta}: usa `valor` y `es`/`en` a la vez; elegí uno.")
         elif not tiene_valor and not tiene_par:
             problemas.append(f"{ruta}: no tiene ni `valor` ni `es`/`en`.")
-        if ruta.split(".")[0] not in ("ui", "caso", "lab", "hito", "pagina", "contacto"):
+        if ruta.split(".")[0] not in ("ui", "caso", "lab", "hito", "tag", "pagina", "contacto"):
             problemas.append(f"{ruta}: no reconozco ese grupo; el sitio la ignoraría.")
     return problemas
 
@@ -174,6 +175,7 @@ def main():
     ruta_casos, casos = mezclar("cases.json", "cases", "caso", CAMPOS_CASO)
     ruta_lab, lab = mezclar("lab.json", "items", "lab", CAMPOS_LAB)
     ruta_hitos, hitos = mezclar("timeline.json", "milestones", "hito", CAMPOS_HITO)
+    ruta_tags, tags = mezclar("tags.json", "tags", "tag", CAMPOS_TAG)
 
     # ─── Datos de contacto repetidos en el HTML ───
     html_files = sorted(f for f in os.listdir(RAIZ) if f.endswith(".html"))
@@ -209,7 +211,7 @@ def main():
 
     # ─── Escritura ───
     open(r("data/strings.js"), "w", encoding="utf-8").write(nuevo_strings)
-    for ruta, datos in ((ruta_casos, casos), (ruta_lab, lab), (ruta_hitos, hitos)):
+    for ruta, datos in ((ruta_casos, casos), (ruta_lab, lab), (ruta_hitos, hitos), (ruta_tags, tags)):
         with open(ruta, "w", encoding="utf-8") as f:
             json.dump(datos, f, ensure_ascii=False, indent=2)
             f.write("\n")

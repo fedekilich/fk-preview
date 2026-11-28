@@ -32,7 +32,7 @@ function render() {
   if (index === -1) {
     notFoundEl.hidden = false;
     articleEl.hidden = true;
-    document.title = `${t("lab.notFound", lang)} — Fede Kilich`;
+    document.title = `${t("lab.notFound", lang)} - Fede Kilich`;
     return;
   }
 
@@ -43,7 +43,7 @@ function render() {
   const next = items[(index + 1) % items.length];
   const title = pick(item.title, lang);
 
-  document.title = `${title || t("lab.title", lang)} — Fede Kilich`;
+  document.title = `${title || t("lab.title", lang)} - Fede Kilich`;
 
   nodes.client.textContent = pick(item.client, lang);
   nodes.title.textContent = title;

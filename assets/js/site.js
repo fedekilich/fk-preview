@@ -1,7 +1,7 @@
 // Estado de idioma compartido por todo el sitio.
 // Los textos se marcan en el HTML con data-i18n / data-i18n-aria-label.
 
-import { t } from "../../data/i18n.js";
+import { t, pick } from "../../data/i18n.js";
 
 const STORAGE_KEY = "fk-lang";
 const listeners = new Set();
@@ -94,6 +94,23 @@ async function loadList(file, key) {
 }
 
 export const loadCases = () => loadList("cases.json", "cases");
+
+/* Catálogo único de tags (data/tags.json): los casos guardan ids y el nombre
+   visible sale de acá, en el idioma activo. Un id que no esté en el catálogo
+   devuelve "" y el que lo pide lo descarta, así un tag viejo no rompe nada. */
+let tagsById = new Map();
+
+export const loadTags = () =>
+  loadList("tags.json", "tags").then((list) => {
+    tagsById = new Map(list.map((tag) => [tag.id, tag]));
+    return list;
+  });
+
+export const tagLabel = (id, lang) => {
+  const tag = tagsById.get(id);
+  return tag ? pick(tag.label, lang) : "";
+};
+
 export const loadLabItems = () => loadList("lab.json", "items");
 export const loadMilestones = () => loadList("timeline.json", "milestones");
 

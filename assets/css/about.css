@@ -49,7 +49,13 @@
   padding-top: 1.25rem;
 }
 
-.about-intro__name { font-size: 0.9rem; color: var(--muted); }
+/* El rol creció a «Design Lead · Brand, Motion & IA» y en el teléfono empujaba
+   al nombre a cortarse en dos líneas. El nombre no se parte. */
+.about-intro__name {
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
 
 .about-intro__role {
   font-size: var(--fs-nav);
@@ -62,33 +68,13 @@
 /* --- Narrativa ------------------------------------------------ */
 .about-story { padding-block: clamp(4rem, 10vw, 9rem); }
 
-.about-story__split {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(2rem, 5vw, 3.5rem);
-}
-
 .about-story p { color: var(--text-soft); }
 
+/* El texto va corrido, en una sola columna de medida de lectura: salió la
+   frase destacada que ocupaba la columna de al lado. */
+.about-story__lead { max-width: 62ch; }
 .about-story__lead p { margin: 0 0 1.4em; }
 .about-story__lead p:last-child { margin-bottom: 0; }
-
-.about-story__aside {
-  border-left: 1px solid var(--line);
-  padding-left: clamp(1.5rem, 3vw, 2rem);
-  display: flex;
-  align-items: center;
-}
-
-.about-story__quote {
-  font-size: var(--fs-display);
-  line-height: 1.08;
-  color: var(--accent);
-}
-
-.about-story__rest { max-width: 62ch; }
-.about-story__rest p { margin: 1.4em 0 0; }
-.about-story__rest p:first-child { margin-top: clamp(2rem, 4vw, 2.75rem); }
 
 /* El borde del revelado del texto. Registrarlo como <percentage> es lo que
    permite animarlo: una custom property sin tipo no interpola, salta. */
@@ -155,9 +141,11 @@
   white-space: nowrap;
   transform: translateY(-50%);
 }
-/* Cuando en vez de un año muestra la palabra de un período abierto */
+/* Cuando en vez de un año muestra la palabra de un período abierto. Es más
+   chica que el número porque tiene el doble de caracteres, pero no tanto: el
+   salto de tamaño al llegar a "presente" se notaba de más. */
 .timeline__year-num.is-word {
-  font-size: clamp(2.6rem, 9vw, 7rem);
+  font-size: clamp(4.4rem, 16vw, 13rem);
   letter-spacing: -0.01em;
 }
 
@@ -225,6 +213,29 @@
 .tl-row--left .tl-row__static { justify-content: flex-end; }
 
 .tl-row__body { grid-row: 3; }
+
+/* Cargo del hito: va enfrentado al nombre, del otro lado de la línea, y
+   aparece y se va con el detalle. Así el zigzag usa los dos lados sin que el
+   hito apagado muestre más que período, nombre y teaser. */
+.tl-row__role {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: right;
+  align-self: center;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.9s var(--ease-texto),
+    transform 0.9s var(--ease-texto);
+}
+.tl-row--left .tl-row__role { grid-column: 3; text-align: left; }
+.tl-row.is-active .tl-row__role { opacity: 1; transform: none; }
 
 .tl-row__teaser {
   margin: 0.7rem 0 0;
@@ -317,6 +328,20 @@
 
   .tl-row--left .tl-row__static { justify-content: flex-start; }
 
+  /* Sin otro lado donde ponerlo, el cargo baja debajo del nombre y queda
+     siempre visible, como el detalle */
+  .tl-row__role,
+  .tl-row--left .tl-row__role {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: left;
+    margin-top: 0.45rem;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .tl-row__body { grid-row: 4; }
+
   .tl-row__dot { grid-column: 1; }
 
   /* En el teléfono entra un hito por pantalla, así que el cruce no se llega
@@ -336,7 +361,7 @@
      con el texto que ahora le cruza por encima a todo lo ancho */
   .timeline__year.is-on { opacity: 0.05; }
   .timeline__year-num { font-size: clamp(8rem, 44vw, 14rem); }
-  .timeline__year-num.is-word { font-size: clamp(2.4rem, 15vw, 5rem); }
+  .timeline__year-num.is-word { font-size: clamp(3.8rem, 26vw, 8.5rem); }
 }
 
 /* Sin animación si el usuario pidió menos movimiento: todas las

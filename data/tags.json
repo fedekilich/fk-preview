@@ -1,0 +1,108 @@
+{
+  "tags": [
+    {
+      "id": "brand-design",
+      "order": 1,
+      "label": {
+        "es": "Diseño de marca",
+        "en": "Brand Design"
+      }
+    },
+    {
+      "id": "web-design",
+      "order": 2,
+      "label": {
+        "es": "Diseño web",
+        "en": "Web Design"
+      }
+    },
+    {
+      "id": "social-media",
+      "order": 3,
+      "label": {
+        "es": "Redes sociales",
+        "en": "Social Media"
+      }
+    },
+    {
+      "id": "motion-design",
+      "order": 4,
+      "label": {
+        "es": "Motion design",
+        "en": "Motion Design"
+      }
+    },
+    {
+      "id": "naming",
+      "order": 5,
+      "label": {
+        "es": "Naming",
+        "en": "Naming"
+      }
+    },
+    {
+      "id": "packaging",
+      "order": 6,
+      "label": {
+        "es": "Packaging",
+        "en": "Packaging"
+      }
+    },
+    {
+      "id": "crisis-communication",
+      "order": 7,
+      "label": {
+        "es": "Comunicación de crisis",
+        "en": "Crisis Communication"
+      }
+    },
+    {
+      "id": "visual-system",
+      "order": 8,
+      "label": {
+        "es": "Sistema visual",
+        "en": "Visual System"
+      }
+    },
+    {
+      "id": "team-leadership",
+      "order": 9,
+      "label": {
+        "es": "Liderazgo de equipo",
+        "en": "Team Leadership"
+      }
+    },
+    {
+      "id": "3d-design",
+      "order": 10,
+      "label": {
+        "es": "Diseño 3D",
+        "en": "3D Design"
+      }
+    },
+    {
+      "id": "video-editing",
+      "order": 11,
+      "label": {
+        "es": "Edición de video",
+        "en": "Video Editing"
+      }
+    },
+    {
+      "id": "post-production",
+      "order": 12,
+      "label": {
+        "es": "Posproducción",
+        "en": "Post-production"
+      }
+    },
+    {
+      "id": "generative-ai",
+      "order": 13,
+      "label": {
+        "es": "IA generativa",
+        "en": "Generative AI"
+      }
+    }
+  ]
+}

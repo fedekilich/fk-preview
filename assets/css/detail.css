@@ -216,6 +216,23 @@
 }
 .tb__body p:last-child { margin-bottom: 0; }
 
+/* Línea de crédito al equipo: nota al pie del relato, sin etiqueta ni línea
+   divisoria. El margen negativo le come parte del aire que deja el bloque de
+   arriba, para que se lea pegada al texto que acredita y no como un bloque
+   nuevo. */
+.tb--credit {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: calc(-1 * clamp(1.75rem, 4.5vw, 3.5rem));
+}
+.tb__credit {
+  max-width: 62ch;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
 /* --- Sección de piezas ---------------------------------------- */
 /* El marco habla en oscuro y el trabajo se muestra en claro: cada sección va
    sobre una franja clara de borde a borde, con sus propios tokens de color.
