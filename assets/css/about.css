@@ -4,20 +4,23 @@
 
 /* --- Intro: foto + titular ----------------------------------- */
 .about-intro {
-  padding-top: clamp(3rem, 9vw, 7rem);
+  padding-top: clamp(1.8rem, 5.4vw, 4.2rem);   /* 40% menos que el 3/9/7 original */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: center;
 }
 
+/* Sin filete y sin --surface: la foto se funde con la pagina en vez de vivir
+   dentro de un recuadro. El negro del archivo ya viene igualado al --bg, asi
+   que no hace falta mezclar nada: el fondo es solo el color de espera
+   mientras la imagen carga. */
 .about-photo {
   aspect-ratio: 4 / 5;
-  width: 100%;
+  width: 89.25%;              /* 85% + 5%; la proporcion la mantiene el aspect-ratio */
   position: relative;
   overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: var(--bg);
 }
 
 /* La foto ya viene recortada en 4:5, igual que el recuadro: object-fit la deja
