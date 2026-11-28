@@ -206,10 +206,13 @@ main { overflow-x: clip; }
    para que la masa nunca empuje al texto fuera de pantalla. */
 @media (max-width: 1199px) {
   .hero {
-    /* El header mide 72px y empuja al hero hacia abajo: sin descontarlo, el
-       bloque de texto alineado abajo se va de pantalla. */
+    /* El texto arranca pasada la mitad de la pantalla: la masa se queda con
+       la mitad de arriba y el nombre entra limpio abajo. Lo que sobra sigue
+       hacia abajo y se scrollea, a proposito.
+       El header mide 72px y ya empuja al hero, asi que se descuenta. */
     min-height: calc(100svh - 72px);
-    align-items: end;
+    align-items: start;
+    padding-top: calc(50svh - 72px);
     padding-bottom: clamp(2.5rem, 6vw, 4rem);
   }
 
