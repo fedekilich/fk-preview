@@ -171,7 +171,7 @@ img, video { max-width: 100%; display: block; }
 }
 .wordmark__logo {
   display: block;
-  height: 0.85em;
+  height: 1.1em;
   width: auto;
 }
 .wordmark__ink { fill: currentColor; }
