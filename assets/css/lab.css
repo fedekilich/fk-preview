@@ -26,11 +26,7 @@
 /* El eyebrow del Lab se separa del acento azul */
 .theme-lab .eyebrow { color: var(--lab-eyebrow); }
 
-.theme-lab .wordmark {
-  text-transform: uppercase;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
-}
+.theme-lab .wordmark { font-size: 1.05rem; }
 
 /* Ya estamos en la sección: el subrayado queda dibujado, no espera al hover */
 .theme-lab .site-nav__link--lab {

@@ -159,16 +159,23 @@ img, video { max-width: 100%; display: block; }
   gap: 0.75rem 1.5rem;
 }
 
+/* El logo va inline y no como <img> para que los colores salgan de las
+   variables: en el Lab el acento es azul, y así KILICH lo sigue solo. Se mide
+   en em para que el font-size del enlace lo siga escalando, como cuando era
+   texto. */
 .wordmark {
-  font-family: var(--font-display);
-  font-weight: 900;
+  display: inline-flex;
   font-size: 1rem;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
   color: var(--text);
   text-decoration: none;
 }
-.wordmark span { color: var(--accent); }
+.wordmark__logo {
+  display: block;
+  height: 0.85em;
+  width: auto;
+}
+.wordmark__ink { fill: currentColor; }
+.wordmark__accent { fill: var(--accent); }
 
 .site-nav {
   display: flex;
